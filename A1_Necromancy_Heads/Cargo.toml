@@ -1,0 +1,16 @@
+[package]
+name = "A1_Necromancy_Heads"
+version = "0.0.1"
+edition = "2024"
+publish = false
+
+[profile.release]
+codegen-units = 1
+lto = true
+panic = "abort"
+strip = true
+
+[dependencies]
+either = "1.16.0"
+esl = "0.19.6"
+serde-serialize-seed = "0.0.10"
