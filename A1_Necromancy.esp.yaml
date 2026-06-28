@@ -1,0 +1,263 @@
+- TES3:
+  - HEDR:
+      version: 1067869798
+      file_type: ESP
+      author: A1
+      description:
+      - Профессиональный некромант.
+      - Основан на Blasphemous Revenants v1.3, созданный Fliggerty и переведённый Gwathlobal
+      records: 18
+  - MAST: Morrowind.esm
+  - DATA: 79764287
+  - MAST: Tribunal.esm
+  - DATA: 6616539
+  - MAST: Bloodmoon.esm
+  - DATA: 11799703
+  - MAST: Trib_BM_patch_1C.esm
+  - DATA: 23382
+
+- SPEL:
+  - NAME: A1_NecroPrepare
+  - FNAM: Подготовить тело
+  - SPDT:
+      type: Spell
+      cost: 0
+      flags: ALWAYS_SUCCEEDS
+  - ENAM:
+      index: Burden
+      skill: null
+      attribute: null
+      range: Touch
+      area: 0
+      duration: 1
+      magnitude_min: 1
+      magnitude_max: 1
+  - ENAM:
+      index: Reflect
+      skill: null
+      attribute: null
+      range: Self
+      area: 0
+      duration: 1
+      magnitude_min: 1
+      magnitude_max: 1
+
+- BODY:
+  - NAME: A1_NecroAltmerCarry
+  - MODL: a1n\altmer_corpse_p.nif
+  - FNAM: Argonian
+  - BYDT:
+      kind: Clavicle
+      vampire: false
+      flags: ''
+      type: Armor
+
+- BODY:
+  - NAME: A1_NecroArgCarry
+  - MODL: a1n\arg_corpse_p.nif
+  - FNAM: Argonian
+  - BYDT:
+      kind: Clavicle
+      vampire: false
+      flags: ''
+      type: Armor
+
+- BODY:
+  - NAME: A1_NecroRgCarry
+  - MODL: a1n\redguard_corpse_p.nif
+  - FNAM: Argonian
+  - BYDT:
+      kind: Clavicle
+      vampire: false
+      flags: ''
+      type: Armor
+
+- BODY:
+  - NAME: A1_NecroOrcCarry
+  - MODL: a1n\orc_corpse_p.nif
+  - FNAM: Argonian
+  - BYDT:
+      kind: Clavicle
+      vampire: false
+      flags: ''
+      type: Armor
+
+- BODY:
+  - NAME: A1_NecroKhaCarry
+  - MODL: a1n\khajiit_corpse_p.nif
+  - FNAM: Argonian
+  - BYDT:
+      kind: Clavicle
+      vampire: false
+      flags: ''
+      type: Armor
+
+- BODY:
+  - NAME: A1_NecroDunmerCarry
+  - MODL: a1n\dunmer_corpse_p.nif
+  - FNAM: Argonian
+  - BYDT:
+      kind: Clavicle
+      vampire: false
+      flags: ''
+      type: Armor
+
+- BODY:
+  - NAME: A1_NecroHumanCarry
+  - MODL: a1n\human_corpse_p.nif
+  - FNAM: Argonian
+  - BYDT:
+      kind: Clavicle
+      vampire: false
+      flags: ''
+      type: Armor
+
+- ARMO:
+  - NAME: A1_NecroAltmerPaul
+  - MODL: a1n\altmer_corpse.nif
+  - FNAM: Труп высокого эльфа
+  - AODT:
+      type: LeftPauldron
+      weight: 175.0
+      value: 0
+      health: 100
+      enchantment: 0
+      armor: 0
+  - ITEX: a1n\body_he.dds
+  - INDX: LeftPauldron
+  - BNAM: A1_NecroAltmerCarry
+
+- ARMO:
+  - NAME: A1_NecroArgPaul
+  - MODL: a1n\argonian_corpse.nif
+  - FNAM: Труп аргонианина
+  - AODT:
+      type: LeftPauldron
+      weight: 145.0
+      value: 0
+      health: 100
+      enchantment: 0
+      armor: 0
+  - ITEX: a1n\body_ar.dds
+  - INDX: LeftPauldron
+  - BNAM: A1_NecroArgCarry
+
+- ARMO:
+  - NAME: A1_NecroBosmerPaul
+  - MODL: a1n\human_corpse.nif
+  - FNAM: Труп лесного эльфа
+  - AODT:
+      type: LeftPauldron
+      weight: 125.0
+      value: 0
+      health: 100
+      enchantment: 0
+      armor: 0
+  - ITEX: a1n\body_we.dds
+  - INDX: LeftPauldron
+  - BNAM: A1_NecroHumanCarry
+
+- ARMO:
+  - NAME: A1_NecroDunmerPaul
+  - MODL: a1n\dunmer_corpse.nif
+  - FNAM: Труп данмера
+  - AODT:
+      type: LeftPauldron
+      weight: 165.0
+      value: 0
+      health: 100
+      enchantment: 0
+      armor: 0
+  - ITEX: a1\body_de.dds
+  - INDX: LeftPauldron
+  - BNAM: A1_NecroDunmerCarry
+
+- ARMO:
+  - NAME: A1_NecroBretonPaul
+  - MODL: a1n\human_corpse.nif
+  - FNAM: Труп бретона
+  - AODT:
+      type: LeftPauldron
+      weight: 165.0
+      value: 0
+      health: 100
+      enchantment: 0
+      armor: 0
+  - ITEX: a1n\body_we.dds
+  - INDX: LeftPauldron
+  - BNAM: A1_NecroHumanCarry
+
+- ARMO:
+  - NAME: A1_NecroImpPaul
+  - MODL: a1n\human_corpse.nif
+  - FNAM: Труп имперца
+  - AODT:
+      type: LeftPauldron
+      weight: 165.0
+      value: 0
+      health: 100
+      enchantment: 0
+      armor: 0
+  - ITEX: a1n\body_we.dds
+  - INDX: LeftPauldron
+  - BNAM: A1_NecroHumanCarry
+
+- ARMO:
+  - NAME: A1_NecroNordPaul
+  - MODL: a1n\human_corpse.nif
+  - FNAM: Труп норда
+  - AODT:
+      type: LeftPauldron
+      weight: 185.0
+      value: 0
+      health: 100
+      enchantment: 0
+      armor: 0
+  - ITEX: a1n\body_we.dds
+  - INDX: LeftPauldron
+  - BNAM: A1_NecroHumanCarry
+
+- ARMO:
+  - NAME: A1_NecroKhaPaul
+  - MODL: a1n\khajiit_corpse.nif
+  - FNAM: Труп хаджита
+  - AODT:
+      type: LeftPauldron
+      weight: 145.0
+      value: 0
+      health: 100
+      enchantment: 0
+      armor: 0
+  - ITEX: a1n\body_kh.dds
+  - INDX: LeftPauldron
+  - BNAM: A1_NecroKhaCarry
+
+- ARMO:
+  - NAME: A1_NecroOrcPaul
+  - MODL: a1n\orc_corpse.nif
+  - FNAM: Труп орка
+  - AODT:
+      type: LeftPauldron
+      weight: 195.0
+      value: 0
+      health: 100
+      enchantment: 0
+      armor: 0
+  - ITEX: a1n\body_or.dds
+  - INDX: LeftPauldron
+  - BNAM: A1_NecroOrcCarry
+
+- ARMO:
+  - NAME: A1_NecroRgPaul
+  - MODL: a1n\redguard_corpse.nif
+  - FNAM: Труп редгарда
+  - AODT:
+      type: LeftPauldron
+      weight: 135.0
+      value: 0
+      health: 100
+      enchantment: 0
+      armor: 0
+  - ITEX: a1n\body_rg.dds
+  - INDX: LeftPauldron
+  - BNAM: A1_NecroRgCarry
