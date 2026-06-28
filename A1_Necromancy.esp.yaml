@@ -5,14 +5,630 @@
       author: A1
       description:
       - Профессиональный некромант.
-      - Основан на Blasphemous Revenants v1.3, созданный Fliggerty и переведённый Gwathlobal
-      records: 29
+      - Основан на Blasphemous Revenants v1.3, который создан Fliggerty и переведён Gwathlobal
+      records: 32
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
   - DATA: 6616539
   - MAST: Bloodmoon.esm
   - DATA: 11799703
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroPaulSc
+      vars:
+        shorts: 4
+        longs: 0
+        floats: 0
+      data_size: 5603
+      var_table_size: 28
+  - SCVR:
+    - delay
+    - dropped
+    - drop
+    - equipped
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 1
+        - " X \x10 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - " s\x01\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x01\0 < 1000"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 0'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 0'
+      - func: SetRef
+        args: player
+      raw:
+      - 0A 01 02 1D 20 58 FD 10 20 6F 12 41 31 5F 4E 65 63 72 6F 41 6C 74 6D 65 72 50 61 75 6C 20 3E 20
+      - 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 12 41 31 5F 4E 65 63 72 6F 41 6C 74
+      - 6D 65 72 50 61 75 6C 01 00 0B 01 0C 01 06 70 6C 61 79 65 72 0A 01 02 1F 20 58 FD 10 20 6F 14 41
+      - 31 5F 4E 65 63 72 6F 41 6C 74 6D 65 72 50 61 75 6C 53 6B 20 3E 20 31 05 01 73 02 00 02 20 31 0C
+      - 01 06 70 6C 61 79 65 72 0D 11 14 41 31 5F 4E 65 63 72 6F 41 6C 74 6D 65 72 50 61 75 6C 53 6B 01
+      - 00 0B 01 0C 01 06 70 6C 61 79 65 72 0A 01 02 1A 20 58 FD 10 20 6F 0F 41 31 5F 4E 65 63 72 6F 41
+      - 72 67 50 61 75 6C 20 3E 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 0F 41 31
+      - 5F 4E 65 63 72 6F 41 72 67 50 61 75 6C 01 00 0B 01 0C 01 06 70 6C 61 79 65 72 0A 01 02 1C 20 58
+      - FD 10 20 6F 11 41 31 5F 4E 65 63 72 6F 41 72 67 50 61 75 6C 53 6B 20 3E 20 31 05 01 73 02 00 02
+      - 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 11 41 31 5F 4E 65 63 72 6F 41 72 67 50 61 75 6C 53 6B 01
+      - 00 0B 01 0C 01 06 70 6C 61 79 65 72 0A 01 02 1D 20 58 FD 10 20 6F 12 41 31 5F 4E 65 63 72 6F 42
+      - 6F 73 6D 65 72 50 61 75 6C 20 3E 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11
+      - 12 41 31 5F 4E 65 63 72 6F 42 6F 73 6D 65 72 50 61 75 6C 01 00 0B 01 0C 01 06 70 6C 61 79 65 72
+      - 0A 01 02 1F 20 58 FD 10 20 6F 14 41 31 5F 4E 65 63 72 6F 42 6F 73 6D 65 72 50 61 75 6C 53 6B 20
+      - 3E 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 14 41 31 5F 4E 65 63 72 6F 42
+      - 6F 73 6D 65 72 50 61 75 6C 53 6B 01 00 0B 01 0C 01 06 70 6C 61 79 65 72 0A 01 02 1D 20 58 FD 10
+      - 20 6F 12 41 31 5F 4E 65 63 72 6F 42 72 65 74 6F 6E 50 61 75 6C 20 3E 20 31 05 01 73 02 00 02 20
+      - 31 0C 01 06 70 6C 61 79 65 72 0D 11 12 41 31 5F 4E 65 63 72 6F 42 72 65 74 6F 6E 50 61 75 6C 01
+      - 00 0B 01 0C 01 06 70 6C 61 79 65 72 0A 01 02 1F 20 58 FD 10 20 6F 14 41 31 5F 4E 65 63 72 6F 42
+      - 72 65 74 6F 6E 50 61 75 6C 53 6B 20 3E 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72
+      - 0D 11 14 41 31 5F 4E 65 63 72 6F 42 72 65 74 6F 6E 50 61 75 6C 53 6B 01 00 0B 01 0C 01 06 70 6C
+      - 61 79 65 72 0A 01 02 1D 20 58 FD 10 20 6F 12 41 31 5F 4E 65 63 72 6F 44 75 6E 6D 65 72 50 61 75
+      - 6C 20 3E 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 12 41 31 5F 4E 65 63 72
+      - 6F 44 75 6E 6D 65 72 50 61 75 6C 01 00 0B 01 0C 01 06 70 6C 61 79 65 72 0A 01 02 1F 20 58 FD 10
+      - 20 6F 14 41 31 5F 4E 65 63 72 6F 44 75 6E 6D 65 72 50 61 75 6C 53 6B 20 3E 20 31 05 01 73 02 00
+      - 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 14 41 31 5F 4E 65 63 72 6F 44 75 6E 6D 65 72 50 61 75
+      - 6C 53 6B 01 00 0B 01 0C 01 06 70 6C 61 79 65 72 0A 01 02 1A 20 58 FD 10 20 6F 0F 41 31 5F 4E 65
+      - 63 72 6F 49 6D 70 50 61 75 6C 20 3E 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D
+      - 11 0F 41 31 5F 4E 65 63 72 6F 49 6D 70 50 61 75 6C 01 00 0B 01 0C 01 06 70 6C 61 79 65 72 0A 01
+      - 02 1C 20 58 FD 10 20 6F 11 41 31 5F 4E 65 63 72 6F 49 6D 70 50 61 75 6C 53 6B 20 3E 20 31 05 01
+      - 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 11 41 31 5F 4E 65 63 72 6F 49 6D 70 50 61 75
+      - 6C 53 6B 01 00 0B 01 0C 01 06 70 6C 61 79 65 72 0A 01 02 1A 20 58 FD 10 20 6F 0F 41 31 5F 4E 65
+      - 63 72 6F 4B 68 61 50 61 75 6C 20 3E 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D
+      - 11 0F 41 31 5F 4E 65 63 72 6F 4B 68 61 50 61 75 6C 01 00 0B 01 0C 01 06 70 6C 61 79 65 72 0A 01
+      - 02 1C 20 58 FD 10 20 6F 11 41 31 5F 4E 65 63 72 6F 4B 68 61 50 61 75 6C 53 6B 20 3E 20 31 05 01
+      - 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 11 41 31 5F 4E 65 63 72 6F 4B 68 61 50 61 75
+      - 6C 53 6B 01 00 0B 01 0C 01 06 70 6C 61 79 65 72 0A 01 02 1B 20 58 FD 10 20 6F 10 41 31 5F 4E 65
+      - 63 72 6F 4E 6F 72 64 50 61 75 6C 20 3E 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72
+      - 0D 11 10 41 31 5F 4E 65 63 72 6F 4E 6F 72 64 50 61 75 6C 01 00 0B 01 0C 01 06 70 6C 61 79 65 72
+      - 0A 01 02 1D 20 58 FD 10 20 6F 12 41 31 5F 4E 65 63 72 6F 4E 6F 72 64 50 61 75 6C 53 6B 20 3E 20
+      - 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 12 41 31 5F 4E 65 63 72 6F 4E 6F 72
+      - 64 50 61 75 6C 53 6B 01 00 0B 01 0C 01 06 70 6C 61 79 65 72 0A 01 02 1A 20 58 FD 10 20 6F 0F 41
+      - 31 5F 4E 65 63 72 6F 4F 72 63 50 61 75 6C 20 3E 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61
+      - 79 65 72 0D 11 0F 41 31 5F 4E 65 63 72 6F 4F 72 63 50 61 75 6C 01 00 0B 01 0C 01 06 70 6C 61 79
+      - 65 72 0A 01 02 1C 20 58 FD 10 20 6F 11 41 31 5F 4E 65 63 72 6F 4F 72 63 50 61 75 6C 53 6B 20 3E
+      - 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 11 41 31 5F 4E 65 63 72 6F 4F 72
+      - 63 50 61 75 6C 53 6B 01 00 0B 01 0C 01 06 70 6C 61 79 65 72 0A 01 02 19 20 58 FD 10 20 6F 0E 41
+      - 31 5F 4E 65 63 72 6F 52 67 50 61 75 6C 20 3E 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79
+      - 65 72 0D 11 0E 41 31 5F 4E 65 63 72 6F 52 67 50 61 75 6C 01 00 0B 01 0C 01 06 70 6C 61 79 65 72
+      - 0A 01 02 1B 20 58 FD 10 20 6F 10 41 31 5F 4E 65 63 72 6F 52 67 50 61 75 6C 53 6B 20 3E 20 31 05
+      - 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 10 41 31 5F 4E 65 63 72 6F 52 67 50 61 75
+      - 6C 53 6B 01 00 0B 01 05 01 73 04 00 02 20 30 05 01 73 03 00 02 20 30 0C 01 06 70 6C 61 79 65 72
+      - 06 01 05 1D 20 58 FD 10 20 6F 12 41 31 5F 4E 65 63 72 6F 41 6C 74 6D 65 72 50 61 75 6C 20 3E 20
+      - 30 0C 01 06 70 6C 61 79 65 72 06 01 02 1E 20 58 99 11 20 6F 12 41 31 5F 4E 65 63 72 6F 41 6C 74
+      - 6D 65 72 50 61 75 6C 20 3D 3D 20 30 05 01 73 04 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0E 11 12
+      - 41 31 5F 4E 65 63 72 6F 41 6C 74 6D 65 72 50 61 75 6C 09 01 05 01 73 03 00 02 20 31 09 01 0C 01
+      - 06 70 6C 61 79 65 72 06 01 0A 1F 20 58 FD 10 20 6F 14 41 31 5F 4E 65 63 72 6F 41 6C 74 6D 65 72
+      - 50 61 75 6C 53 6B 20 3E 20 30 06 01 02 09 20 73 03 00 20 3D 3D 20 31 05 01 73 02 00 02 20 31 0C
+      - 01 06 70 6C 61 79 65 72 0D 11 14 41 31 5F 4E 65 63 72 6F 41 6C 74 6D 65 72 50 61 75 6C 53 6B 01
+      - 00 07 01 05 0C 01 06 70 6C 61 79 65 72 06 01 02 20 20 58 99 11 20 6F 14 41 31 5F 4E 65 63 72 6F
+      - 41 6C 74 6D 65 72 50 61 75 6C 53 6B 20 3D 3D 20 30 05 01 73 04 00 02 20 31 0C 01 06 70 6C 61 79
+      - 65 72 0E 11 14 41 31 5F 4E 65 63 72 6F 41 6C 74 6D 65 72 50 61 75 6C 53 6B 09 01 05 01 73 03 00
+      - 02 20 31 09 01 09 01 0C 01 06 70 6C 61 79 65 72 06 01 0A 1A 20 58 FD 10 20 6F 0F 41 31 5F 4E 65
+      - 63 72 6F 41 72 67 50 61 75 6C 20 3E 20 30 06 01 02 09 20 73 03 00 20 3D 3D 20 31 05 01 73 02 00
+      - 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 0F 41 31 5F 4E 65 63 72 6F 41 72 67 50 61 75 6C 01 00
+      - 07 01 05 0C 01 06 70 6C 61 79 65 72 06 01 02 1B 20 58 99 11 20 6F 0F 41 31 5F 4E 65 63 72 6F 41
+      - 72 67 50 61 75 6C 20 3D 3D 20 30 05 01 73 04 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0E 11 0F 41
+      - 31 5F 4E 65 63 72 6F 41 72 67 50 61 75 6C 09 01 05 01 73 03 00 02 20 31 09 01 09 01 0C 01 06 70
+      - 6C 61 79 65 72 06 01 0A 1C 20 58 FD 10 20 6F 11 41 31 5F 4E 65 63 72 6F 41 72 67 50 61 75 6C 53
+      - 6B 20 3E 20 30 06 01 02 09 20 73 03 00 20 3D 3D 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61
+      - 79 65 72 0D 11 11 41 31 5F 4E 65 63 72 6F 41 72 67 50 61 75 6C 53 6B 01 00 07 01 05 0C 01 06 70
+      - 6C 61 79 65 72 06 01 02 1D 20 58 99 11 20 6F 11 41 31 5F 4E 65 63 72 6F 41 72 67 50 61 75 6C 53
+      - 6B 20 3D 3D 20 30 05 01 73 04 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0E 11 11 41 31 5F 4E 65 63
+      - 72 6F 41 72 67 50 61 75 6C 53 6B 09 01 05 01 73 03 00 02 20 31 09 01 09 01 0C 01 06 70 6C 61 79
+      - 65 72 06 01 0A 1D 20 58 FD 10 20 6F 12 41 31 5F 4E 65 63 72 6F 42 6F 73 6D 65 72 50 61 75 6C 20
+      - 3E 20 30 06 01 02 09 20 73 03 00 20 3D 3D 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65
+      - 72 0D 11 12 41 31 5F 4E 65 63 72 6F 42 6F 73 6D 65 72 50 61 75 6C 01 00 07 01 05 0C 01 06 70 6C
+      - 61 79 65 72 06 01 02 1E 20 58 99 11 20 6F 12 41 31 5F 4E 65 63 72 6F 42 6F 73 6D 65 72 50 61 75
+      - 6C 20 3D 3D 20 30 05 01 73 04 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0E 11 12 41 31 5F 4E 65 63
+      - 72 6F 42 6F 73 6D 65 72 50 61 75 6C 09 01 05 01 73 03 00 02 20 31 09 01 09 01 0C 01 06 70 6C 61
+      - 79 65 72 06 01 0A 1F 20 58 FD 10 20 6F 14 41 31 5F 4E 65 63 72 6F 42 6F 73 6D 65 72 50 61 75 6C
+      - 53 6B 20 3E 20 30 06 01 02 09 20 73 03 00 20 3D 3D 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C
+      - 61 79 65 72 0D 11 14 41 31 5F 4E 65 63 72 6F 42 6F 73 6D 65 72 50 61 75 6C 53 6B 01 00 07 01 05
+      - 0C 01 06 70 6C 61 79 65 72 06 01 02 20 20 58 99 11 20 6F 14 41 31 5F 4E 65 63 72 6F 42 6F 73 6D
+      - 65 72 50 61 75 6C 53 6B 20 3D 3D 20 30 05 01 73 04 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0E 11
+      - 14 41 31 5F 4E 65 63 72 6F 42 6F 73 6D 65 72 50 61 75 6C 53 6B 09 01 05 01 73 03 00 02 20 31 09
+      - 01 09 01 0C 01 06 70 6C 61 79 65 72 06 01 0A 1D 20 58 FD 10 20 6F 12 41 31 5F 4E 65 63 72 6F 42
+      - 72 65 74 6F 6E 50 61 75 6C 20 3E 20 30 06 01 02 09 20 73 03 00 20 3D 3D 20 31 05 01 73 02 00 02
+      - 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 12 41 31 5F 4E 65 63 72 6F 42 72 65 74 6F 6E 50 61 75 6C
+      - 01 00 07 01 05 0C 01 06 70 6C 61 79 65 72 06 01 02 1E 20 58 99 11 20 6F 12 41 31 5F 4E 65 63 72
+      - 6F 42 72 65 74 6F 6E 50 61 75 6C 20 3D 3D 20 30 05 01 73 04 00 02 20 31 0C 01 06 70 6C 61 79 65
+      - 72 0E 11 12 41 31 5F 4E 65 63 72 6F 42 72 65 74 6F 6E 50 61 75 6C 09 01 05 01 73 03 00 02 20 31
+      - 09 01 09 01 0C 01 06 70 6C 61 79 65 72 06 01 0A 1F 20 58 FD 10 20 6F 14 41 31 5F 4E 65 63 72 6F
+      - 42 72 65 74 6F 6E 50 61 75 6C 53 6B 20 3E 20 30 06 01 02 09 20 73 03 00 20 3D 3D 20 31 05 01 73
+      - 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 14 41 31 5F 4E 65 63 72 6F 42 72 65 74 6F 6E 50
+      - 61 75 6C 53 6B 01 00 07 01 05 0C 01 06 70 6C 61 79 65 72 06 01 02 20 20 58 99 11 20 6F 14 41 31
+      - 5F 4E 65 63 72 6F 42 72 65 74 6F 6E 50 61 75 6C 53 6B 20 3D 3D 20 30 05 01 73 04 00 02 20 31 0C
+      - 01 06 70 6C 61 79 65 72 0E 11 14 41 31 5F 4E 65 63 72 6F 42 72 65 74 6F 6E 50 61 75 6C 53 6B 09
+      - 01 05 01 73 03 00 02 20 31 09 01 09 01 0C 01 06 70 6C 61 79 65 72 06 01 0A 1D 20 58 FD 10 20 6F
+      - 12 41 31 5F 4E 65 63 72 6F 44 75 6E 6D 65 72 50 61 75 6C 20 3E 20 30 06 01 02 09 20 73 03 00 20
+      - 3D 3D 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 12 41 31 5F 4E 65 63 72 6F
+      - 44 75 6E 6D 65 72 50 61 75 6C 01 00 07 01 05 0C 01 06 70 6C 61 79 65 72 06 01 02 1E 20 58 99 11
+      - 20 6F 12 41 31 5F 4E 65 63 72 6F 44 75 6E 6D 65 72 50 61 75 6C 20 3D 3D 20 30 05 01 73 04 00 02
+      - 20 31 0C 01 06 70 6C 61 79 65 72 0E 11 12 41 31 5F 4E 65 63 72 6F 44 75 6E 6D 65 72 50 61 75 6C
+      - 09 01 05 01 73 03 00 02 20 31 09 01 09 01 0C 01 06 70 6C 61 79 65 72 06 01 0A 1F 20 58 FD 10 20
+      - 6F 14 41 31 5F 4E 65 63 72 6F 44 75 6E 6D 65 72 50 61 75 6C 53 6B 20 3E 20 30 06 01 02 09 20 73
+      - 03 00 20 3D 3D 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 14 41 31 5F 4E 65
+      - 63 72 6F 44 75 6E 6D 65 72 50 61 75 6C 53 6B 01 00 07 01 05 0C 01 06 70 6C 61 79 65 72 06 01 02
+      - 20 20 58 99 11 20 6F 14 41 31 5F 4E 65 63 72 6F 44 75 6E 6D 65 72 50 61 75 6C 53 6B 20 3D 3D 20
+      - 30 05 01 73 04 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0E 11 14 41 31 5F 4E 65 63 72 6F 44 75 6E
+      - 6D 65 72 50 61 75 6C 53 6B 09 01 05 01 73 03 00 02 20 31 09 01 09 01 0C 01 06 70 6C 61 79 65 72
+      - 06 01 0A 1A 20 58 FD 10 20 6F 0F 41 31 5F 4E 65 63 72 6F 49 6D 70 50 61 75 6C 20 3E 20 30 06 01
+      - 02 09 20 73 03 00 20 3D 3D 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 0F 41
+      - 31 5F 4E 65 63 72 6F 49 6D 70 50 61 75 6C 01 00 07 01 05 0C 01 06 70 6C 61 79 65 72 06 01 02 1B
+      - 20 58 99 11 20 6F 0F 41 31 5F 4E 65 63 72 6F 49 6D 70 50 61 75 6C 20 3D 3D 20 30 05 01 73 04 00
+      - 02 20 31 0C 01 06 70 6C 61 79 65 72 0E 11 0F 41 31 5F 4E 65 63 72 6F 49 6D 70 50 61 75 6C 09 01
+      - 05 01 73 03 00 02 20 31 09 01 09 01 0C 01 06 70 6C 61 79 65 72 06 01 0A 1C 20 58 FD 10 20 6F 11
+      - 41 31 5F 4E 65 63 72 6F 49 6D 70 50 61 75 6C 53 6B 20 3E 20 30 06 01 02 09 20 73 03 00 20 3D 3D
+      - 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 11 41 31 5F 4E 65 63 72 6F 49 6D
+      - 70 50 61 75 6C 53 6B 01 00 07 01 05 0C 01 06 70 6C 61 79 65 72 06 01 02 1D 20 58 99 11 20 6F 11
+      - 41 31 5F 4E 65 63 72 6F 49 6D 70 50 61 75 6C 53 6B 20 3D 3D 20 30 05 01 73 04 00 02 20 31 0C 01
+      - 06 70 6C 61 79 65 72 0E 11 11 41 31 5F 4E 65 63 72 6F 49 6D 70 50 61 75 6C 53 6B 09 01 05 01 73
+      - 03 00 02 20 31 09 01 09 01 0C 01 06 70 6C 61 79 65 72 06 01 0A 1A 20 58 FD 10 20 6F 0F 41 31 5F
+      - 4E 65 63 72 6F 4B 68 61 50 61 75 6C 20 3E 20 30 06 01 02 09 20 73 03 00 20 3D 3D 20 31 05 01 73
+      - 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 0F 41 31 5F 4E 65 63 72 6F 4B 68 61 50 61 75 6C
+      - 01 00 07 01 05 0C 01 06 70 6C 61 79 65 72 06 01 02 1B 20 58 99 11 20 6F 0F 41 31 5F 4E 65 63 72
+      - 6F 4B 68 61 50 61 75 6C 20 3D 3D 20 30 05 01 73 04 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0E 11
+      - 0F 41 31 5F 4E 65 63 72 6F 4B 68 61 50 61 75 6C 09 01 05 01 73 03 00 02 20 31 09 01 09 01 0C 01
+      - 06 70 6C 61 79 65 72 06 01 0A 1C 20 58 FD 10 20 6F 11 41 31 5F 4E 65 63 72 6F 4B 68 61 50 61 75
+      - 6C 53 6B 20 3E 20 30 06 01 02 09 20 73 03 00 20 3D 3D 20 31 05 01 73 02 00 02 20 31 0C 01 06 70
+      - 6C 61 79 65 72 0D 11 11 41 31 5F 4E 65 63 72 6F 4B 68 61 50 61 75 6C 53 6B 01 00 07 01 05 0C 01
+      - 06 70 6C 61 79 65 72 06 01 02 1D 20 58 99 11 20 6F 11 41 31 5F 4E 65 63 72 6F 4B 68 61 50 61 75
+      - 6C 53 6B 20 3D 3D 20 30 05 01 73 04 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0E 11 11 41 31 5F 4E
+      - 65 63 72 6F 4B 68 61 50 61 75 6C 53 6B 09 01 05 01 73 03 00 02 20 31 09 01 09 01 0C 01 06 70 6C
+      - 61 79 65 72 06 01 0A 1B 20 58 FD 10 20 6F 10 41 31 5F 4E 65 63 72 6F 4E 6F 72 64 50 61 75 6C 20
+      - 3E 20 30 06 01 02 09 20 73 03 00 20 3D 3D 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65
+      - 72 0D 11 10 41 31 5F 4E 65 63 72 6F 4E 6F 72 64 50 61 75 6C 01 00 07 01 05 0C 01 06 70 6C 61 79
+      - 65 72 06 01 02 1C 20 58 99 11 20 6F 10 41 31 5F 4E 65 63 72 6F 4E 6F 72 64 50 61 75 6C 20 3D 3D
+      - 20 30 05 01 73 04 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0E 11 10 41 31 5F 4E 65 63 72 6F 4E 6F
+      - 72 64 50 61 75 6C 09 01 05 01 73 03 00 02 20 31 09 01 09 01 0C 01 06 70 6C 61 79 65 72 06 01 0A
+      - 1D 20 58 FD 10 20 6F 12 41 31 5F 4E 65 63 72 6F 4E 6F 72 64 50 61 75 6C 53 6B 20 3E 20 30 06 01
+      - 02 09 20 73 03 00 20 3D 3D 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 12 41
+      - 31 5F 4E 65 63 72 6F 4E 6F 72 64 50 61 75 6C 53 6B 01 00 07 01 05 0C 01 06 70 6C 61 79 65 72 06
+      - 01 02 1E 20 58 99 11 20 6F 12 41 31 5F 4E 65 63 72 6F 4E 6F 72 64 50 61 75 6C 53 6B 20 3D 3D 20
+      - 30 05 01 73 04 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0E 11 12 41 31 5F 4E 65 63 72 6F 4E 6F 72
+      - 64 50 61 75 6C 53 6B 09 01 05 01 73 03 00 02 20 31 09 01 09 01 0C 01 06 70 6C 61 79 65 72 06 01
+      - 0A 1A 20 58 FD 10 20 6F 0F 41 31 5F 4E 65 63 72 6F 4F 72 63 50 61 75 6C 20 3E 20 30 06 01 02 09
+      - 20 73 03 00 20 3D 3D 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 0F 41 31 5F
+      - 4E 65 63 72 6F 4F 72 63 50 61 75 6C 01 00 07 01 05 0C 01 06 70 6C 61 79 65 72 06 01 02 1B 20 58
+      - 99 11 20 6F 0F 41 31 5F 4E 65 63 72 6F 4F 72 63 50 61 75 6C 20 3D 3D 20 30 05 01 73 04 00 02 20
+      - 31 0C 01 06 70 6C 61 79 65 72 0E 11 0F 41 31 5F 4E 65 63 72 6F 4F 72 63 50 61 75 6C 09 01 05 01
+      - 73 03 00 02 20 31 09 01 09 01 0C 01 06 70 6C 61 79 65 72 06 01 0A 1C 20 58 FD 10 20 6F 11 41 31
+      - 5F 4E 65 63 72 6F 4F 72 63 50 61 75 6C 53 6B 20 3E 20 30 06 01 02 09 20 73 03 00 20 3D 3D 20 31
+      - 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 11 41 31 5F 4E 65 63 72 6F 4F 72 63 50
+      - 61 75 6C 53 6B 01 00 07 01 05 0C 01 06 70 6C 61 79 65 72 06 01 02 1D 20 58 99 11 20 6F 11 41 31
+      - 5F 4E 65 63 72 6F 4F 72 63 50 61 75 6C 53 6B 20 3D 3D 20 30 05 01 73 04 00 02 20 31 0C 01 06 70
+      - 6C 61 79 65 72 0E 11 11 41 31 5F 4E 65 63 72 6F 4F 72 63 50 61 75 6C 53 6B 09 01 05 01 73 03 00
+      - 02 20 31 09 01 09 01 0C 01 06 70 6C 61 79 65 72 06 01 0A 19 20 58 FD 10 20 6F 0E 41 31 5F 4E 65
+      - 63 72 6F 52 67 50 61 75 6C 20 3E 20 30 06 01 02 09 20 73 03 00 20 3D 3D 20 31 05 01 73 02 00 02
+      - 20 31 0C 01 06 70 6C 61 79 65 72 0D 11 0E 41 31 5F 4E 65 63 72 6F 52 67 50 61 75 6C 01 00 07 01
+      - 05 0C 01 06 70 6C 61 79 65 72 06 01 02 1A 20 58 99 11 20 6F 0E 41 31 5F 4E 65 63 72 6F 52 67 50
+      - 61 75 6C 20 3D 3D 20 30 05 01 73 04 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0E 11 0E 41 31 5F 4E
+      - 65 63 72 6F 52 67 50 61 75 6C 09 01 05 01 73 03 00 02 20 31 09 01 09 01 0C 01 06 70 6C 61 79 65
+      - 72 06 01 0A 1B 20 58 FD 10 20 6F 10 41 31 5F 4E 65 63 72 6F 52 67 50 61 75 6C 53 6B 20 3E 20 30
+      - 06 01 02 09 20 73 03 00 20 3D 3D 20 31 05 01 73 02 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0D 11
+      - 10 41 31 5F 4E 65 63 72 6F 52 67 50 61 75 6C 53 6B 01 00 07 01 05 0C 01 06 70 6C 61 79 65 72 06
+      - 01 02 1C 20 58 99 11 20 6F 10 41 31 5F 4E 65 63 72 6F 52 67 50 61 75 6C 53 6B 20 3D 3D 20 30 05
+      - 01 73 04 00 02 20 31 0C 01 06 70 6C 61 79 65 72 0E 11 10 41 31 5F 4E 65 63 72 6F 52 67 50 61 75
+      - 6C 53 6B 09 01 05 01 73 03 00 02 20 31 09 01 09 01 06 01 01 09 20 73 02 00 20 3D 3D 20 31 00 10
+      - 1F 00 CD E5 F1 F2 E8 20 E1 EE EB FC F8 E5 20 EE E4 ED EE E3 EE 20 F2 E5 EB E0 20 F2 FF E6 E5 EB
+      - EE 00 00 09 01 06 01 01 09 20 73 04 00 20 3D 3D 20 31 00 10 3C 00 CD E5 F1 F2 E8 20 F2 E5 EB EE
+      - 20 F2 FF E6 E5 EB EE 2C 20 EF EE FD F2 EE EC F3 20 E2 FB 20 EF E5 F0 E5 E1 F0 E0 F1 FB E2 E0 E5
+      - F2 E5 20 E5 E3 EE 20 F7 E5 F0 E5 E7 20 EF EB E5 F7 EE 00 00 09 01 01 01
+  - SCTX:
+    - begin A1_NecroPaulSc
+    - ''
+    - short delay
+    - short dropped
+    - short drop
+    - short equipped
+    - ''
+    - if ( MenuMode == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - set delay to ( delay + 1 )
+    - if ( delay < 1000 )
+    - "\treturn"
+    - endif
+    - set delay to 0
+    - ''
+    - set dropped to 0
+    - while ( player->GetItemCount A1_NecroAltmerPaul > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroAltmerPaul, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroAltmerPaulSk > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroAltmerPaulSk, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroArgPaul > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroArgPaul, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroArgPaulSk > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroArgPaulSk, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroBosmerPaul > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroBosmerPaul, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroBosmerPaulSk > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroBosmerPaulSk, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroBretonPaul > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroBretonPaul, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroBretonPaulSk > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroBretonPaulSk, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroDunmerPaul > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroDunmerPaul, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroDunmerPaulSk > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroDunmerPaulSk, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroImpPaul > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroImpPaul, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroImpPaulSk > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroImpPaulSk, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroKhaPaul > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroKhaPaul, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroKhaPaulSk > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroKhaPaulSk, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroNordPaul > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroNordPaul, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroNordPaulSk > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroNordPaulSk, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroOrcPaul > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroOrcPaul, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroOrcPaulSk > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroOrcPaulSk, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroRgPaul > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroRgPaul, 1"
+    - endwhile
+    - while ( player->GetItemCount A1_NecroRgPaulSk > 1 )
+    - "\tset dropped to 1"
+    - "\tplayer->Drop A1_NecroRgPaulSk, 1"
+    - endwhile
+    - ''
+    - set equipped to 0
+    - set drop to 0
+    - if ( player->GetItemCount A1_NecroAltmerPaul > 0 )
+    - "\tif ( player->HasItemEquipped A1_NecroAltmerPaul == 0 )"
+    - "\t\tset equipped to 1"
+    - "\t\tplayer->Equip A1_NecroAltmerPaul"
+    - "\tendif"
+    - "\tset drop to 1"
+    - endif
+    - if ( player->GetItemCount A1_NecroAltmerPaulSk > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroAltmerPaulSk, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroAltmerPaulSk == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroAltmerPaulSk"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroArgPaul > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroArgPaul, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroArgPaul == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroArgPaul"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroArgPaulSk > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroArgPaulSk, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroArgPaulSk == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroArgPaulSk"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroBosmerPaul > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroBosmerPaul, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroBosmerPaul == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroBosmerPaul"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroBosmerPaulSk > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroBosmerPaulSk, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroBosmerPaulSk == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroBosmerPaulSk"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroBretonPaul > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroBretonPaul, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroBretonPaul == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroBretonPaul"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroBretonPaulSk > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroBretonPaulSk, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroBretonPaulSk == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroBretonPaulSk"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroDunmerPaul > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroDunmerPaul, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroDunmerPaul == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroDunmerPaul"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroDunmerPaulSk > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroDunmerPaulSk, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroDunmerPaulSk == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroDunmerPaulSk"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroImpPaul > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroImpPaul, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroImpPaul == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroImpPaul"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroImpPaulSk > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroImpPaulSk, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroImpPaulSk == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroImpPaulSk"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroKhaPaul > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroKhaPaul, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroKhaPaul == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroKhaPaul"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroKhaPaulSk > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroKhaPaulSk, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroKhaPaulSk == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroKhaPaulSk"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroNordPaul > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroNordPaul, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroNordPaul == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroNordPaul"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroNordPaulSk > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroNordPaulSk, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroNordPaulSk == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroNordPaulSk"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroOrcPaul > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroOrcPaul, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroOrcPaul == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroOrcPaul"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroOrcPaulSk > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroOrcPaulSk, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroOrcPaulSk == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroOrcPaulSk"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroRgPaul > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroRgPaul, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroRgPaul == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroRgPaul"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - if ( player->GetItemCount A1_NecroRgPaulSk > 0 )
+    - "\tif ( drop == 1 )"
+    - "\t\tset dropped to 1"
+    - "\t\tplayer->Drop A1_NecroRgPaulSk, 1"
+    - "\telse"
+    - "\t\tif ( player->HasItemEquipped A1_NecroRgPaulSk == 0 )"
+    - "\t\t\tset equipped to 1"
+    - "\t\t\tplayer->Equip A1_NecroRgPaulSk"
+    - "\t\tendif"
+    - "\t\tset drop to 1"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( dropped == 1 )
+    - "\tMessageBox \"Нести больше одного тела тяжело\""
+    - endif
+    - ''
+    - if ( equipped == 1 )
+    - "\tMessageBox \"Нести тело тяжело, поэтому вы перебрасываете его через плечо\""
+    - endif
+    - ''
+    - end
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroStart
+      vars:
+        shorts: 0
+        longs: 0
+        floats: 0
+      data_size: 67
+      var_table_size: 0
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 1
+        - " X\x1D\x10 m\x0EA1_NecroPaulSc == 0"
+      - func: StartScript
+        args: A1_NecroPaulSc
+      - func: EndIf
+        args: null
+      - func: StopScript
+        args: A1_NecroStart
+      - func: End
+        args: null
+      raw: []
+  - SCTX:
+    - begin A1_NecroStart
+    - ''
+    - if ( ScriptRunning A1_NecroPaulSc == 0 )
+    - "\tStartScript A1_NecroPaulSc"
+    - endif
+    - ''
+    - StopScript A1_NecroStart
+    - ''
+    - end
+
+- SSCR:
+  - DATA: '13465308143273012083'
+  - NAME: A1_NecroStart
 
 - SPEL:
   - NAME: A1_NecroPrepare
@@ -176,7 +792,7 @@
       health: 100
       enchantment: 0
       armor: 0
-  - ITEX: a1\body_de.dds
+  - ITEX: a1n\body_de.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroDunmerCarry
 
