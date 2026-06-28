@@ -888,7 +888,7 @@
 
 - ARMO:
   - NAME: A1_NecroAltmerPaulSk
-  - MODL: o\contain_corpse00.nif
+  - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет высокого эльфа
   - AODT:
       type: LeftPauldron
@@ -903,7 +903,7 @@
 
 - ARMO:
   - NAME: A1_NecroArgPaulSk
-  - MODL: o\contain_corpse00.nif
+  - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет аргонианина
   - AODT:
       type: LeftPauldron
@@ -918,7 +918,7 @@
 
 - ARMO:
   - NAME: A1_NecroBosmerPaulSk
-  - MODL: o\contain_corpse00.nif
+  - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет лесного эльфа
   - AODT:
       type: LeftPauldron
@@ -933,7 +933,7 @@
 
 - ARMO:
   - NAME: A1_NecroDunmerPaulSk
-  - MODL: o\contain_corpse00.nif
+  - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет данмера
   - AODT:
       type: LeftPauldron
@@ -948,7 +948,7 @@
 
 - ARMO:
   - NAME: A1_NecroImpPaulSk
-  - MODL: o\contain_corpse00.nif
+  - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет имперца
   - AODT:
       type: LeftPauldron
@@ -963,7 +963,7 @@
 
 - ARMO:
   - NAME: A1_NecroKhaPaulSk
-  - MODL: o\contain_corpse00.nif
+  - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет хаджита
   - AODT:
       type: LeftPauldron
@@ -978,7 +978,7 @@
 
 - ARMO:
   - NAME: A1_NecroNordPaulSk
-  - MODL: o\contain_corpse00.nif
+  - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет норда
   - AODT:
       type: LeftPauldron
@@ -993,7 +993,7 @@
 
 - ARMO:
   - NAME: A1_NecroOrcPaulSk
-  - MODL: o\contain_corpse00.nif
+  - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет орка
   - AODT:
       type: LeftPauldron
@@ -1008,7 +1008,7 @@
 
 - ARMO:
   - NAME: A1_NecroRgPaulSk
-  - MODL: o\contain_corpse00.nif
+  - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет редгарда
   - AODT:
       type: LeftPauldron
@@ -1023,7 +1023,7 @@
 
 - ARMO:
   - NAME: A1_NecroBretonPaulSk
-  - MODL: o\contain_corpse00.nif
+  - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет бретона
   - AODT:
       type: LeftPauldron
