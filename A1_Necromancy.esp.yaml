@@ -6,13 +6,5770 @@
       description:
       - Профессиональный некромант.
       - Основан на Blasphemous Revenants v1.3, который создан Fliggerty и переведён Gwathlobal
-      records: 32
+      records: 80
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
   - DATA: 6616539
   - MAST: Bloodmoon.esm
   - DATA: 11799703
+
+- GLOB:
+  - NAME: A1_NecroX
+  - FNAM: f
+  - FLTV: 0.0
+
+- GLOB:
+  - NAME: A1_NecroY
+  - FNAM: f
+  - FLTV: 0.0
+
+- GLOB:
+  - NAME: A1_NecroZ
+  - FNAM: f
+  - FLTV: 0.0
+
+- GLOB:
+  - NAME: A1_NecroLock
+  - FNAM: s
+  - FLTV: 0.0
+
+- GLOB:
+  - NAME: A1_NecroXRot
+  - FNAM: f
+  - FLTV: 0.0
+
+- GLOB:
+  - NAME: A1_NecroYRot
+  - FNAM: f
+  - FLTV: 0.0
+
+- GLOB:
+  - NAME: A1_NecroZRot
+  - FNAM: f
+  - FLTV: 0.0
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroAltmerBodySc
+      vars:
+        shorts: 3
+        longs: 0
+        floats: 3
+      data_size: 931
+      var_table_size: 34
+  - SCVR:
+    - state
+    - count
+    - temp
+    - timer
+    - time
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 4"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 18
+        - " s\x01\0 == 0"
+      - func: If
+        args:
+        - 2
+        - " X\x12\x11 c\x15Район Горького Берега == 0"
+      - func: MessageBox
+        args:
+        - Здесь тело будет очень долго оставаться нетронутым
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Else
+        args: 13
+      - func: MessageBox
+        args:
+        - Через два-три дня от тела останется лишь скелет
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 48 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " X!\x10d\000"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 100 /"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " s\x01\0 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " X \x10 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 < 100"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 0'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 f\x03\0 +"
+      - func: If
+        args:
+        - 1
+        - " f\x02\0 < f\x01\0\0"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 3'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 21
+        - " s\x01\0 == 3"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\fA1_NecroLock\0"
+      - func: If
+        args:
+        - 18
+        - " s\x03\0 == 0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroX
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroY
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZ
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroXRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroYRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZRot
+        - " f\x03\0\0"
+      raw:
+      - BA 11 14 41 31 5F 4E 65 63 72 6F 41 6C 74 6D 65 72 42 6F 64 79 53 6B 01 00 00 00 80 3F 01 00 BA
+      - 11 07 6D 75 64 63 72 61 62 01 00 00 00 C8 42 00 00 DB 10 05 01 73 02 00 02 20 30 05 01 73 01 00
+      - 02 20 34 09 01 09 01 01 01
+  - SCTX:
+    - begin A1_NecroAltmerBodySc
+    - ''
+    - short state
+    - float timer
+    - float time
+    - short count
+    - short temp
+    - float tempF
+    - ''
+    - if ( state == 4 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tif ( GetPCCell \"Район Горького Берега\" == 0 )"
+    - "\t\tMessageBox \"Здесь тело будет очень долго оставаться нетронутым\""
+    - "\t\tset state to 1"
+    - "\telse"
+    - "\t\tMessageBox \"Через два-три дня от тела останется лишь скелет\""
+    - "\t\tset state to 2"
+    - "\t\tset temp to DaysPassed"
+    - "\t\tset timer to temp"
+    - "\t\tset timer to ( timer * 24 )"
+    - "\t\tset tempF to GameHour"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\t\tset timer to ( timer + 48 )"
+    - "\t\tset temp to ( Random 100 )"
+    - "\t\tset tempF to temp"
+    - "\t\tset tempF to ( tempF / 100 )"
+    - "\t\tset tempF to ( tempF * 24 )"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( state == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( MenuMode == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count < 100 )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset count to 0"
+    - "\tset temp to DaysPassed"
+    - "\tset time to temp"
+    - "\tset time to ( time * 24 )"
+    - "\tset tempF to GameHour"
+    - "\tset time to ( time + tempF )"
+    - "\tif ( time < timer )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset state to 3"
+    - endif
+    - ''
+    - if ( state == 3 )
+    - "\tset temp to A1_NecroLock"
+    - "\tif ( temp == 0 )"
+    - "\t\tset A1_NecroLock to 1"
+    - "\t\tset tempF to ( GetPos X )"
+    - "\t\tset A1_NecroX to tempF"
+    - "\t\tset tempF to ( GetPos Y )"
+    - "\t\tset A1_NecroY to tempF"
+    - "\t\tset tempF to ( GetPos Z )"
+    - "\t\tset A1_NecroZ to tempF"
+    - "\t\tset tempF to ( GetAngle X )"
+    - "\t\tset A1_NecroXRot to tempF"
+    - "\t\tset tempF to ( GetAngle Y )"
+    - "\t\tset A1_NecroYRot to tempF"
+    - "\t\tset tempF to ( GetAngle Z )"
+    - "\t\tset A1_NecroZRot to tempF"
+    - "\t\tPlaceAtMe A1_NecroAltmerBodySk 1 1 1"
+    - "\t\tPlaceAtMe mudcrab 1 100 0"
+    - "\t\tDisable"
+    - "\t\tset count to 0"
+    - "\t\tset state to 4"
+    - "\tendif"
+    - endif
+    - ''
+    - end
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroAltmerBodySkSc
+      vars:
+        shorts: 2
+        longs: 0
+        floats: 1
+      data_size: 319
+      var_table_size: 18
+  - SCVR:
+    - state
+    - count
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroX\0"
+      - func: SetPos
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroY\0"
+      - func: SetPos
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroZ\0"
+      - func: SetPos
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroXRot\0"
+      - func: SetAngle
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroYRot\0"
+      - func: SetAngle
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroZRot\0"
+      - func: SetAngle
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 3
+        - " X\x18\x10 == 1"
+      - func: Disable
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: SetRef
+        args: player
+      - func: AddItem
+        args:
+        - A1_NecroAltmerPaulSk
+        - 1
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
+  - SCTX:
+    - begin A1_NecroAltmerBodySkSc
+    - ''
+    - short state
+    - float tempF
+    - short count
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tset state to 1"
+    - "\tset tempF to A1_NecroX"
+    - "\tSetPos X tempF"
+    - "\tset tempF to A1_NecroY"
+    - "\tSetPos Y tempF"
+    - "\tset tempF to A1_NecroZ"
+    - "\tSetPos Z tempF"
+    - "\tset tempF to A1_NecroXRot"
+    - "\tSetAngle X tempF"
+    - "\tset tempF to A1_NecroYRot"
+    - "\tSetAngle Y tempF"
+    - "\tset tempF to A1_NecroZRot"
+    - "\tSetAngle Z tempF"
+    - "\tset A1_NecroLock to 0"
+    - endif
+    - ''
+    - if ( OnActivate == 1 )
+    - "\tDisable"
+    - "\tset state to 2"
+    - "\tplayer->AddItem A1_NecroAltmerPaulSk 1"
+    - endif
+    - ''
+    - end
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroArgBodySc
+      vars:
+        shorts: 3
+        longs: 0
+        floats: 3
+      data_size: 928
+      var_table_size: 34
+  - SCVR:
+    - state
+    - count
+    - temp
+    - timer
+    - time
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 4"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 18
+        - " s\x01\0 == 0"
+      - func: If
+        args:
+        - 2
+        - " X\x12\x11 c\x15Район Горького Берега == 0"
+      - func: MessageBox
+        args:
+        - Здесь тело будет очень долго оставаться нетронутым
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Else
+        args: 13
+      - func: MessageBox
+        args:
+        - Через два-три дня от тела останется лишь скелет
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 48 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " X!\x10d\000"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 100 /"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " s\x01\0 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " X \x10 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 < 100"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 0'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 f\x03\0 +"
+      - func: If
+        args:
+        - 1
+        - " f\x02\0 < f\x01\0\0"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 3'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 21
+        - " s\x01\0 == 3"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\fA1_NecroLock\0"
+      - func: If
+        args:
+        - 18
+        - " s\x03\0 == 0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroX
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroY
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZ
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroXRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroYRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZRot
+        - " f\x03\0\0"
+      raw:
+      - BA 11 11 41 31 5F 4E 65 63 72 6F 41 72 67 42 6F 64 79 53 6B 01 00 00 00 80 3F 01 00 BA 11 07 6D
+      - 75 64 63 72 61 62 01 00 00 00 C8 42 00 00 DB 10 05 01 73 02 00 02 20 30 05 01 73 01 00 02 20 34
+      - 09 01 09 01 01 01
+  - SCTX:
+    - begin A1_NecroArgBodySc
+    - ''
+    - short state
+    - float timer
+    - float time
+    - short count
+    - short temp
+    - float tempF
+    - ''
+    - if ( state == 4 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tif ( GetPCCell \"Район Горького Берега\" == 0 )"
+    - "\t\tMessageBox \"Здесь тело будет очень долго оставаться нетронутым\""
+    - "\t\tset state to 1"
+    - "\telse"
+    - "\t\tMessageBox \"Через два-три дня от тела останется лишь скелет\""
+    - "\t\tset state to 2"
+    - "\t\tset temp to DaysPassed"
+    - "\t\tset timer to temp"
+    - "\t\tset timer to ( timer * 24 )"
+    - "\t\tset tempF to GameHour"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\t\tset timer to ( timer + 48 )"
+    - "\t\tset temp to ( Random 100 )"
+    - "\t\tset tempF to temp"
+    - "\t\tset tempF to ( tempF / 100 )"
+    - "\t\tset tempF to ( tempF * 24 )"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( state == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( MenuMode == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count < 100 )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset count to 0"
+    - "\tset temp to DaysPassed"
+    - "\tset time to temp"
+    - "\tset time to ( time * 24 )"
+    - "\tset tempF to GameHour"
+    - "\tset time to ( time + tempF )"
+    - "\tif ( time < timer )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset state to 3"
+    - endif
+    - ''
+    - if ( state == 3 )
+    - "\tset temp to A1_NecroLock"
+    - "\tif ( temp == 0 )"
+    - "\t\tset A1_NecroLock to 1"
+    - "\t\tset tempF to ( GetPos X )"
+    - "\t\tset A1_NecroX to tempF"
+    - "\t\tset tempF to ( GetPos Y )"
+    - "\t\tset A1_NecroY to tempF"
+    - "\t\tset tempF to ( GetPos Z )"
+    - "\t\tset A1_NecroZ to tempF"
+    - "\t\tset tempF to ( GetAngle X )"
+    - "\t\tset A1_NecroXRot to tempF"
+    - "\t\tset tempF to ( GetAngle Y )"
+    - "\t\tset A1_NecroYRot to tempF"
+    - "\t\tset tempF to ( GetAngle Z )"
+    - "\t\tset A1_NecroZRot to tempF"
+    - "\t\tPlaceAtMe A1_NecroArgBodySk 1 1 1"
+    - "\t\tPlaceAtMe mudcrab 1 100 0"
+    - "\t\tDisable"
+    - "\t\tset count to 0"
+    - "\t\tset state to 4"
+    - "\tendif"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroArgBodySkSc
+      vars:
+        shorts: 2
+        longs: 0
+        floats: 1
+      data_size: 316
+      var_table_size: 18
+  - SCVR:
+    - state
+    - count
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroX\0"
+      - func: SetPos
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroY\0"
+      - func: SetPos
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroZ\0"
+      - func: SetPos
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroXRot\0"
+      - func: SetAngle
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroYRot\0"
+      - func: SetAngle
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroZRot\0"
+      - func: SetAngle
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 3
+        - " X\x18\x10 == 1"
+      - func: Disable
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: SetRef
+        args: player
+      - func: AddItem
+        args:
+        - A1_NecroArgPaulSk
+        - 1
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
+  - SCTX:
+    - begin A1_NecroArgBodySkSc
+    - ''
+    - short state
+    - float tempF
+    - short count
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tset state to 1"
+    - "\tset tempF to A1_NecroX"
+    - "\tSetPos X tempF"
+    - "\tset tempF to A1_NecroY"
+    - "\tSetPos Y tempF"
+    - "\tset tempF to A1_NecroZ"
+    - "\tSetPos Z tempF"
+    - "\tset tempF to A1_NecroXRot"
+    - "\tSetAngle X tempF"
+    - "\tset tempF to A1_NecroYRot"
+    - "\tSetAngle Y tempF"
+    - "\tset tempF to A1_NecroZRot"
+    - "\tSetAngle Z tempF"
+    - "\tset A1_NecroLock to 0"
+    - endif
+    - ''
+    - if ( OnActivate == 1 )
+    - "\tDisable"
+    - "\tset state to 2"
+    - "\tplayer->AddItem A1_NecroArgPaulSk 1"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroBosmerBodySc
+      vars:
+        shorts: 3
+        longs: 0
+        floats: 3
+      data_size: 931
+      var_table_size: 34
+  - SCVR:
+    - state
+    - count
+    - temp
+    - timer
+    - time
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 4"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 18
+        - " s\x01\0 == 0"
+      - func: If
+        args:
+        - 2
+        - " X\x12\x11 c\x15Район Горького Берега == 0"
+      - func: MessageBox
+        args:
+        - Здесь тело будет очень долго оставаться нетронутым
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Else
+        args: 13
+      - func: MessageBox
+        args:
+        - Через два-три дня от тела останется лишь скелет
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 48 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " X!\x10d\000"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 100 /"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " s\x01\0 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " X \x10 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 < 100"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 0'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 f\x03\0 +"
+      - func: If
+        args:
+        - 1
+        - " f\x02\0 < f\x01\0\0"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 3'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 21
+        - " s\x01\0 == 3"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\fA1_NecroLock\0"
+      - func: If
+        args:
+        - 18
+        - " s\x03\0 == 0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroX
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroY
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZ
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroXRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroYRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZRot
+        - " f\x03\0\0"
+      raw:
+      - BA 11 14 41 31 5F 4E 65 63 72 6F 42 6F 73 6D 65 72 42 6F 64 79 53 6B 01 00 00 00 80 3F 01 00 BA
+      - 11 07 6D 75 64 63 72 61 62 01 00 00 00 C8 42 00 00 DB 10 05 01 73 02 00 02 20 30 05 01 73 01 00
+      - 02 20 34 09 01 09 01 01 01
+  - SCTX:
+    - begin A1_NecroBosmerBodySc
+    - ''
+    - short state
+    - float timer
+    - float time
+    - short count
+    - short temp
+    - float tempF
+    - ''
+    - if ( state == 4 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tif ( GetPCCell \"Район Горького Берега\" == 0 )"
+    - "\t\tMessageBox \"Здесь тело будет очень долго оставаться нетронутым\""
+    - "\t\tset state to 1"
+    - "\telse"
+    - "\t\tMessageBox \"Через два-три дня от тела останется лишь скелет\""
+    - "\t\tset state to 2"
+    - "\t\tset temp to DaysPassed"
+    - "\t\tset timer to temp"
+    - "\t\tset timer to ( timer * 24 )"
+    - "\t\tset tempF to GameHour"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\t\tset timer to ( timer + 48 )"
+    - "\t\tset temp to ( Random 100 )"
+    - "\t\tset tempF to temp"
+    - "\t\tset tempF to ( tempF / 100 )"
+    - "\t\tset tempF to ( tempF * 24 )"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( state == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( MenuMode == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count < 100 )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset count to 0"
+    - "\tset temp to DaysPassed"
+    - "\tset time to temp"
+    - "\tset time to ( time * 24 )"
+    - "\tset tempF to GameHour"
+    - "\tset time to ( time + tempF )"
+    - "\tif ( time < timer )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset state to 3"
+    - endif
+    - ''
+    - if ( state == 3 )
+    - "\tset temp to A1_NecroLock"
+    - "\tif ( temp == 0 )"
+    - "\t\tset A1_NecroLock to 1"
+    - "\t\tset tempF to ( GetPos X )"
+    - "\t\tset A1_NecroX to tempF"
+    - "\t\tset tempF to ( GetPos Y )"
+    - "\t\tset A1_NecroY to tempF"
+    - "\t\tset tempF to ( GetPos Z )"
+    - "\t\tset A1_NecroZ to tempF"
+    - "\t\tset tempF to ( GetAngle X )"
+    - "\t\tset A1_NecroXRot to tempF"
+    - "\t\tset tempF to ( GetAngle Y )"
+    - "\t\tset A1_NecroYRot to tempF"
+    - "\t\tset tempF to ( GetAngle Z )"
+    - "\t\tset A1_NecroZRot to tempF"
+    - "\t\tPlaceAtMe A1_NecroBosmerBodySk 1 1 1"
+    - "\t\tPlaceAtMe mudcrab 1 100 0"
+    - "\t\tDisable"
+    - "\t\tset count to 0"
+    - "\t\tset state to 4"
+    - "\tendif"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroBosmerBodySkSc
+      vars:
+        shorts: 2
+        longs: 0
+        floats: 1
+      data_size: 319
+      var_table_size: 18
+  - SCVR:
+    - state
+    - count
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroX\0"
+      - func: SetPos
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroY\0"
+      - func: SetPos
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroZ\0"
+      - func: SetPos
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroXRot\0"
+      - func: SetAngle
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroYRot\0"
+      - func: SetAngle
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroZRot\0"
+      - func: SetAngle
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 3
+        - " X\x18\x10 == 1"
+      - func: Disable
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: SetRef
+        args: player
+      - func: AddItem
+        args:
+        - A1_NecroBosmerPaulSk
+        - 1
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
+  - SCTX:
+    - begin A1_NecroBosmerBodySkSc
+    - ''
+    - short state
+    - float tempF
+    - short count
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tset state to 1"
+    - "\tset tempF to A1_NecroX"
+    - "\tSetPos X tempF"
+    - "\tset tempF to A1_NecroY"
+    - "\tSetPos Y tempF"
+    - "\tset tempF to A1_NecroZ"
+    - "\tSetPos Z tempF"
+    - "\tset tempF to A1_NecroXRot"
+    - "\tSetAngle X tempF"
+    - "\tset tempF to A1_NecroYRot"
+    - "\tSetAngle Y tempF"
+    - "\tset tempF to A1_NecroZRot"
+    - "\tSetAngle Z tempF"
+    - "\tset A1_NecroLock to 0"
+    - endif
+    - ''
+    - if ( OnActivate == 1 )
+    - "\tDisable"
+    - "\tset state to 2"
+    - "\tplayer->AddItem A1_NecroBosmerPaulSk 1"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroBretonBodySc
+      vars:
+        shorts: 3
+        longs: 0
+        floats: 3
+      data_size: 931
+      var_table_size: 34
+  - SCVR:
+    - state
+    - count
+    - temp
+    - timer
+    - time
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 4"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 18
+        - " s\x01\0 == 0"
+      - func: If
+        args:
+        - 2
+        - " X\x12\x11 c\x15Район Горького Берега == 0"
+      - func: MessageBox
+        args:
+        - Здесь тело будет очень долго оставаться нетронутым
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Else
+        args: 13
+      - func: MessageBox
+        args:
+        - Через два-три дня от тела останется лишь скелет
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 48 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " X!\x10d\000"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 100 /"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " s\x01\0 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " X \x10 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 < 100"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 0'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 f\x03\0 +"
+      - func: If
+        args:
+        - 1
+        - " f\x02\0 < f\x01\0\0"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 3'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 21
+        - " s\x01\0 == 3"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\fA1_NecroLock\0"
+      - func: If
+        args:
+        - 18
+        - " s\x03\0 == 0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroX
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroY
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZ
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroXRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroYRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZRot
+        - " f\x03\0\0"
+      raw:
+      - BA 11 14 41 31 5F 4E 65 63 72 6F 42 72 65 74 6F 6E 42 6F 64 79 53 6B 01 00 00 00 80 3F 01 00 BA
+      - 11 07 6D 75 64 63 72 61 62 01 00 00 00 C8 42 00 00 DB 10 05 01 73 02 00 02 20 30 05 01 73 01 00
+      - 02 20 34 09 01 09 01 01 01
+  - SCTX:
+    - begin A1_NecroBretonBodySc
+    - ''
+    - short state
+    - float timer
+    - float time
+    - short count
+    - short temp
+    - float tempF
+    - ''
+    - if ( state == 4 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tif ( GetPCCell \"Район Горького Берега\" == 0 )"
+    - "\t\tMessageBox \"Здесь тело будет очень долго оставаться нетронутым\""
+    - "\t\tset state to 1"
+    - "\telse"
+    - "\t\tMessageBox \"Через два-три дня от тела останется лишь скелет\""
+    - "\t\tset state to 2"
+    - "\t\tset temp to DaysPassed"
+    - "\t\tset timer to temp"
+    - "\t\tset timer to ( timer * 24 )"
+    - "\t\tset tempF to GameHour"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\t\tset timer to ( timer + 48 )"
+    - "\t\tset temp to ( Random 100 )"
+    - "\t\tset tempF to temp"
+    - "\t\tset tempF to ( tempF / 100 )"
+    - "\t\tset tempF to ( tempF * 24 )"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( state == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( MenuMode == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count < 100 )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset count to 0"
+    - "\tset temp to DaysPassed"
+    - "\tset time to temp"
+    - "\tset time to ( time * 24 )"
+    - "\tset tempF to GameHour"
+    - "\tset time to ( time + tempF )"
+    - "\tif ( time < timer )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset state to 3"
+    - endif
+    - ''
+    - if ( state == 3 )
+    - "\tset temp to A1_NecroLock"
+    - "\tif ( temp == 0 )"
+    - "\t\tset A1_NecroLock to 1"
+    - "\t\tset tempF to ( GetPos X )"
+    - "\t\tset A1_NecroX to tempF"
+    - "\t\tset tempF to ( GetPos Y )"
+    - "\t\tset A1_NecroY to tempF"
+    - "\t\tset tempF to ( GetPos Z )"
+    - "\t\tset A1_NecroZ to tempF"
+    - "\t\tset tempF to ( GetAngle X )"
+    - "\t\tset A1_NecroXRot to tempF"
+    - "\t\tset tempF to ( GetAngle Y )"
+    - "\t\tset A1_NecroYRot to tempF"
+    - "\t\tset tempF to ( GetAngle Z )"
+    - "\t\tset A1_NecroZRot to tempF"
+    - "\t\tPlaceAtMe A1_NecroBretonBodySk 1 1 1"
+    - "\t\tPlaceAtMe mudcrab 1 100 0"
+    - "\t\tDisable"
+    - "\t\tset count to 0"
+    - "\t\tset state to 4"
+    - "\tendif"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroBretonBodySkSc
+      vars:
+        shorts: 2
+        longs: 0
+        floats: 1
+      data_size: 319
+      var_table_size: 18
+  - SCVR:
+    - state
+    - count
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroX\0"
+      - func: SetPos
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroY\0"
+      - func: SetPos
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroZ\0"
+      - func: SetPos
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroXRot\0"
+      - func: SetAngle
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroYRot\0"
+      - func: SetAngle
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroZRot\0"
+      - func: SetAngle
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 3
+        - " X\x18\x10 == 1"
+      - func: Disable
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: SetRef
+        args: player
+      - func: AddItem
+        args:
+        - A1_NecroBretonPaulSk
+        - 1
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
+  - SCTX:
+    - begin A1_NecroBretonBodySkSc
+    - ''
+    - short state
+    - float tempF
+    - short count
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tset state to 1"
+    - "\tset tempF to A1_NecroX"
+    - "\tSetPos X tempF"
+    - "\tset tempF to A1_NecroY"
+    - "\tSetPos Y tempF"
+    - "\tset tempF to A1_NecroZ"
+    - "\tSetPos Z tempF"
+    - "\tset tempF to A1_NecroXRot"
+    - "\tSetAngle X tempF"
+    - "\tset tempF to A1_NecroYRot"
+    - "\tSetAngle Y tempF"
+    - "\tset tempF to A1_NecroZRot"
+    - "\tSetAngle Z tempF"
+    - "\tset A1_NecroLock to 0"
+    - endif
+    - ''
+    - if ( OnActivate == 1 )
+    - "\tDisable"
+    - "\tset state to 2"
+    - "\tplayer->AddItem A1_NecroBretonPaulSk 1"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroDunmerBodySc
+      vars:
+        shorts: 3
+        longs: 0
+        floats: 3
+      data_size: 931
+      var_table_size: 34
+  - SCVR:
+    - state
+    - count
+    - temp
+    - timer
+    - time
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 4"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 18
+        - " s\x01\0 == 0"
+      - func: If
+        args:
+        - 2
+        - " X\x12\x11 c\x15Район Горького Берега == 0"
+      - func: MessageBox
+        args:
+        - Здесь тело будет очень долго оставаться нетронутым
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Else
+        args: 13
+      - func: MessageBox
+        args:
+        - Через два-три дня от тела останется лишь скелет
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 48 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " X!\x10d\000"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 100 /"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " s\x01\0 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " X \x10 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 < 100"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 0'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 f\x03\0 +"
+      - func: If
+        args:
+        - 1
+        - " f\x02\0 < f\x01\0\0"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 3'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 21
+        - " s\x01\0 == 3"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\fA1_NecroLock\0"
+      - func: If
+        args:
+        - 18
+        - " s\x03\0 == 0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroX
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroY
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZ
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroXRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroYRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZRot
+        - " f\x03\0\0"
+      raw:
+      - BA 11 14 41 31 5F 4E 65 63 72 6F 44 75 6E 6D 65 72 42 6F 64 79 53 6B 01 00 00 00 80 3F 01 00 BA
+      - 11 07 6D 75 64 63 72 61 62 01 00 00 00 C8 42 00 00 DB 10 05 01 73 02 00 02 20 30 05 01 73 01 00
+      - 02 20 34 09 01 09 01 01 01
+  - SCTX:
+    - begin A1_NecroDunmerBodySc
+    - ''
+    - short state
+    - float timer
+    - float time
+    - short count
+    - short temp
+    - float tempF
+    - ''
+    - if ( state == 4 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tif ( GetPCCell \"Район Горького Берега\" == 0 )"
+    - "\t\tMessageBox \"Здесь тело будет очень долго оставаться нетронутым\""
+    - "\t\tset state to 1"
+    - "\telse"
+    - "\t\tMessageBox \"Через два-три дня от тела останется лишь скелет\""
+    - "\t\tset state to 2"
+    - "\t\tset temp to DaysPassed"
+    - "\t\tset timer to temp"
+    - "\t\tset timer to ( timer * 24 )"
+    - "\t\tset tempF to GameHour"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\t\tset timer to ( timer + 48 )"
+    - "\t\tset temp to ( Random 100 )"
+    - "\t\tset tempF to temp"
+    - "\t\tset tempF to ( tempF / 100 )"
+    - "\t\tset tempF to ( tempF * 24 )"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( state == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( MenuMode == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count < 100 )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset count to 0"
+    - "\tset temp to DaysPassed"
+    - "\tset time to temp"
+    - "\tset time to ( time * 24 )"
+    - "\tset tempF to GameHour"
+    - "\tset time to ( time + tempF )"
+    - "\tif ( time < timer )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset state to 3"
+    - endif
+    - ''
+    - if ( state == 3 )
+    - "\tset temp to A1_NecroLock"
+    - "\tif ( temp == 0 )"
+    - "\t\tset A1_NecroLock to 1"
+    - "\t\tset tempF to ( GetPos X )"
+    - "\t\tset A1_NecroX to tempF"
+    - "\t\tset tempF to ( GetPos Y )"
+    - "\t\tset A1_NecroY to tempF"
+    - "\t\tset tempF to ( GetPos Z )"
+    - "\t\tset A1_NecroZ to tempF"
+    - "\t\tset tempF to ( GetAngle X )"
+    - "\t\tset A1_NecroXRot to tempF"
+    - "\t\tset tempF to ( GetAngle Y )"
+    - "\t\tset A1_NecroYRot to tempF"
+    - "\t\tset tempF to ( GetAngle Z )"
+    - "\t\tset A1_NecroZRot to tempF"
+    - "\t\tPlaceAtMe A1_NecroDunmerBodySk 1 1 1"
+    - "\t\tPlaceAtMe mudcrab 1 100 0"
+    - "\t\tDisable"
+    - "\t\tset count to 0"
+    - "\t\tset state to 4"
+    - "\tendif"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroDunmerBodySkSc
+      vars:
+        shorts: 2
+        longs: 0
+        floats: 1
+      data_size: 319
+      var_table_size: 18
+  - SCVR:
+    - state
+    - count
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroX\0"
+      - func: SetPos
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroY\0"
+      - func: SetPos
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroZ\0"
+      - func: SetPos
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroXRot\0"
+      - func: SetAngle
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroYRot\0"
+      - func: SetAngle
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroZRot\0"
+      - func: SetAngle
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 3
+        - " X\x18\x10 == 1"
+      - func: Disable
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: SetRef
+        args: player
+      - func: AddItem
+        args:
+        - A1_NecroDunmerPaulSk
+        - 1
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
+  - SCTX:
+    - begin A1_NecroDunmerBodySkSc
+    - ''
+    - short state
+    - float tempF
+    - short count
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tset state to 1"
+    - "\tset tempF to A1_NecroX"
+    - "\tSetPos X tempF"
+    - "\tset tempF to A1_NecroY"
+    - "\tSetPos Y tempF"
+    - "\tset tempF to A1_NecroZ"
+    - "\tSetPos Z tempF"
+    - "\tset tempF to A1_NecroXRot"
+    - "\tSetAngle X tempF"
+    - "\tset tempF to A1_NecroYRot"
+    - "\tSetAngle Y tempF"
+    - "\tset tempF to A1_NecroZRot"
+    - "\tSetAngle Z tempF"
+    - "\tset A1_NecroLock to 0"
+    - endif
+    - ''
+    - if ( OnActivate == 1 )
+    - "\tDisable"
+    - "\tset state to 2"
+    - "\tplayer->AddItem A1_NecroDunmerPaulSk 1"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroImpBodySc
+      vars:
+        shorts: 3
+        longs: 0
+        floats: 3
+      data_size: 928
+      var_table_size: 34
+  - SCVR:
+    - state
+    - count
+    - temp
+    - timer
+    - time
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 4"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 18
+        - " s\x01\0 == 0"
+      - func: If
+        args:
+        - 2
+        - " X\x12\x11 c\x15Район Горького Берега == 0"
+      - func: MessageBox
+        args:
+        - Здесь тело будет очень долго оставаться нетронутым
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Else
+        args: 13
+      - func: MessageBox
+        args:
+        - Через два-три дня от тела останется лишь скелет
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 48 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " X!\x10d\000"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 100 /"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " s\x01\0 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " X \x10 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 < 100"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 0'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 f\x03\0 +"
+      - func: If
+        args:
+        - 1
+        - " f\x02\0 < f\x01\0\0"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 3'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 21
+        - " s\x01\0 == 3"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\fA1_NecroLock\0"
+      - func: If
+        args:
+        - 18
+        - " s\x03\0 == 0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroX
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroY
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZ
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroXRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroYRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZRot
+        - " f\x03\0\0"
+      raw:
+      - BA 11 11 41 31 5F 4E 65 63 72 6F 49 6D 70 42 6F 64 79 53 6B 01 00 00 00 80 3F 01 00 BA 11 07 6D
+      - 75 64 63 72 61 62 01 00 00 00 C8 42 00 00 DB 10 05 01 73 02 00 02 20 30 05 01 73 01 00 02 20 34
+      - 09 01 09 01 01 01
+  - SCTX:
+    - begin A1_NecroImpBodySc
+    - ''
+    - short state
+    - float timer
+    - float time
+    - short count
+    - short temp
+    - float tempF
+    - ''
+    - if ( state == 4 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tif ( GetPCCell \"Район Горького Берега\" == 0 )"
+    - "\t\tMessageBox \"Здесь тело будет очень долго оставаться нетронутым\""
+    - "\t\tset state to 1"
+    - "\telse"
+    - "\t\tMessageBox \"Через два-три дня от тела останется лишь скелет\""
+    - "\t\tset state to 2"
+    - "\t\tset temp to DaysPassed"
+    - "\t\tset timer to temp"
+    - "\t\tset timer to ( timer * 24 )"
+    - "\t\tset tempF to GameHour"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\t\tset timer to ( timer + 48 )"
+    - "\t\tset temp to ( Random 100 )"
+    - "\t\tset tempF to temp"
+    - "\t\tset tempF to ( tempF / 100 )"
+    - "\t\tset tempF to ( tempF * 24 )"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( state == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( MenuMode == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count < 100 )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset count to 0"
+    - "\tset temp to DaysPassed"
+    - "\tset time to temp"
+    - "\tset time to ( time * 24 )"
+    - "\tset tempF to GameHour"
+    - "\tset time to ( time + tempF )"
+    - "\tif ( time < timer )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset state to 3"
+    - endif
+    - ''
+    - if ( state == 3 )
+    - "\tset temp to A1_NecroLock"
+    - "\tif ( temp == 0 )"
+    - "\t\tset A1_NecroLock to 1"
+    - "\t\tset tempF to ( GetPos X )"
+    - "\t\tset A1_NecroX to tempF"
+    - "\t\tset tempF to ( GetPos Y )"
+    - "\t\tset A1_NecroY to tempF"
+    - "\t\tset tempF to ( GetPos Z )"
+    - "\t\tset A1_NecroZ to tempF"
+    - "\t\tset tempF to ( GetAngle X )"
+    - "\t\tset A1_NecroXRot to tempF"
+    - "\t\tset tempF to ( GetAngle Y )"
+    - "\t\tset A1_NecroYRot to tempF"
+    - "\t\tset tempF to ( GetAngle Z )"
+    - "\t\tset A1_NecroZRot to tempF"
+    - "\t\tPlaceAtMe A1_NecroImpBodySk 1 1 1"
+    - "\t\tPlaceAtMe mudcrab 1 100 0"
+    - "\t\tDisable"
+    - "\t\tset count to 0"
+    - "\t\tset state to 4"
+    - "\tendif"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroImpBodySkSc
+      vars:
+        shorts: 2
+        longs: 0
+        floats: 1
+      data_size: 316
+      var_table_size: 18
+  - SCVR:
+    - state
+    - count
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroX\0"
+      - func: SetPos
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroY\0"
+      - func: SetPos
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroZ\0"
+      - func: SetPos
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroXRot\0"
+      - func: SetAngle
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroYRot\0"
+      - func: SetAngle
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroZRot\0"
+      - func: SetAngle
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 3
+        - " X\x18\x10 == 1"
+      - func: Disable
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: SetRef
+        args: player
+      - func: AddItem
+        args:
+        - A1_NecroImpPaulSk
+        - 1
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
+  - SCTX:
+    - begin A1_NecroImpBodySkSc
+    - ''
+    - short state
+    - float tempF
+    - short count
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tset state to 1"
+    - "\tset tempF to A1_NecroX"
+    - "\tSetPos X tempF"
+    - "\tset tempF to A1_NecroY"
+    - "\tSetPos Y tempF"
+    - "\tset tempF to A1_NecroZ"
+    - "\tSetPos Z tempF"
+    - "\tset tempF to A1_NecroXRot"
+    - "\tSetAngle X tempF"
+    - "\tset tempF to A1_NecroYRot"
+    - "\tSetAngle Y tempF"
+    - "\tset tempF to A1_NecroZRot"
+    - "\tSetAngle Z tempF"
+    - "\tset A1_NecroLock to 0"
+    - endif
+    - ''
+    - if ( OnActivate == 1 )
+    - "\tDisable"
+    - "\tset state to 2"
+    - "\tplayer->AddItem A1_NecroImpPaulSk 1"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroKhaBodySc
+      vars:
+        shorts: 3
+        longs: 0
+        floats: 3
+      data_size: 928
+      var_table_size: 34
+  - SCVR:
+    - state
+    - count
+    - temp
+    - timer
+    - time
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 4"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 18
+        - " s\x01\0 == 0"
+      - func: If
+        args:
+        - 2
+        - " X\x12\x11 c\x15Район Горького Берега == 0"
+      - func: MessageBox
+        args:
+        - Здесь тело будет очень долго оставаться нетронутым
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Else
+        args: 13
+      - func: MessageBox
+        args:
+        - Через два-три дня от тела останется лишь скелет
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 48 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " X!\x10d\000"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 100 /"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " s\x01\0 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " X \x10 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 < 100"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 0'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 f\x03\0 +"
+      - func: If
+        args:
+        - 1
+        - " f\x02\0 < f\x01\0\0"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 3'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 21
+        - " s\x01\0 == 3"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\fA1_NecroLock\0"
+      - func: If
+        args:
+        - 18
+        - " s\x03\0 == 0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroX
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroY
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZ
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroXRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroYRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZRot
+        - " f\x03\0\0"
+      raw:
+      - BA 11 11 41 31 5F 4E 65 63 72 6F 4B 68 61 42 6F 64 79 53 6B 01 00 00 00 80 3F 01 00 BA 11 07 6D
+      - 75 64 63 72 61 62 01 00 00 00 C8 42 00 00 DB 10 05 01 73 02 00 02 20 30 05 01 73 01 00 02 20 34
+      - 09 01 09 01 01 01
+  - SCTX:
+    - begin A1_NecroKhaBodySc
+    - ''
+    - short state
+    - float timer
+    - float time
+    - short count
+    - short temp
+    - float tempF
+    - ''
+    - if ( state == 4 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tif ( GetPCCell \"Район Горького Берега\" == 0 )"
+    - "\t\tMessageBox \"Здесь тело будет очень долго оставаться нетронутым\""
+    - "\t\tset state to 1"
+    - "\telse"
+    - "\t\tMessageBox \"Через два-три дня от тела останется лишь скелет\""
+    - "\t\tset state to 2"
+    - "\t\tset temp to DaysPassed"
+    - "\t\tset timer to temp"
+    - "\t\tset timer to ( timer * 24 )"
+    - "\t\tset tempF to GameHour"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\t\tset timer to ( timer + 48 )"
+    - "\t\tset temp to ( Random 100 )"
+    - "\t\tset tempF to temp"
+    - "\t\tset tempF to ( tempF / 100 )"
+    - "\t\tset tempF to ( tempF * 24 )"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( state == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( MenuMode == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count < 100 )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset count to 0"
+    - "\tset temp to DaysPassed"
+    - "\tset time to temp"
+    - "\tset time to ( time * 24 )"
+    - "\tset tempF to GameHour"
+    - "\tset time to ( time + tempF )"
+    - "\tif ( time < timer )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset state to 3"
+    - endif
+    - ''
+    - if ( state == 3 )
+    - "\tset temp to A1_NecroLock"
+    - "\tif ( temp == 0 )"
+    - "\t\tset A1_NecroLock to 1"
+    - "\t\tset tempF to ( GetPos X )"
+    - "\t\tset A1_NecroX to tempF"
+    - "\t\tset tempF to ( GetPos Y )"
+    - "\t\tset A1_NecroY to tempF"
+    - "\t\tset tempF to ( GetPos Z )"
+    - "\t\tset A1_NecroZ to tempF"
+    - "\t\tset tempF to ( GetAngle X )"
+    - "\t\tset A1_NecroXRot to tempF"
+    - "\t\tset tempF to ( GetAngle Y )"
+    - "\t\tset A1_NecroYRot to tempF"
+    - "\t\tset tempF to ( GetAngle Z )"
+    - "\t\tset A1_NecroZRot to tempF"
+    - "\t\tPlaceAtMe A1_NecroKhaBodySk 1 1 1"
+    - "\t\tPlaceAtMe mudcrab 1 100 0"
+    - "\t\tDisable"
+    - "\t\tset count to 0"
+    - "\t\tset state to 4"
+    - "\tendif"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroKhaBodySkSc
+      vars:
+        shorts: 2
+        longs: 0
+        floats: 1
+      data_size: 316
+      var_table_size: 18
+  - SCVR:
+    - state
+    - count
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroX\0"
+      - func: SetPos
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroY\0"
+      - func: SetPos
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroZ\0"
+      - func: SetPos
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroXRot\0"
+      - func: SetAngle
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroYRot\0"
+      - func: SetAngle
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroZRot\0"
+      - func: SetAngle
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 3
+        - " X\x18\x10 == 1"
+      - func: Disable
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: SetRef
+        args: player
+      - func: AddItem
+        args:
+        - A1_NecroKhaPaulSk
+        - 1
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
+  - SCTX:
+    - begin A1_NecroKhaBodySkSc
+    - ''
+    - short state
+    - float tempF
+    - short count
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tset state to 1"
+    - "\tset tempF to A1_NecroX"
+    - "\tSetPos X tempF"
+    - "\tset tempF to A1_NecroY"
+    - "\tSetPos Y tempF"
+    - "\tset tempF to A1_NecroZ"
+    - "\tSetPos Z tempF"
+    - "\tset tempF to A1_NecroXRot"
+    - "\tSetAngle X tempF"
+    - "\tset tempF to A1_NecroYRot"
+    - "\tSetAngle Y tempF"
+    - "\tset tempF to A1_NecroZRot"
+    - "\tSetAngle Z tempF"
+    - "\tset A1_NecroLock to 0"
+    - endif
+    - ''
+    - if ( OnActivate == 1 )
+    - "\tDisable"
+    - "\tset state to 2"
+    - "\tplayer->AddItem A1_NecroKhaPaulSk 1"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroNordBodySc
+      vars:
+        shorts: 3
+        longs: 0
+        floats: 3
+      data_size: 929
+      var_table_size: 34
+  - SCVR:
+    - state
+    - count
+    - temp
+    - timer
+    - time
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 4"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 18
+        - " s\x01\0 == 0"
+      - func: If
+        args:
+        - 2
+        - " X\x12\x11 c\x15Район Горького Берега == 0"
+      - func: MessageBox
+        args:
+        - Здесь тело будет очень долго оставаться нетронутым
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Else
+        args: 13
+      - func: MessageBox
+        args:
+        - Через два-три дня от тела останется лишь скелет
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 48 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " X!\x10d\000"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 100 /"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " s\x01\0 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " X \x10 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 < 100"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 0'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 f\x03\0 +"
+      - func: If
+        args:
+        - 1
+        - " f\x02\0 < f\x01\0\0"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 3'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 21
+        - " s\x01\0 == 3"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\fA1_NecroLock\0"
+      - func: If
+        args:
+        - 18
+        - " s\x03\0 == 0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroX
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroY
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZ
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroXRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroYRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZRot
+        - " f\x03\0\0"
+      raw:
+      - BA 11 12 41 31 5F 4E 65 63 72 6F 4E 6F 72 64 42 6F 64 79 53 6B 01 00 00 00 80 3F 01 00 BA 11 07
+      - 6D 75 64 63 72 61 62 01 00 00 00 C8 42 00 00 DB 10 05 01 73 02 00 02 20 30 05 01 73 01 00 02 20
+      - 34 09 01 09 01 01 01
+  - SCTX:
+    - begin A1_NecroNordBodySc
+    - ''
+    - short state
+    - float timer
+    - float time
+    - short count
+    - short temp
+    - float tempF
+    - ''
+    - if ( state == 4 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tif ( GetPCCell \"Район Горького Берега\" == 0 )"
+    - "\t\tMessageBox \"Здесь тело будет очень долго оставаться нетронутым\""
+    - "\t\tset state to 1"
+    - "\telse"
+    - "\t\tMessageBox \"Через два-три дня от тела останется лишь скелет\""
+    - "\t\tset state to 2"
+    - "\t\tset temp to DaysPassed"
+    - "\t\tset timer to temp"
+    - "\t\tset timer to ( timer * 24 )"
+    - "\t\tset tempF to GameHour"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\t\tset timer to ( timer + 48 )"
+    - "\t\tset temp to ( Random 100 )"
+    - "\t\tset tempF to temp"
+    - "\t\tset tempF to ( tempF / 100 )"
+    - "\t\tset tempF to ( tempF * 24 )"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( state == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( MenuMode == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count < 100 )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset count to 0"
+    - "\tset temp to DaysPassed"
+    - "\tset time to temp"
+    - "\tset time to ( time * 24 )"
+    - "\tset tempF to GameHour"
+    - "\tset time to ( time + tempF )"
+    - "\tif ( time < timer )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset state to 3"
+    - endif
+    - ''
+    - if ( state == 3 )
+    - "\tset temp to A1_NecroLock"
+    - "\tif ( temp == 0 )"
+    - "\t\tset A1_NecroLock to 1"
+    - "\t\tset tempF to ( GetPos X )"
+    - "\t\tset A1_NecroX to tempF"
+    - "\t\tset tempF to ( GetPos Y )"
+    - "\t\tset A1_NecroY to tempF"
+    - "\t\tset tempF to ( GetPos Z )"
+    - "\t\tset A1_NecroZ to tempF"
+    - "\t\tset tempF to ( GetAngle X )"
+    - "\t\tset A1_NecroXRot to tempF"
+    - "\t\tset tempF to ( GetAngle Y )"
+    - "\t\tset A1_NecroYRot to tempF"
+    - "\t\tset tempF to ( GetAngle Z )"
+    - "\t\tset A1_NecroZRot to tempF"
+    - "\t\tPlaceAtMe A1_NecroNordBodySk 1 1 1"
+    - "\t\tPlaceAtMe mudcrab 1 100 0"
+    - "\t\tDisable"
+    - "\t\tset count to 0"
+    - "\t\tset state to 4"
+    - "\tendif"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroNordBodySkSc
+      vars:
+        shorts: 2
+        longs: 0
+        floats: 1
+      data_size: 317
+      var_table_size: 18
+  - SCVR:
+    - state
+    - count
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroX\0"
+      - func: SetPos
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroY\0"
+      - func: SetPos
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroZ\0"
+      - func: SetPos
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroXRot\0"
+      - func: SetAngle
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroYRot\0"
+      - func: SetAngle
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroZRot\0"
+      - func: SetAngle
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 3
+        - " X\x18\x10 == 1"
+      - func: Disable
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: SetRef
+        args: player
+      - func: AddItem
+        args:
+        - A1_NecroNordPaulSk
+        - 1
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
+  - SCTX:
+    - begin A1_NecroNordBodySkSc
+    - ''
+    - short state
+    - float tempF
+    - short count
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tset state to 1"
+    - "\tset tempF to A1_NecroX"
+    - "\tSetPos X tempF"
+    - "\tset tempF to A1_NecroY"
+    - "\tSetPos Y tempF"
+    - "\tset tempF to A1_NecroZ"
+    - "\tSetPos Z tempF"
+    - "\tset tempF to A1_NecroXRot"
+    - "\tSetAngle X tempF"
+    - "\tset tempF to A1_NecroYRot"
+    - "\tSetAngle Y tempF"
+    - "\tset tempF to A1_NecroZRot"
+    - "\tSetAngle Z tempF"
+    - "\tset A1_NecroLock to 0"
+    - endif
+    - ''
+    - if ( OnActivate == 1 )
+    - "\tDisable"
+    - "\tset state to 2"
+    - "\tplayer->AddItem A1_NecroNordPaulSk 1"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroOrcBodySc
+      vars:
+        shorts: 3
+        longs: 0
+        floats: 3
+      data_size: 928
+      var_table_size: 34
+  - SCVR:
+    - state
+    - count
+    - temp
+    - timer
+    - time
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 4"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 18
+        - " s\x01\0 == 0"
+      - func: If
+        args:
+        - 2
+        - " X\x12\x11 c\x15Район Горького Берега == 0"
+      - func: MessageBox
+        args:
+        - Здесь тело будет очень долго оставаться нетронутым
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Else
+        args: 13
+      - func: MessageBox
+        args:
+        - Через два-три дня от тела останется лишь скелет
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 48 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " X!\x10d\000"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 100 /"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " s\x01\0 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " X \x10 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 < 100"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 0'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 f\x03\0 +"
+      - func: If
+        args:
+        - 1
+        - " f\x02\0 < f\x01\0\0"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 3'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 21
+        - " s\x01\0 == 3"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\fA1_NecroLock\0"
+      - func: If
+        args:
+        - 18
+        - " s\x03\0 == 0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroX
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroY
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZ
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroXRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroYRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZRot
+        - " f\x03\0\0"
+      raw:
+      - BA 11 11 41 31 5F 4E 65 63 72 6F 4F 72 63 42 6F 64 79 53 6B 01 00 00 00 80 3F 01 00 BA 11 07 6D
+      - 75 64 63 72 61 62 01 00 00 00 C8 42 00 00 DB 10 05 01 73 02 00 02 20 30 05 01 73 01 00 02 20 34
+      - 09 01 09 01 01 01
+  - SCTX:
+    - begin A1_NecroOrcBodySc
+    - ''
+    - short state
+    - float timer
+    - float time
+    - short count
+    - short temp
+    - float tempF
+    - ''
+    - if ( state == 4 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tif ( GetPCCell \"Район Горького Берега\" == 0 )"
+    - "\t\tMessageBox \"Здесь тело будет очень долго оставаться нетронутым\""
+    - "\t\tset state to 1"
+    - "\telse"
+    - "\t\tMessageBox \"Через два-три дня от тела останется лишь скелет\""
+    - "\t\tset state to 2"
+    - "\t\tset temp to DaysPassed"
+    - "\t\tset timer to temp"
+    - "\t\tset timer to ( timer * 24 )"
+    - "\t\tset tempF to GameHour"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\t\tset timer to ( timer + 48 )"
+    - "\t\tset temp to ( Random 100 )"
+    - "\t\tset tempF to temp"
+    - "\t\tset tempF to ( tempF / 100 )"
+    - "\t\tset tempF to ( tempF * 24 )"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( state == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( MenuMode == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count < 100 )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset count to 0"
+    - "\tset temp to DaysPassed"
+    - "\tset time to temp"
+    - "\tset time to ( time * 24 )"
+    - "\tset tempF to GameHour"
+    - "\tset time to ( time + tempF )"
+    - "\tif ( time < timer )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset state to 3"
+    - endif
+    - ''
+    - if ( state == 3 )
+    - "\tset temp to A1_NecroLock"
+    - "\tif ( temp == 0 )"
+    - "\t\tset A1_NecroLock to 1"
+    - "\t\tset tempF to ( GetPos X )"
+    - "\t\tset A1_NecroX to tempF"
+    - "\t\tset tempF to ( GetPos Y )"
+    - "\t\tset A1_NecroY to tempF"
+    - "\t\tset tempF to ( GetPos Z )"
+    - "\t\tset A1_NecroZ to tempF"
+    - "\t\tset tempF to ( GetAngle X )"
+    - "\t\tset A1_NecroXRot to tempF"
+    - "\t\tset tempF to ( GetAngle Y )"
+    - "\t\tset A1_NecroYRot to tempF"
+    - "\t\tset tempF to ( GetAngle Z )"
+    - "\t\tset A1_NecroZRot to tempF"
+    - "\t\tPlaceAtMe A1_NecroOrcBodySk 1 1 1"
+    - "\t\tPlaceAtMe mudcrab 1 100 0"
+    - "\t\tDisable"
+    - "\t\tset count to 0"
+    - "\t\tset state to 4"
+    - "\tendif"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroOrcBodySkSc
+      vars:
+        shorts: 2
+        longs: 0
+        floats: 1
+      data_size: 316
+      var_table_size: 18
+  - SCVR:
+    - state
+    - count
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroX\0"
+      - func: SetPos
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroY\0"
+      - func: SetPos
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroZ\0"
+      - func: SetPos
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroXRot\0"
+      - func: SetAngle
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroYRot\0"
+      - func: SetAngle
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroZRot\0"
+      - func: SetAngle
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 3
+        - " X\x18\x10 == 1"
+      - func: Disable
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: SetRef
+        args: player
+      - func: AddItem
+        args:
+        - A1_NecroOrcPaulSk
+        - 1
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
+  - SCTX:
+    - begin A1_NecroOrcBodySkSc
+    - ''
+    - short state
+    - float tempF
+    - short count
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tset state to 1"
+    - "\tset tempF to A1_NecroX"
+    - "\tSetPos X tempF"
+    - "\tset tempF to A1_NecroY"
+    - "\tSetPos Y tempF"
+    - "\tset tempF to A1_NecroZ"
+    - "\tSetPos Z tempF"
+    - "\tset tempF to A1_NecroXRot"
+    - "\tSetAngle X tempF"
+    - "\tset tempF to A1_NecroYRot"
+    - "\tSetAngle Y tempF"
+    - "\tset tempF to A1_NecroZRot"
+    - "\tSetAngle Z tempF"
+    - "\tset A1_NecroLock to 0"
+    - endif
+    - ''
+    - if ( OnActivate == 1 )
+    - "\tDisable"
+    - "\tset state to 2"
+    - "\tplayer->AddItem A1_NecroOrcPaulSk 1"
+    - endif
+    - ''
+    - end
+    - ''
 
 - SCPT:
   - SCHD:
@@ -593,6 +6350,642 @@
 
 - SCPT:
   - SCHD:
+      name: A1_NecroRgBodySc
+      vars:
+        shorts: 3
+        longs: 0
+        floats: 3
+      data_size: 927
+      var_table_size: 34
+  - SCVR:
+    - state
+    - count
+    - temp
+    - timer
+    - time
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 4"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 18
+        - " s\x01\0 == 0"
+      - func: If
+        args:
+        - 2
+        - " X\x12\x11 c\x15Район Горького Берега == 0"
+      - func: MessageBox
+        args:
+        - Здесь тело будет очень долго оставаться нетронутым
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Else
+        args: 13
+      - func: MessageBox
+        args:
+        - Через два-три дня от тела останется лишь скелет
+        - []
+        - []
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 48 +"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " X!\x10d\000"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 100 /"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " f\x03\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " f\x01\0 f\x03\0 +"
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " s\x01\0 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " X \x10 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 < 100"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 0'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " s\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 24 *"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " G\bGameHour\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 2
+        - " f\x02\0 f\x03\0 +"
+      - func: If
+        args:
+        - 1
+        - " f\x02\0 < f\x01\0\0"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 3'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 21
+        - " s\x01\0 == 3"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\fA1_NecroLock\0"
+      - func: If
+        args:
+        - 18
+        - " s\x03\0 == 0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroX
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroY
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\n\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZ
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10X\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroXRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Y\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroYRot
+        - " f\x03\0\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 3
+        - " X\f\x10Z\0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroZRot
+        - " f\x03\0\0"
+      raw:
+      - BA 11 10 41 31 5F 4E 65 63 72 6F 52 67 42 6F 64 79 53 6B 01 00 00 00 80 3F 01 00 BA 11 07 6D 75
+      - 64 63 72 61 62 01 00 00 00 C8 42 00 00 DB 10 05 01 73 02 00 02 20 30 05 01 73 01 00 02 20 34 09
+      - 01 09 01 01 01
+  - SCTX:
+    - begin A1_NecroRgBodySc
+    - ''
+    - short state
+    - float timer
+    - float time
+    - short count
+    - short temp
+    - float tempF
+    - ''
+    - if ( state == 4 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tif ( GetPCCell \"Район Горького Берега\" == 0 )"
+    - "\t\tMessageBox \"Здесь тело будет очень долго оставаться нетронутым\""
+    - "\t\tset state to 1"
+    - "\telse"
+    - "\t\tMessageBox \"Через два-три дня от тела останется лишь скелет\""
+    - "\t\tset state to 2"
+    - "\t\tset temp to DaysPassed"
+    - "\t\tset timer to temp"
+    - "\t\tset timer to ( timer * 24 )"
+    - "\t\tset tempF to GameHour"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\t\tset timer to ( timer + 48 )"
+    - "\t\tset temp to ( Random 100 )"
+    - "\t\tset tempF to temp"
+    - "\t\tset tempF to ( tempF / 100 )"
+    - "\t\tset tempF to ( tempF * 24 )"
+    - "\t\tset timer to ( timer + tempF )"
+    - "\tendif"
+    - endif
+    - ''
+    - if ( state == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( MenuMode == 1 )
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count < 100 )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset count to 0"
+    - "\tset temp to DaysPassed"
+    - "\tset time to temp"
+    - "\tset time to ( time * 24 )"
+    - "\tset tempF to GameHour"
+    - "\tset time to ( time + tempF )"
+    - "\tif ( time < timer )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tset state to 3"
+    - endif
+    - ''
+    - if ( state == 3 )
+    - "\tset temp to A1_NecroLock"
+    - "\tif ( temp == 0 )"
+    - "\t\tset A1_NecroLock to 1"
+    - "\t\tset tempF to ( GetPos X )"
+    - "\t\tset A1_NecroX to tempF"
+    - "\t\tset tempF to ( GetPos Y )"
+    - "\t\tset A1_NecroY to tempF"
+    - "\t\tset tempF to ( GetPos Z )"
+    - "\t\tset A1_NecroZ to tempF"
+    - "\t\tset tempF to ( GetAngle X )"
+    - "\t\tset A1_NecroXRot to tempF"
+    - "\t\tset tempF to ( GetAngle Y )"
+    - "\t\tset A1_NecroYRot to tempF"
+    - "\t\tset tempF to ( GetAngle Z )"
+    - "\t\tset A1_NecroZRot to tempF"
+    - "\t\tPlaceAtMe A1_NecroRgBodySk 1 1 1"
+    - "\t\tPlaceAtMe mudcrab 1 100 0"
+    - "\t\tDisable"
+    - "\t\tset count to 0"
+    - "\t\tset state to 4"
+    - "\tendif"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroRgBodySkSc
+      vars:
+        shorts: 2
+        longs: 0
+        floats: 1
+      data_size: 315
+      var_table_size: 18
+  - SCVR:
+    - state
+    - count
+    - tempF
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 5
+        - " s\x01\0 == 2"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " s\x02\0 1 +"
+      - func: If
+        args:
+        - 1
+        - " s\x02\0 == 20"
+      - func: SetDelete
+        args: 1
+      - func: EndIf
+        args: null
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 14
+        - " s\x01\0 == 0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroX\0"
+      - func: SetPos
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroY\0"
+      - func: SetPos
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\tA1_NecroZ\0"
+      - func: SetPos
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroXRot\0"
+      - func: SetAngle
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroYRot\0"
+      - func: SetAngle
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " G\fA1_NecroZRot\0"
+      - func: SetAngle
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroLock
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 3
+        - " X\x18\x10 == 1"
+      - func: Disable
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 2'
+      - func: SetRef
+        args: player
+      - func: AddItem
+        args:
+        - A1_NecroRgPaulSk
+        - 1
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
+  - SCTX:
+    - begin A1_NecroRgBodySkSc
+    - ''
+    - short state
+    - float tempF
+    - short count
+    - ''
+    - if ( state == 2 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 20 )"
+    - "\t\tSetDelete 1"
+    - "\tendif"
+    - "\treturn"
+    - endif
+    - ''
+    - if ( state == 0 )
+    - "\tset state to 1"
+    - "\tset tempF to A1_NecroX"
+    - "\tSetPos X tempF"
+    - "\tset tempF to A1_NecroY"
+    - "\tSetPos Y tempF"
+    - "\tset tempF to A1_NecroZ"
+    - "\tSetPos Z tempF"
+    - "\tset tempF to A1_NecroXRot"
+    - "\tSetAngle X tempF"
+    - "\tset tempF to A1_NecroYRot"
+    - "\tSetAngle Y tempF"
+    - "\tset tempF to A1_NecroZRot"
+    - "\tSetAngle Z tempF"
+    - "\tset A1_NecroLock to 0"
+    - endif
+    - ''
+    - if ( OnActivate == 1 )
+    - "\tDisable"
+    - "\tset state to 2"
+    - "\tplayer->AddItem A1_NecroRgPaulSk 1"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
       name: A1_NecroStart
       vars:
         shorts: 0
@@ -829,7 +7222,7 @@
 - ARMO:
   - NAME: A1_NecroNordPaul
   - MODL: a1n\human_corpse.nif
-  - FNAM: Труп норда
+  - FNAM: Труп нордлинга
   - AODT:
       type: LeftPauldron
       weight: 185.0
@@ -979,7 +7372,7 @@
 - ARMO:
   - NAME: A1_NecroNordPaulSk
   - MODL: a1n\skeleton_corpse.nif
-  - FNAM: Скелет норда
+  - FNAM: Скелет нордлинга
   - AODT:
       type: LeftPauldron
       weight: 30.0
@@ -1035,3 +7428,123 @@
   - ITEX: a1n\skelly.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroSkelCarry
+
+- ACTI:
+  - NAME: A1_NecroAltmerBody
+  - MODL: a1n\altmer_corpse.nif
+  - FNAM: Труп высокого эльфа
+  - SCRI: A1_NecroAltmerBodySc
+
+- ACTI:
+  - NAME: A1_NecroArgBody
+  - MODL: a1n\argonian_corpse.nif
+  - FNAM: Труп аргонианина
+  - SCRI: A1_NecroArgBodySc
+
+- ACTI:
+  - NAME: A1_NecroBosmerBody
+  - MODL: a1n\human_corpse.nif
+  - FNAM: Труп лесного эльфа
+  - SCRI: A1_NecroBosmerBodySc
+
+- ACTI:
+  - NAME: A1_NecroBretonBody
+  - MODL: a1n\human_corpse.nif
+  - FNAM: Труп бретона
+  - SCRI: A1_NecroBretonBodySc
+
+- ACTI:
+  - NAME: A1_NecroDunmerBody
+  - MODL: a1n\dunmer_corpse.nif
+  - FNAM: Труп темного эльфа
+  - SCRI: A1_NecroDunmerBodySc
+
+- ACTI:
+  - NAME: A1_NecroImpBody
+  - MODL: a1n\human_corpse.nif
+  - FNAM: Труп имперца
+  - SCRI: A1_NecroImpBodySc
+
+- ACTI:
+  - NAME: A1_NecroKhaBody
+  - MODL: a1n\khajiit_corpse.nif
+  - FNAM: Труп хаджита
+  - SCRI: A1_NecroKhaBodySc
+
+- ACTI:
+  - NAME: A1_NecroNordBody
+  - MODL: a1n\human_corpse.nif
+  - FNAM: Труп нордлинга
+  - SCRI: A1_NecroNordBodySc
+
+- ACTI:
+  - NAME: A1_NecroOrcBody
+  - MODL: a1n\orc_corpse.nif
+  - FNAM: Труп орка
+  - SCRI: A1_NecroOrcBodySc
+
+- ACTI:
+  - NAME: A1_NecroRgBody
+  - MODL: a1n\redguard_corpse.nif
+  - FNAM: Труп редгарда
+  - SCRI: A1_NecroRgBodySc
+
+- ACTI:
+  - NAME: A1_NecroAltmerBodySk
+  - MODL: a1n\skeleton_corpse.nif
+  - FNAM: Скелет высокого эльфа
+  - SCRI: A1_NecroAltmerBodySkSc
+
+- ACTI:
+  - NAME: A1_NecroArgBodySk
+  - MODL: a1n\skeleton_corpse.nif
+  - FNAM: Скелет аргонианина
+  - SCRI: A1_NecroArgBodySkSc
+
+- ACTI:
+  - NAME: A1_NecroBosmerBodySk
+  - MODL: a1n\skeleton_corpse.nif
+  - FNAM: Скелет лесного эльфа
+  - SCRI: A1_NecroBosmerBodySkSc
+
+- ACTI:
+  - NAME: A1_NecroBretonBodySk
+  - MODL: a1n\skeleton_corpse.nif
+  - FNAM: Скелет бретона
+  - SCRI: A1_NecroBretonBodySkSc
+
+- ACTI:
+  - NAME: A1_NecroDunmerBodySk
+  - MODL: a1n\skeleton_corpse.nif
+  - FNAM: Скелет темного эльфа
+  - SCRI: A1_NecroDunmerBodySkSc
+
+- ACTI:
+  - NAME: A1_NecroImpBodySk
+  - MODL: a1n\skeleton_corpse.nif
+  - FNAM: Скелет имперца
+  - SCRI: A1_NecroImpBodySkSc
+
+- ACTI:
+  - NAME: A1_NecroKhaBodySk
+  - MODL: a1n\skeleton_corpse.nif
+  - FNAM: Скелет хаджита
+  - SCRI: A1_NecroKhaBodySkSc
+
+- ACTI:
+  - NAME: A1_NecroNordBodySk
+  - MODL: a1n\skeleton_corpse.nif
+  - FNAM: Скелет нордлинга
+  - SCRI: A1_NecroNordBodySkSc
+
+- ACTI:
+  - NAME: A1_NecroOrcBodySk
+  - MODL: a1n\skeleton_corpse.nif
+  - FNAM: Скелет орка
+  - SCRI: A1_NecroOrcBodySkSc
+
+- ACTI:
+  - NAME: A1_NecroRgBodySk
+  - MODL: a1n\skeleton_corpse.nif
+  - FNAM: Скелет редгарда
+  - SCRI: A1_NecroRgBodySkSc
