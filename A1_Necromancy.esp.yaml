@@ -6,7 +6,7 @@
       description:
       - Профессиональный некромант.
       - Основан на Blasphemous Revenants v1.3, который создан Fliggerty и переведён Gwathlobal
-      records: 119
+      records: 240
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
@@ -48,1007 +48,6 @@
   - NAME: A1_NecroZRot
   - FNAM: f
   - FLTV: 0.0
-
-- BODY:
-  - NAME: A1_NecroSkelArgChest
-  - MODL: a1n\b_s_skel_m_chest_1.nif
-  - FNAM: A1_NecroArgRace
-  - BYDT:
-      kind: Chest
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelArgGroin
-  - MODL: a1n\b_s_skel_m_groin_1.nif
-  - FNAM: A1_NecroArgRace
-  - BYDT:
-      kind: Groin
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelArgNeck
-  - MODL: a1n\b_s_skel_m_neck_1.nif
-  - FNAM: A1_NecroArgRace
-  - BYDT:
-      kind: Neck
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelArgFoot
-  - MODL: a1n\b_s_skel_m_r_foot_1.nif
-  - FNAM: A1_NecroArgRace
-  - BYDT:
-      kind: Foot
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelArgForearm
-  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
-  - FNAM: A1_NecroArgRace
-  - BYDT:
-      kind: Forearm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelArgHand
-  - MODL: a1n\b_s_skel_m_r_hand_1.nif
-  - FNAM: A1_NecroArgRace
-  - BYDT:
-      kind: Hand
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelArgKnee
-  - MODL: a1n\b_s_skel_m_r_knee_1.nif
-  - FNAM: A1_NecroArgRace
-  - BYDT:
-      kind: Knee
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelArgUpperArm
-  - MODL: a1n\b_s_skel_upperarm.nif
-  - FNAM: A1_NecroArgRace
-  - BYDT:
-      kind: UpperArm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelArgUpperLeg
-  - MODL: a1n\b_s_skel_upperleg_1.nif
-  - FNAM: A1_NecroArgRace
-  - BYDT:
-      kind: UpperLeg
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelArgHead
-  - MODL: a1n\argonian_skull.nif
-  - FNAM: A1_NecroArgRace
-  - BYDT:
-      kind: Head
-      vampire: false
-      flags: NON_PLAYABLE
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBretonHead
-  - MODL: a1n\b_s_skel_m_head_1.nif
-  - FNAM: A1_NecroBretonRace
-  - BYDT:
-      kind: Head
-      vampire: false
-      flags: NON_PLAYABLE
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelDunmerHead
-  - MODL: a1n\b_s_skel_m_head_1.nif
-  - FNAM: A1_NecroDunmerRace
-  - BYDT:
-      kind: Head
-      vampire: false
-      flags: NON_PLAYABLE
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelAltmerHead
-  - MODL: a1n\b_s_skel_m_head_1.nif
-  - FNAM: A1_NecroAltmerRace
-  - BYDT:
-      kind: Head
-      vampire: false
-      flags: NON_PLAYABLE
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelImpHead
-  - MODL: a1n\b_s_skel_m_head_1.nif
-  - FNAM: A1_NecroImpRace
-  - BYDT:
-      kind: Head
-      vampire: false
-      flags: NON_PLAYABLE
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelNordHead
-  - MODL: a1n\b_s_skel_m_head_1.nif
-  - FNAM: A1_NecroNordRace
-  - BYDT:
-      kind: Head
-      vampire: false
-      flags: NON_PLAYABLE
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelRgHead
-  - MODL: a1n\b_s_skel_m_head_1.nif
-  - FNAM: A1_NecroRgRace
-  - BYDT:
-      kind: Head
-      vampire: false
-      flags: NON_PLAYABLE
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBosmerHead
-  - MODL: a1n\b_s_skel_m_head_1.nif
-  - FNAM: A1_NecroBosmerRace
-  - BYDT:
-      kind: Head
-      vampire: false
-      flags: NON_PLAYABLE
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelKhaHead
-  - MODL: a1n\khajiit_skull.nif
-  - FNAM: A1_NecroKhaRace
-  - BYDT:
-      kind: Head
-      vampire: false
-      flags: NON_PLAYABLE
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelOrcHead
-  - MODL: a1n\orc_skull.nif
-  - FNAM: A1_NecroOrcRace
-  - BYDT:
-      kind: Head
-      vampire: false
-      flags: NON_PLAYABLE
-      type: Skin
-
-
-- BODY:
-  - NAME: A1_NecroSkelBretonChest
-  - MODL: a1n\b_s_skel_m_chest_1.nif
-  - FNAM: A1_NecroBretonRace
-  - BYDT:
-      kind: Chest
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelDunmerChest
-  - MODL: a1n\b_s_skel_m_chest_1.nif
-  - FNAM: A1_NecroDunmerRace
-  - BYDT:
-      kind: Chest
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelAltmerChest
-  - MODL: a1n\b_s_skel_m_chest_1.nif
-  - FNAM: A1_NecroAltmerRace
-  - BYDT:
-      kind: Chest
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelImpChest
-  - MODL: a1n\b_s_skel_m_chest_1.nif
-  - FNAM: A1_NecroImpRace
-  - BYDT:
-      kind: Chest
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelKhaChest
-  - MODL: a1n\b_s_skel_m_chest_1.nif
-  - FNAM: A1_NecroKhaRace
-  - BYDT:
-      kind: Chest
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelNordChest
-  - MODL: a1n\b_s_skel_m_chest_1.nif
-  - FNAM: A1_NecroNordRace
-  - BYDT:
-      kind: Chest
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelOrcChest
-  - MODL: a1n\b_s_skel_m_chest_1.nif
-  - FNAM: A1_NecroOrcRace
-  - BYDT:
-      kind: Chest
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelRgChest
-  - MODL: a1n\b_s_skel_m_chest_1.nif
-  - FNAM: A1_NecroRgRace
-  - BYDT:
-      kind: Chest
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBosmerChest
-  - MODL: a1n\b_s_skel_m_chest_1.nif
-  - FNAM: A1_NecroBosmerRace
-  - BYDT:
-      kind: Chest
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBretonGroin
-  - MODL: a1n\b_s_skel_m_groin_1.nif
-  - FNAM: A1_NecroBretonRace
-  - BYDT:
-      kind: Groin
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelDunmerGroin
-  - MODL: a1n\b_s_skel_m_groin_1.nif
-  - FNAM: A1_NecroDunmerRace
-  - BYDT:
-      kind: Groin
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelAltmerGroin
-  - MODL: a1n\b_s_skel_m_groin_1.nif
-  - FNAM: A1_NecroAltmerRace
-  - BYDT:
-      kind: Groin
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelImpGroin
-  - MODL: a1n\b_s_skel_m_groin_1.nif
-  - FNAM: A1_NecroImpRace
-  - BYDT:
-      kind: Groin
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelKhaGroin
-  - MODL: a1n\b_s_skel_m_groin_1.nif
-  - FNAM: A1_NecroKhaRace
-  - BYDT:
-      kind: Groin
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelNordGroin
-  - MODL: a1n\b_s_skel_m_groin_1.nif
-  - FNAM: A1_NecroNordRace
-  - BYDT:
-      kind: Groin
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelOrcGroin
-  - MODL: a1n\b_s_skel_m_groin_1.nif
-  - FNAM: A1_NecroOrcRace
-  - BYDT:
-      kind: Groin
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelRgGroin
-  - MODL: a1n\b_s_skel_m_groin_1.nif
-  - FNAM: A1_NecroRgRace
-  - BYDT:
-      kind: Groin
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBosmerGroin
-  - MODL: a1n\b_s_skel_m_groin_1.nif
-  - FNAM: A1_NecroBosmerRace
-  - BYDT:
-      kind: Groin
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBretonNeck
-  - MODL: a1n\b_s_skel_m_neck_1.nif
-  - FNAM: A1_NecroBretonRace
-  - BYDT:
-      kind: Neck
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelDunmerNeck
-  - MODL: a1n\b_s_skel_m_neck_1.nif
-  - FNAM: A1_NecroDunmerRace
-  - BYDT:
-      kind: Neck
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelAltmerNeck
-  - MODL: a1n\b_s_skel_m_neck_1.nif
-  - FNAM: A1_NecroAltmerRace
-  - BYDT:
-      kind: Neck
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelImpNeck
-  - MODL: a1n\b_s_skel_m_neck_1.nif
-  - FNAM: A1_NecroImpRace
-  - BYDT:
-      kind: Neck
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelKhaNeck
-  - MODL: a1n\b_s_skel_m_neck_1.nif
-  - FNAM: A1_NecroKhaRace
-  - BYDT:
-      kind: Neck
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelNordNeck
-  - MODL: a1n\b_s_skel_m_neck_1.nif
-  - FNAM: A1_NecroNordRace
-  - BYDT:
-      kind: Neck
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelOrcNeck
-  - MODL: a1n\b_s_skel_m_neck_1.nif
-  - FNAM: A1_NecroOrcRace
-  - BYDT:
-      kind: Neck
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelRgNeck
-  - MODL: a1n\b_s_skel_m_neck_1.nif
-  - FNAM: A1_NecroRgRace
-  - BYDT:
-      kind: Neck
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBosmerNeck
-  - MODL: a1n\b_s_skel_m_neck_1.nif
-  - FNAM: A1_NecroBosmerRace
-  - BYDT:
-      kind: Neck
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBretonFoot
-  - MODL: a1n\b_s_skel_m_r_foot_1.nif
-  - FNAM: A1_NecroBretonRace
-  - BYDT:
-      kind: Foot
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBretonForearm
-  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
-  - FNAM: A1_NecroBretonRace
-  - BYDT:
-      kind: Forearm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBretonHand
-  - MODL: a1n\b_s_skel_m_r_hand_1.nif
-  - FNAM: A1_NecroBretonRace
-  - BYDT:
-      kind: Hand
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBretonKnee
-  - MODL: a1n\b_s_skel_m_r_knee_1.nif
-  - FNAM: A1_NecroBretonRace
-  - BYDT:
-      kind: Knee
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBretonUpperArm
-  - MODL: a1n\b_s_skel_upperarm.nif
-  - FNAM: A1_NecroBretonRace
-  - BYDT:
-      kind: UpperArm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBretonUpperLeg
-  - MODL: a1n\b_s_skel_upperleg_1.nif
-  - FNAM: A1_NecroBretonRace
-  - BYDT:
-      kind: UpperLeg
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelDunmerFoot
-  - MODL: a1n\b_s_skel_m_r_foot_1.nif
-  - FNAM: A1_NecroDunmerRace
-  - BYDT:
-      kind: Foot
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelDunmerForearm
-  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
-  - FNAM: A1_NecroDunmerRace
-  - BYDT:
-      kind: Forearm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelDunmerHand
-  - MODL: a1n\b_s_skel_m_r_hand_1.nif
-  - FNAM: A1_NecroDunmerRace
-  - BYDT:
-      kind: Hand
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelDunmerKnee
-  - MODL: a1n\b_s_skel_m_r_knee_1.nif
-  - FNAM: A1_NecroDunmerRace
-  - BYDT:
-      kind: Knee
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelDunmerUpperArm
-  - MODL: a1n\b_s_skel_upperarm.nif
-  - FNAM: A1_NecroDunmerRace
-  - BYDT:
-      kind: UpperArm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelDunmerUpperLeg
-  - MODL: a1n\b_s_skel_upperleg_1.nif
-  - FNAM: A1_NecroDunmerRace
-  - BYDT:
-      kind: UpperLeg
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelAltmerFoot
-  - MODL: a1n\b_s_skel_m_r_foot_1.nif
-  - FNAM: A1_NecroAltmerRace
-  - BYDT:
-      kind: Foot
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelAltmerForearm
-  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
-  - FNAM: A1_NecroAltmerRace
-  - BYDT:
-      kind: Forearm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelAltmerHand
-  - MODL: a1n\b_s_skel_m_r_hand_1.nif
-  - FNAM: A1_NecroAltmerRace
-  - BYDT:
-      kind: Hand
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelAltmerKnee
-  - MODL: a1n\b_s_skel_m_r_knee_1.nif
-  - FNAM: A1_NecroAltmerRace
-  - BYDT:
-      kind: Knee
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelAltmerUpperArm
-  - MODL: a1n\b_s_skel_upperarm.nif
-  - FNAM: A1_NecroAltmerRace
-  - BYDT:
-      kind: UpperArm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelAltmerUpperLeg
-  - MODL: a1n\b_s_skel_upperleg_1.nif
-  - FNAM: A1_NecroAltmerRace
-  - BYDT:
-      kind: UpperLeg
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelImpFoot
-  - MODL: a1n\b_s_skel_m_r_foot_1.nif
-  - FNAM: A1_NecroImpRace
-  - BYDT:
-      kind: Foot
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelImpForearm
-  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
-  - FNAM: A1_NecroImpRace
-  - BYDT:
-      kind: Forearm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelImpHand
-  - MODL: a1n\b_s_skel_m_r_hand_1.nif
-  - FNAM: A1_NecroImpRace
-  - BYDT:
-      kind: Hand
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelImpKnee
-  - MODL: a1n\b_s_skel_m_r_knee_1.nif
-  - FNAM: A1_NecroImpRace
-  - BYDT:
-      kind: Knee
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelImpUpperArm
-  - MODL: a1n\b_s_skel_upperarm.nif
-  - FNAM: A1_NecroImpRace
-  - BYDT:
-      kind: UpperArm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelImpUpperLeg
-  - MODL: a1n\b_s_skel_upperleg_1.nif
-  - FNAM: A1_NecroImpRace
-  - BYDT:
-      kind: UpperLeg
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelKhaFoot
-  - MODL: a1n\b_s_skel_m_r_foot_1.nif
-  - FNAM: A1_NecroKhaRace
-  - BYDT:
-      kind: Foot
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelKhaForearm
-  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
-  - FNAM: A1_NecroKhaRace
-  - BYDT:
-      kind: Forearm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelKhaHand
-  - MODL: a1n\b_s_skel_m_r_hand_1.nif
-  - FNAM: A1_NecroKhaRace
-  - BYDT:
-      kind: Hand
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelKhaKnee
-  - MODL: a1n\b_s_skel_m_r_knee_1.nif
-  - FNAM: A1_NecroKhaRace
-  - BYDT:
-      kind: Knee
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelKhaUpperArm
-  - MODL: a1n\b_s_skel_upperarm.nif
-  - FNAM: A1_NecroKhaRace
-  - BYDT:
-      kind: UpperArm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelKhaUpperLeg
-  - MODL: a1n\b_s_skel_upperleg_1.nif
-  - FNAM: A1_NecroKhaRace
-  - BYDT:
-      kind: UpperLeg
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelNordFoot
-  - MODL: a1n\b_s_skel_m_r_foot_1.nif
-  - FNAM: A1_NecroNordRace
-  - BYDT:
-      kind: Foot
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelNordForearm
-  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
-  - FNAM: A1_NecroNordRace
-  - BYDT:
-      kind: Forearm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelNordHand
-  - MODL: a1n\b_s_skel_m_r_hand_1.nif
-  - FNAM: A1_NecroNordRace
-  - BYDT:
-      kind: Hand
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelNordKnee
-  - MODL: a1n\b_s_skel_m_r_knee_1.nif
-  - FNAM: A1_NecroNordRace
-  - BYDT:
-      kind: Knee
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelNordUpperArm
-  - MODL: a1n\b_s_skel_upperarm.nif
-  - FNAM: A1_NecroNordRace
-  - BYDT:
-      kind: UpperArm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelNordUpperLeg
-  - MODL: a1n\b_s_skel_upperleg_1.nif
-  - FNAM: A1_NecroNordRace
-  - BYDT:
-      kind: UpperLeg
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelOrcFoot
-  - MODL: a1n\b_s_skel_m_r_foot_1.nif
-  - FNAM: A1_NecroOrcRace
-  - BYDT:
-      kind: Foot
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelOrcForearm
-  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
-  - FNAM: A1_NecroOrcRace
-  - BYDT:
-      kind: Forearm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelOrcHand
-  - MODL: a1n\b_s_skel_m_r_hand_1.nif
-  - FNAM: A1_NecroOrcRace
-  - BYDT:
-      kind: Hand
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelOrcKnee
-  - MODL: a1n\b_s_skel_m_r_knee_1.nif
-  - FNAM: A1_NecroOrcRace
-  - BYDT:
-      kind: Knee
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelOrcUpperArm
-  - MODL: a1n\b_s_skel_upperarm.nif
-  - FNAM: A1_NecroOrcRace
-  - BYDT:
-      kind: UpperArm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelOrcUpperLeg
-  - MODL: a1n\b_s_skel_upperleg_1.nif
-  - FNAM: A1_NecroOrcRace
-  - BYDT:
-      kind: UpperLeg
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelRgFoot
-  - MODL: a1n\b_s_skel_m_r_foot_1.nif
-  - FNAM: A1_NecroRgRace
-  - BYDT:
-      kind: Foot
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelRgForearm
-  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
-  - FNAM: A1_NecroRgRace
-  - BYDT:
-      kind: Forearm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelRgHand
-  - MODL: a1n\b_s_skel_m_r_hand_1.nif
-  - FNAM: A1_NecroRgRace
-  - BYDT:
-      kind: Hand
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelRgKnee
-  - MODL: a1n\b_s_skel_m_r_knee_1.nif
-  - FNAM: A1_NecroRgRace
-  - BYDT:
-      kind: Knee
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelRgUpperArm
-  - MODL: a1n\b_s_skel_upperarm.nif
-  - FNAM: A1_NecroRgRace
-  - BYDT:
-      kind: UpperArm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelRgUpperLeg
-  - MODL: a1n\b_s_skel_upperleg_1.nif
-  - FNAM: A1_NecroRgRace
-  - BYDT:
-      kind: UpperLeg
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBosmerFoot
-  - MODL: a1n\b_s_skel_m_r_foot_1.nif
-  - FNAM: A1_NecroBosmerRace
-  - BYDT:
-      kind: Foot
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBosmerForearm
-  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
-  - FNAM: A1_NecroBosmerRace
-  - BYDT:
-      kind: Forearm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBosmerHand
-  - MODL: a1n\b_s_skel_m_r_hand_1.nif
-  - FNAM: A1_NecroBosmerRace
-  - BYDT:
-      kind: Hand
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBosmerKnee
-  - MODL: a1n\b_s_skel_m_r_knee_1.nif
-  - FNAM: A1_NecroBosmerRace
-  - BYDT:
-      kind: Knee
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBosmerUpperArm
-  - MODL: a1n\b_s_skel_upperarm.nif
-  - FNAM: A1_NecroBosmerRace
-  - BYDT:
-      kind: UpperArm
-      vampire: false
-      flags: ''
-      type: Skin
-
-- BODY:
-  - NAME: A1_NecroSkelBosmerUpperLeg
-  - MODL: a1n\b_s_skel_upperleg_1.nif
-  - FNAM: A1_NecroBosmerRace
-  - BYDT:
-      kind: UpperLeg
-      vampire: false
-      flags: ''
-      type: Skin
 
 - FACT:
   - NAME: A1_NecroFact
@@ -15064,6 +14063,1006 @@
       magnitude_max: 1
 
 - BODY:
+  - NAME: A1_NecroSkelArgChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgHead
+  - MODL: a1n\argonian_skull.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonHead
+  - MODL: a1n\b_s_skel_m_head_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerHead
+  - MODL: a1n\b_s_skel_m_head_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerHead
+  - MODL: a1n\b_s_skel_m_head_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpHead
+  - MODL: a1n\b_s_skel_m_head_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordHead
+  - MODL: a1n\b_s_skel_m_head_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgHead
+  - MODL: a1n\b_s_skel_m_head_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerHead
+  - MODL: a1n\b_s_skel_m_head_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaHead
+  - MODL: a1n\khajiit_skull.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcHead
+  - MODL: a1n\orc_skull.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
   - NAME: A1_NecroSkelCarry
   - MODL: a1n\skeleton.nif
   - FNAM: Argonian
@@ -15738,8 +15737,8 @@
       reputation: 2
       rank: 0
       gold: 0
-      padding: 198
-      stats: 31872
+      padding: 233
+      stats: 31671
   - FLAG:
       flags: AUTO_CALCULATE_STATS
       blood: Skeleton
@@ -15749,8 +15748,8 @@
       fight: 30
       flee: 30
       alarm: 0
-      padding_8: 198
-      padding_16: 31872
+      padding_8: 233
+      padding_16: 31671
       services: ''
 
 - NPC_:
@@ -15767,8 +15766,8 @@
       reputation: 2
       rank: 0
       gold: 0
-      padding: 198
-      stats: 31872
+      padding: 233
+      stats: 31671
   - FLAG:
       flags: AUTO_CALCULATE_STATS
       blood: Skeleton
@@ -15778,8 +15777,8 @@
       fight: 30
       flee: 30
       alarm: 0
-      padding_8: 198
-      padding_16: 31872
+      padding_8: 233
+      padding_16: 31671
       services: ''
 
 - NPC_:
@@ -15796,8 +15795,8 @@
       reputation: 2
       rank: 0
       gold: 0
-      padding: 198
-      stats: 31872
+      padding: 233
+      stats: 31671
   - FLAG:
       flags: AUTO_CALCULATE_STATS
       blood: Skeleton
@@ -15807,8 +15806,8 @@
       fight: 30
       flee: 30
       alarm: 0
-      padding_8: 198
-      padding_16: 31872
+      padding_8: 233
+      padding_16: 31671
       services: ''
 
 - NPC_:
@@ -15892,8 +15891,8 @@
       fight: 30
       flee: 30
       alarm: 0
-      padding_8: 198
-      padding_16: 31872
+      padding_8: 233
+      padding_16: 31671
       services: ''
 
 - NPC_:
@@ -15910,8 +15909,8 @@
       reputation: 2
       rank: 0
       gold: 0
-      padding: 198
-      stats: 31872
+      padding: 233
+      stats: 31671
   - FLAG:
       flags: AUTO_CALCULATE_STATS
       blood: Skeleton
@@ -15921,8 +15920,8 @@
       fight: 30
       flee: 30
       alarm: 0
-      padding_8: 198
-      padding_16: 31872
+      padding_8: 233
+      padding_16: 31671
       services: ''
 
 - NPC_:
@@ -15940,8 +15939,8 @@
       reputation: 2
       rank: 0
       gold: 0
-      padding: 198
-      stats: 31872
+      padding: 233
+      stats: 31671
   - FLAG:
       flags: AUTO_CALCULATE_STATS
       blood: Skeleton
@@ -15951,8 +15950,8 @@
       fight: 30
       flee: 30
       alarm: 0
-      padding_8: 198
-      padding_16: 31872
+      padding_8: 233
+      padding_16: 31671
       services: ''
 
 - NPC_:
@@ -15969,8 +15968,8 @@
       reputation: 2
       rank: 0
       gold: 0
-      padding: 198
-      stats: 31872
+      padding: 233
+      stats: 31671
   - FLAG:
       flags: AUTO_CALCULATE_STATS
       blood: Skeleton
@@ -15980,8 +15979,8 @@
       fight: 30
       flee: 30
       alarm: 0
-      padding_8: 198
-      padding_16: 31872
+      padding_8: 233
+      padding_16: 31671
       services: ''
 
 - NPC_:
@@ -15998,8 +15997,8 @@
       reputation: 2
       rank: 0
       gold: 0
-      padding: 198
-      stats: 31872
+      padding: 233
+      stats: 31671
   - FLAG:
       flags: AUTO_CALCULATE_STATS
       blood: Skeleton
@@ -16009,8 +16008,8 @@
       fight: 30
       flee: 30
       alarm: 0
-      padding_8: 198
-      padding_16: 31872
+      padding_8: 233
+      padding_16: 31671
       services: ''
 
 - NPC_:
@@ -16027,8 +16026,8 @@
       reputation: 2
       rank: 0
       gold: 0
-      padding: 198
-      stats: 31872
+      padding: 233
+      stats: 31671
   - FLAG:
       flags: AUTO_CALCULATE_STATS
       blood: Skeleton
@@ -16038,8 +16037,8 @@
       fight: 30
       flee: 30
       alarm: 0
-      padding_8: 198
-      padding_16: 31872
+      padding_8: 233
+      padding_16: 31671
       services: ''
 
 - NPC_:
@@ -16056,8 +16055,8 @@
       reputation: 2
       rank: 0
       gold: 0
-      padding: 198
-      stats: 31872
+      padding: 233
+      stats: 31671
   - FLAG:
       flags: AUTO_CALCULATE_STATS
       blood: Skeleton
@@ -16067,6 +16066,6 @@
       fight: 30
       flee: 30
       alarm: 0
-      padding_8: 198
-      padding_16: 31872
+      padding_8: 233
+      padding_16: 31671
       services: ''
