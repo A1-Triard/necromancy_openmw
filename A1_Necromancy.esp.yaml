@@ -6,7 +6,7 @@
       description:
       - Профессиональный некромант.
       - Основан на Blasphemous Revenants v1.3, который создан Fliggerty и переведён Gwathlobal
-      records: 240
+      records: 265
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
@@ -165,12 +165,11 @@
         male: 1.1
         female: 1.0
       flags: BEAST_RACE
-  - NPCS: immune to shock
-  - NPCS: immune to frost
   - NPCS: argonian breathing
+  - NPCS: immune to frost
   - NPCS: immune to poison
   - NPCS: immune to disease
-  - NPCS: weakness fire_50
+  - NPCS: resist shock_50
 
 - RACE:
   - NAME: A1_NecroBretonRace
@@ -222,14 +221,13 @@
         male: 1.0
         female: 0.9
       flags: ''
-  - NPCS: immune to shock
+  - NPCS: magicka mult bonus_5
+  - NPCS: resist shock_50
   - NPCS: immune to frost
   - NPCS: immune to poison
   - NPCS: immune to disease
-  - NPCS: magicka mult bonus_5
-  - NPCS: resist magicka_50
   - NPCS: dragon skin
-  - NPCS: weakness fire_50
+  - NPCS: resist magicka_50
 
 - RACE:
   - NAME: A1_NecroDunmerRace
@@ -281,13 +279,12 @@
         male: 1.0
         female: 0.9
       flags: ''
-  - NPCS: immune to shock
+  - NPCS: ancestor guardian
+  - NPCS: resist shock_50
   - NPCS: immune to frost
   - NPCS: immune to poison
   - NPCS: immune to disease
-  - NPCS: ancestor guardian
   - NPCS: resist fire_75
-  - NPCS: weakness fire_50
 
 - RACE:
   - NAME: A1_NecroAltmerRace
@@ -339,16 +336,15 @@
         male: 1.0
         female: 1.0
       flags: ''
-  - NPCS: immune to shock
+  - NPCS: magicka mult bonus_15
   - NPCS: immune to frost
   - NPCS: immune to poison
   - NPCS: immune to disease
-  - NPCS: magicka mult bonus_15
-  - NPCS: weakness magicka_50
+  - NPCS: resist shock_50
   - NPCS: weakness fire_50
   - NPCS: weakness frost_25
   - NPCS: weakness shock_25
-  - NPCS: resist disease_75
+  - NPCS: weakness magicka_50
 
 - RACE:
   - NAME: A1_NecroImpRace
@@ -400,13 +396,12 @@
         male: 1.25
         female: 0.95
       flags: ''
-  - NPCS: immune to shock
-  - NPCS: immune to frost
-  - NPCS: immune to poison
-  - NPCS: immune to disease
   - NPCS: star of the west
   - NPCS: voice of the emperor
-  - NPCS: weakness fire_50
+  - NPCS: resist shock_50
+  - NPCS: immune to disease
+  - NPCS: immune to poison
+  - NPCS: immune to frost
 
 - RACE:
   - NAME: A1_NecroKhaRace
@@ -458,13 +453,12 @@
         male: 1.0
         female: 0.95
       flags: BEAST_RACE
-  - NPCS: weakness fire_50
+  - NPCS: eye of night
+  - NPCS: eye of fear
+  - NPCS: resist shock_50
   - NPCS: immune to frost
-  - NPCS: immune to shock
   - NPCS: immune to disease
   - NPCS: immune to poison
-  - NPCS: eye of fear
-  - NPCS: eye of night
 
 - RACE:
   - NAME: A1_NecroNordRace
@@ -516,14 +510,12 @@
         male: 1.25
         female: 1.0
       flags: ''
-  - NPCS: weakness fire_50
-  - NPCS: immune to poison
-  - NPCS: immune to disease
-  - NPCS: immune to frost
-  - NPCS: resist shock_50
   - NPCS: woad
+  - NPCS: resist shock_50
+  - NPCS: immune to frost
+  - NPCS: immune to disease
+  - NPCS: immune to poison
   - NPCS: thunder fist
-  - NPCS: immune to shock
 
 - RACE:
   - NAME: A1_NecroOrcRace
@@ -575,13 +567,12 @@
         male: 1.35
         female: 1.1
       flags: ''
-  - NPCS: immune to shock
-  - NPCS: immune to frost
-  - NPCS: immune to disease
-  - NPCS: immune to poison
   - NPCS: orc_beserk
   - NPCS: resist magicka_25
-  - NPCS: weakness fire_50
+  - NPCS: immune to poison
+  - NPCS: immune to disease
+  - NPCS: immune to frost
+  - NPCS: resist shock_50
 
 - RACE:
   - NAME: A1_NecroRgRace
@@ -633,14 +624,11 @@
         male: 1.1
         female: 1.0
       flags: ''
-  - NPCS: immune to shock
-  - NPCS: immune to poison
-  - NPCS: immune to disease
   - NPCS: adrenaline rush
-  - NPCS: resist poison_75
-  - NPCS: resist disease_75
+  - NPCS: resist shock_50
   - NPCS: immune to frost
-  - NPCS: weakness fire_50
+  - NPCS: immune to disease
+  - NPCS: immune to poison
 
 - RACE:
   - NAME: A1_NecroBosmerRace
@@ -692,12 +680,11 @@
         male: 0.95
         female: 0.9
       flags: ''
-  - NPCS: weakness fire_50
-  - NPCS: immune to frost
-  - NPCS: immune to poison
-  - NPCS: immune to disease
   - NPCS: beast tongue
-  - NPCS: immune to shock
+  - NPCS: immune to disease
+  - NPCS: immune to poison
+  - NPCS: immune to frost
+  - NPCS: resist shock_50
 
 - SCPT:
   - SCHD:
@@ -10878,6 +10865,249 @@
 
 - SCPT:
   - SCHD:
+      name: A1_NecroNpcSc
+      vars:
+        shorts: 3
+        longs: 0
+        floats: 0
+      data_size: 494
+      var_table_size: 24
+  - SCVR:
+    - NoLore
+    - Companion
+    - Travel
+  - SCDT:
+      stmts:
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - ' 1'
+      - func: If
+        args:
+        - 24
+        - " s\x03\0 > 0"
+      - func: If
+        args:
+        - 1
+        - " s\x03\0 == 1"
+      - func: PositionCell
+        args:
+        - - kind: Val
+            val: -23265.234
+          - kind: Val
+            val: -15409.372
+          - kind: Val
+            val: 556.0
+          - kind: Val
+            val: 0.0
+        - Balmora
+      - func: ElseIf
+        args:
+        - 1
+        - " s\x03\0 == 2"
+      - func: PositionCell
+        args:
+        - - kind: Val
+            val: -14688.397
+          - kind: Val
+            val: 52477.645
+          - kind: Val
+            val: 2119.9502
+          - kind: Val
+            val: 0.0
+        - Ald-ruhn
+      - func: ElseIf
+        args:
+        - 1
+        - " s\x03\0 == 3"
+      - func: PositionCell
+        args:
+        - - kind: Val
+            val: 48308.055
+          - kind: Val
+            val: -81831.63
+          - kind: Val
+            val: 576.7466
+          - kind: Val
+            val: 0.0
+        - Vivec
+      - func: ElseIf
+        args:
+        - 1
+        - " s\x03\0 == 4"
+      - func: PositionCell
+        args:
+        - - kind: Val
+            val: 105102.664
+          - kind: Val
+            val: -61811.348
+          - kind: Val
+            val: 635.0835
+          - kind: Val
+            val: 0.0
+        - Molag Mar
+      - func: ElseIf
+        args:
+        - 1
+        - " s\x03\0 == 5"
+      - func: PositionCell
+        args:
+        - - kind: Val
+            val: 149019.13
+          - kind: Val
+            val: 29684.094
+          - kind: Val
+            val: 700.0
+          - kind: Val
+            val: 0.0
+        - Wolverine Hall
+      - func: ElseIf
+        args:
+        - 1
+        - " s\x03\0 == 6"
+      - func: PositionCell
+        args:
+        - - kind: Val
+            val: 98660.664
+          - kind: Val
+            val: 111530.56
+          - kind: Val
+            val: 308.0195
+          - kind: Val
+            val: 0.0
+        - Vos
+      - func: ElseIf
+        args:
+        - 1
+        - " s\x03\0 == 7"
+      - func: PositionCell
+        args:
+        - - kind: Val
+            val: 59803.883
+          - kind: Val
+            val: 183183.36
+          - kind: Val
+            val: 314.2573
+          - kind: Val
+            val: 0.0
+        - Dagon Fel
+      - func: ElseIf
+        args:
+        - 1
+        - " s\x03\0 == 8"
+      - func: PositionCell
+        args:
+        - - kind: Val
+            val: -67142.36
+          - kind: Val
+            val: 139129.86
+          - kind: Val
+            val: 205.1514
+          - kind: Val
+            val: 0.0
+        - Khuul
+      - func: ElseIf
+        args:
+        - 1
+        - " s\x03\0 == 9"
+      - func: PositionCell
+        args:
+        - - kind: Val
+            val: -84440.82
+          - kind: Val
+            val: 92241.195
+          - kind: Val
+            val: 1054.9253
+          - kind: Val
+            val: 0.0
+        - Gnisis
+      - func: ElseIf
+        args:
+        - 1
+        - " s\x03\0 == 10"
+      - func: PositionCell
+        args:
+        - - kind: Val
+            val: 20736.992
+          - kind: Val
+            val: 38396.8
+          - kind: Val
+            val: 1161.2622
+          - kind: Val
+            val: 0.0
+        - Ghostgate
+      - func: ElseIf
+        args:
+        - 1
+        - " s\x03\0 == 11"
+      - func: PositionCell
+        args:
+        - - kind: Val
+            val: -5.3433
+          - kind: Val
+            val: 2476.102
+          - kind: Val
+            val: 173.3262
+          - kind: Val
+            val: 0.0
+        - Mournhold, Plaza Brindisi Dorom
+      - func: EndIf
+        args: null
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - ' 0'
+      - func: EndIf
+        args: null
+      - func: End
+        args: null
+      raw: []
+  - SCTX:
+    - begin A1_NecroNpcSc
+    - ''
+    - short NoLore
+    - short Companion
+    - short Travel
+    - ''
+    - set Companion to 1
+    - ''
+    - if ( Travel > 0 )
+    - "\tif ( Travel == 1 )"
+    - "\t\tPositionCell -23265.2344, -15409.3721, 556.0000, 0, \"Balmora\""
+    - "\telseif ( Travel == 2 )"
+    - "\t\tPositionCell -14688.3975, 52477.6445, 2119.9502, 0, \"Ald-ruhn\""
+    - "\telseif ( Travel == 3 )"
+    - "\t\tPositionCell 48308.0547, -81831.6328, 576.7466, 0, \"Vivec\""
+    - "\telseif ( Travel == 4 )"
+    - "\t\tPositionCell 105102.6641, -61811.3477, 635.0835, 0, \"Molag Mar\""
+    - "\telseif ( Travel == 5 )"
+    - "\t\tPositionCell 149019.1250, 29684.0938, 700.0000, 0, \"Wolverine Hall\""
+    - "\telseif ( Travel == 6 )"
+    - "\t\tPositionCell 98660.6641, 111530.5625, 308.0195, 0, \"Vos\""
+    - "\telseif ( Travel == 7 )"
+    - "\t\tPositionCell 59803.8828, 183183.3594, 314.2573, 0, \"Dagon Fel\""
+    - "\telseif ( Travel == 8 )"
+    - "\t\tPositionCell -67142.3594, 139129.8594, 205.1514, 0, \"Khuul\""
+    - "\telseif ( Travel == 9 )"
+    - "\t\tPositionCell -84440.8203, 92241.1953, 1054.9253, 0, \"Gnisis\""
+    - "\telseif ( Travel == 10 )"
+    - "\t\tPositionCell 20736.9922, 38396.8008, 1161.2622, 0, \"Ghostgate\""
+    - "\telseif ( Travel == 11 )"
+    - "\t\tPositionCell -5.3433, 2476.1021, 173.3262, 0, \"Mournhold, Plaza Brindisi Dorom\""
+    - "\tendif"
+    - "\tset Travel to 0"
+    - endif
+    - ''
+    - end
+
+- SCPT:
+  - SCHD:
       name: A1_NecroOrcBodySc
       vars:
         shorts: 3
@@ -15731,6 +15961,7 @@
   - ANAM: A1_NecroFact
   - BNAM: A1_NecroSkelArgHead
   - KNAM: ''
+  - SCRI: A1_NecroNpcSc
   - NPDT:
       level: 10
       disposition: 100
@@ -15760,6 +15991,7 @@
   - ANAM: A1_NecroFact
   - BNAM: A1_NecroSkelBretonHead
   - KNAM: ''
+  - SCRI: A1_NecroNpcSc
   - NPDT:
       level: 10
       disposition: 100
@@ -15789,6 +16021,7 @@
   - ANAM: A1_NecroFact
   - BNAM: A1_NecroSkelDunmerHead
   - KNAM: ''
+  - SCRI: A1_NecroNpcSc
   - NPDT:
       level: 10
       disposition: 100
@@ -15818,6 +16051,7 @@
   - ANAM: A1_NecroFact
   - BNAM: A1_NecroSkelAltmerHead
   - KNAM: ''
+  - SCRI: A1_NecroNpcSc
   - NPDT:
       level: 10
       disposition: 100
@@ -15903,6 +16137,7 @@
   - ANAM: A1_NecroFact
   - BNAM: A1_NecroSkelImpHead
   - KNAM: ''
+  - SCRI: A1_NecroNpcSc
   - NPDT:
       level: 10
       disposition: 100
@@ -15933,6 +16168,7 @@
   - ANAM: A1_NecroFact
   - BNAM: A1_NecroSkelKhaHead
   - KNAM: ''
+  - SCRI: A1_NecroNpcSc
   - NPDT:
       level: 10
       disposition: 100
@@ -15962,6 +16198,7 @@
   - ANAM: A1_NecroFact
   - BNAM: A1_NecroSkelNordHead
   - KNAM: ''
+  - SCRI: A1_NecroNpcSc
   - NPDT:
       level: 10
       disposition: 100
@@ -15991,6 +16228,7 @@
   - ANAM: A1_NecroFact
   - BNAM: A1_NecroSkelRgHead
   - KNAM: ''
+  - SCRI: A1_NecroNpcSc
   - NPDT:
       level: 10
       disposition: 100
@@ -16020,6 +16258,7 @@
   - ANAM: A1_NecroFact
   - BNAM: A1_NecroSkelOrcHead
   - KNAM: ''
+  - SCRI: A1_NecroNpcSc
   - NPDT:
       level: 10
       disposition: 100
@@ -16049,6 +16288,7 @@
   - ANAM: A1_NecroFact
   - BNAM: A1_NecroSkelBosmerHead
   - KNAM: ''
+  - SCRI: A1_NecroNpcSc
   - NPDT:
       level: 10
       disposition: 100
@@ -16069,3 +16309,377 @@
       padding_8: 233
       padding_16: 31671
       services: ''
+
+- DIAL:
+  - NAME: Команды перемещений
+  - DATA: Topic
+
+- INFO:
+  - INAM: '898650121987818531'
+  - PNAM: ''
+  - NNAM: '32173303281186626955'
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Мы встретимся на торговой площади Балморы.
+  - SCVR: '01500'
+  - INTV: 1
+  - BNAM:
+    - set Travel to 1
+    - Goodbye
+
+- INFO:
+  - INAM: '32173303281186626955'
+  - PNAM: '898650121987818531'
+  - NNAM: '8622170712456414'
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Мы встретимся в Альд'руне, между Гильдией бойцов и Гильдией магов.
+  - SCVR: '01500'
+  - INTV: 2
+  - BNAM:
+    - set Travel to 2
+    - Goodbye
+
+- INFO:
+  - INAM: '8622170712456414'
+  - PNAM: '32173303281186626955'
+  - NNAM: '28288288552785821307'
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Мы встретимся на мосту между Кварталом чужеземцев и материком.
+  - SCVR: '01500'
+  - INTV: 3
+  - BNAM:
+    - set Travel to 3
+    - Goodbye
+
+- INFO:
+  - INAM: '28288288552785821307'
+  - PNAM: '8622170712456414'
+  - NNAM: '1492725024168279837'
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Мы встретимся на мосту Молаг Мара.
+  - SCVR: '01500'
+  - INTV: 4
+  - BNAM:
+    - set Travel to 4
+    - Goodbye
+
+- INFO:
+  - INAM: '1492725024168279837'
+  - PNAM: '28288288552785821307'
+  - NNAM: '1240921919146907034'
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Мы встретимся во дворе форта.
+  - SCVR: '01500'
+  - INTV: 5
+  - BNAM:
+    - set Travel to 5
+    - Goodbye
+
+- INFO:
+  - INAM: '1240921919146907034'
+  - PNAM: '1492725024168279837'
+  - NNAM: '2863721325321217405'
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Мы встретимся за зданием лодочной станции.
+  - SCVR: '01500'
+  - INTV: 6
+  - BNAM:
+    - set Travel to 6
+    - Goodbye
+
+- INFO:
+  - INAM: '2863721325321217405'
+  - PNAM: '1240921919146907034'
+  - NNAM: '2062613406217329367'
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Мы встретимся там.
+  - SCVR: '01500'
+  - INTV: 7
+  - BNAM:
+    - set Travel to 7
+    - Goodbye
+
+- INFO:
+  - INAM: '2062613406217329367'
+  - PNAM: '2863721325321217405'
+  - NNAM: '1873118576189129761'
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Мы встретимся возле указателя Хуула.
+  - SCVR: '01500'
+  - INTV: 8
+  - BNAM:
+    - set Travel to 8
+    - Goodbye
+
+- INFO:
+  - INAM: '1873118576189129761'
+  - PNAM: '2062613406217329367'
+  - NNAM: '14649224362186225093'
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Мы встретимся там.
+  - SCVR: '01500'
+  - INTV: 9
+  - BNAM:
+    - set Travel to 9
+    - Goodbye
+
+- INFO:
+  - INAM: '14649224362186225093'
+  - PNAM: '1873118576189129761'
+  - NNAM: '156343006086569022'
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Мы встретимся возле Призрачных врат.
+  - SCVR: '01500'
+  - INTV: 10
+  - BNAM:
+    - set Travel to 10
+    - Goodbye
+
+- INFO:
+  - INAM: '156343006086569022'
+  - PNAM: '14649224362186225093'
+  - NNAM: '2836923590684019805'
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Мы встретимся на Плазе Бриндиза Дорум В Морнхолде.
+  - SCVR: '01500'
+  - INTV: 11
+  - BNAM:
+    - set Travel to 11
+    - Goodbye
+
+- INFO:
+  - INAM: '2836923590684019805'
+  - PNAM: '156343006086569022'
+  - NNAM: '168903259265894830'
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Как прикажешь.
+  - SCVR: '01500'
+  - INTV: 12
+  - BNAM:
+    - set Travel to 12
+    - Goodbye
+
+- INFO:
+  - INAM: '168903259265894830'
+  - PNAM: '2836923590684019805'
+  - NNAM: ''
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Куда я отправляюсь?
+  - BNAM:
+    - Choice "Балмора" 1 "Альд'рун" 2 "Вивек" 3 "Молаг Мар" 4 "Волверин Холл" 5 "Вос" 6 "Дагон Фел" 7 "Хуул" 8 "Гнисис" 9 "Призрачные врата" 10 "Морнхолд" 11 "Никуда" 12
+
+- DIAL:
+  - NAME: Greeting 5
+  - DATA: Greeting
+
+- INFO:
+  - INAM: '1373719765189997642'
+  - PNAM: '27518247831477521212'
+  - NNAM: '1599759952880327831'
+  - DATA:
+      dialog_type: Greeting
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Госпожа обращается ко мне.
+  - SCVR: '01380'
+  - INTV: 1
+
+- INFO:
+  - INAM: '1599759952880327831'
+  - PNAM: '1373719765189997642'
+  - NNAM: ''
+  - DATA:
+      dialog_type: Greeting
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Господин обращается ко мне.
+  - SCVR: '01380'
+  - INTV: 0
+
+- DIAL:
+  - NAME: Команды
+  - DATA: Topic
+
+- INFO:
+  - INAM: '284163287891216610'
+  - PNAM: ''
+  - NNAM: '24179236652257014520'
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Как прикажешь.
+  - SCVR: '01500'
+  - INTV: 1
+  - BNAM:
+    - AiFollow player 0 0 0 0
+
+- INFO:
+  - INAM: '24179236652257014520'
+  - PNAM: '284163287891216610'
+  - NNAM: '632697841063318396'
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Я буду ждать здесь.
+  - SCVR: '01500'
+  - INTV: 2
+  - BNAM:
+    - AiWander 0 0 0 0
+
+- INFO:
+  - INAM: '632697841063318396'
+  - PNAM: '24179236652257014520'
+  - NNAM: '6147241512087927640'
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Я буду охранять это место.
+  - SCVR: '01500'
+  - INTV: 3
+  - BNAM:
+    - AiWander 1000 0 0 60 10 10 10 10 0 0 0
+
+- INFO:
+  - INAM: '6147241512087927640'
+  - PNAM: '632697841063318396'
+  - NNAM: '9774236872336725172'
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Как прикажешь.
+  - SCVR: '01500'
+  - INTV: 4
+
+- INFO:
+  - INAM: '9774236872336725172'
+  - PNAM: '6147241512087927640'
+  - NNAM: ''
+  - DATA:
+      dialog_type: Topic
+      disp_index: 0
+      rank: null
+      sex: null
+      pc_rank: null
+      padding: 0
+  - FNAM: A1_NecroFact
+  - NAME: Я подчиняюсь лишь твоим приказам.
+  - BNAM:
+    - Choice "Пошли" 1 "Жди здесь" 2 "Охраняй это место" 3 "Ничего" 4
