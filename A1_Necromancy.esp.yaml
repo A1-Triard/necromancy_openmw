@@ -49,6 +49,1657 @@
   - FNAM: f
   - FLTV: 0.0
 
+- BODY:
+  - NAME: A1_NecroSkelArgChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelArgHead
+  - MODL: a1n\argonian_skull.nif
+  - FNAM: A1_NecroArgRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonHead
+  - MODL: a1n\b_s_skel_m_head_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerHead
+  - MODL: a1n\b_s_skel_m_head_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerHead
+  - MODL: a1n\b_s_skel_m_head_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpHead
+  - MODL: a1n\b_s_skel_m_head_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordHead
+  - MODL: a1n\b_s_skel_m_head_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgHead
+  - MODL: a1n\b_s_skel_m_head_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerHead
+  - MODL: a1n\b_s_skel_m_head_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaHead
+  - MODL: a1n\khajiit_skull.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcHead
+  - MODL: a1n\orc_skull.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: Head
+      vampire: false
+      flags: NON_PLAYABLE
+      type: Skin
+
+
+- BODY:
+  - NAME: A1_NecroSkelBretonChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerChest
+  - MODL: a1n\b_s_skel_m_chest_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: Chest
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerGroin
+  - MODL: a1n\b_s_skel_m_groin_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: Groin
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerNeck
+  - MODL: a1n\b_s_skel_m_neck_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: Neck
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBretonUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroBretonRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelDunmerUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroDunmerRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelAltmerUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroAltmerRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelImpUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroImpRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelKhaUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroKhaRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelNordUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroNordRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelOrcUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroOrcRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelRgUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroRgRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerFoot
+  - MODL: a1n\b_s_skel_m_r_foot_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: Foot
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerForearm
+  - MODL: a1n\b_s_skel_m_r_forearm_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: Forearm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerHand
+  - MODL: a1n\b_s_skel_m_r_hand_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: Hand
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerKnee
+  - MODL: a1n\b_s_skel_m_r_knee_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: Knee
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerUpperArm
+  - MODL: a1n\b_s_skel_upperarm.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: UpperArm
+      vampire: false
+      flags: ''
+      type: Skin
+
+- BODY:
+  - NAME: A1_NecroSkelBosmerUpperLeg
+  - MODL: a1n\b_s_skel_upperleg_1.nif
+  - FNAM: A1_NecroBosmerRace
+  - BYDT:
+      kind: UpperLeg
+      vampire: false
+      flags: ''
+      type: Skin
+
+- FACT:
+  - NAME: A1_NecroFact
+  - FNAM: Мертвецы
+  - FADT:
+      favored_attribute_1: Strength
+      favored_attribute_2: Endurance
+      ranks:
+      - attribute_1: 0
+        attribute_2: 0
+        primary_skill: 0
+        favored_skill: 0
+        reputation: 0
+      - attribute_1: 0
+        attribute_2: 0
+        primary_skill: 0
+        favored_skill: 0
+        reputation: 0
+      - attribute_1: 0
+        attribute_2: 0
+        primary_skill: 0
+        favored_skill: 0
+        reputation: 0
+      - attribute_1: 0
+        attribute_2: 0
+        primary_skill: 0
+        favored_skill: 0
+        reputation: 0
+      - attribute_1: 0
+        attribute_2: 0
+        primary_skill: 0
+        favored_skill: 0
+        reputation: 0
+      - attribute_1: 0
+        attribute_2: 0
+        primary_skill: 0
+        favored_skill: 0
+        reputation: 0
+      - attribute_1: 0
+        attribute_2: 0
+        primary_skill: 0
+        favored_skill: 0
+        reputation: 0
+      - attribute_1: 0
+        attribute_2: 0
+        primary_skill: 0
+        favored_skill: 0
+        reputation: 0
+      - attribute_1: 0
+        attribute_2: 0
+        primary_skill: 0
+        favored_skill: 0
+        reputation: 0
+      - attribute_1: 0
+        attribute_2: 0
+        primary_skill: 0
+        favored_skill: 0
+        reputation: 0
+      favored_skill_1: null
+      favored_skill_2: null
+      favored_skill_3: null
+      favored_skill_4: null
+      favored_skill_5: null
+      favored_skill_6: null
+      favored_skill_7: null
+      hidden_from_pc: true
+
+- RACE:
+  - NAME: A1_NecroArgRace
+  - FNAM: Скелет-аргонианин
+  - RADT:
+      skill_1: Alchemy
+      skill_1_bonus: 5
+      skill_2: Athletics
+      skill_2_bonus: 15
+      skill_3: Illusion
+      skill_3_bonus: 5
+      skill_4: MediumArmor
+      skill_4_bonus: 5
+      skill_5: Mysticism
+      skill_5_bonus: 5
+      skill_6: Spear
+      skill_6_bonus: 5
+      skill_7: Unarmored
+      skill_7_bonus: 5
+      attributes:
+        strength:
+          male: 40
+          female: 40
+        intelligence:
+          male: 40
+          female: 50
+        willpower:
+          male: 30
+          female: 40
+        agility:
+          male: 50
+          female: 40
+        speed:
+          male: 50
+          female: 40
+        endurance:
+          male: 30
+          female: 30
+        personality:
+          male: 30
+          female: 30
+        luck:
+          male: 40
+          female: 40
+      height:
+        male: 1.03
+        female: 1.0
+      weight:
+        male: 1.1
+        female: 1.0
+      flags: BEAST_RACE
+  - NPCS: immune to shock
+  - NPCS: immune to frost
+  - NPCS: argonian breathing
+  - NPCS: immune to poison
+  - NPCS: immune to disease
+  - NPCS: weakness fire_50
+
+- RACE:
+  - NAME: A1_NecroBretonRace
+  - FNAM: Скелет-бретон
+  - RADT:
+      skill_1: Alchemy
+      skill_1_bonus: 5
+      skill_2: Alteration
+      skill_2_bonus: 5
+      skill_3: Conjuration
+      skill_3_bonus: 10
+      skill_4: Illusion
+      skill_4_bonus: 5
+      skill_5: Mysticism
+      skill_5_bonus: 10
+      skill_6: Restoration
+      skill_6_bonus: 10
+      skill_7: null
+      skill_7_bonus: 0
+      attributes:
+        strength:
+          male: 40
+          female: 30
+        intelligence:
+          male: 50
+          female: 50
+        willpower:
+          male: 50
+          female: 50
+        agility:
+          male: 30
+          female: 30
+        speed:
+          male: 30
+          female: 40
+        endurance:
+          male: 30
+          female: 30
+        personality:
+          male: 40
+          female: 40
+        luck:
+          male: 40
+          female: 40
+      height:
+        male: 1.0
+        female: 0.95
+      weight:
+        male: 1.0
+        female: 0.9
+      flags: ''
+  - NPCS: immune to shock
+  - NPCS: immune to frost
+  - NPCS: immune to poison
+  - NPCS: immune to disease
+  - NPCS: magicka mult bonus_5
+  - NPCS: resist magicka_50
+  - NPCS: dragon skin
+  - NPCS: weakness fire_50
+
+- RACE:
+  - NAME: A1_NecroDunmerRace
+  - FNAM: Скелет-данмер
+  - RADT:
+      skill_1: Athletics
+      skill_1_bonus: 5
+      skill_2: Destruction
+      skill_2_bonus: 10
+      skill_3: LightArmor
+      skill_3_bonus: 5
+      skill_4: LongBlade
+      skill_4_bonus: 5
+      skill_5: Marksman
+      skill_5_bonus: 5
+      skill_6: Mysticism
+      skill_6_bonus: 5
+      skill_7: ShortBlade
+      skill_7_bonus: 10
+      attributes:
+        strength:
+          male: 40
+          female: 40
+        intelligence:
+          male: 40
+          female: 40
+        willpower:
+          male: 30
+          female: 30
+        agility:
+          male: 40
+          female: 40
+        speed:
+          male: 50
+          female: 50
+        endurance:
+          male: 40
+          female: 30
+        personality:
+          male: 30
+          female: 40
+        luck:
+          male: 40
+          female: 40
+      height:
+        male: 1.0
+        female: 1.0
+      weight:
+        male: 1.0
+        female: 0.9
+      flags: ''
+  - NPCS: immune to shock
+  - NPCS: immune to frost
+  - NPCS: immune to poison
+  - NPCS: immune to disease
+  - NPCS: ancestor guardian
+  - NPCS: resist fire_75
+  - NPCS: weakness fire_50
+
+- RACE:
+  - NAME: A1_NecroAltmerRace
+  - FNAM: Скелет-альтмер
+  - RADT:
+      skill_1: Alchemy
+      skill_1_bonus: 10
+      skill_2: Alteration
+      skill_2_bonus: 5
+      skill_3: Conjuration
+      skill_3_bonus: 5
+      skill_4: Destruction
+      skill_4_bonus: 10
+      skill_5: Enchant
+      skill_5_bonus: 10
+      skill_6: Illusion
+      skill_6_bonus: 5
+      skill_7: null
+      skill_7_bonus: 0
+      attributes:
+        strength:
+          male: 30
+          female: 30
+        intelligence:
+          male: 50
+          female: 50
+        willpower:
+          male: 40
+          female: 40
+        agility:
+          male: 40
+          female: 40
+        speed:
+          male: 30
+          female: 40
+        endurance:
+          male: 40
+          female: 30
+        personality:
+          male: 40
+          female: 40
+        luck:
+          male: 40
+          female: 40
+      height:
+        male: 1.1
+        female: 1.1
+      weight:
+        male: 1.0
+        female: 1.0
+      flags: ''
+  - NPCS: immune to shock
+  - NPCS: immune to frost
+  - NPCS: immune to poison
+  - NPCS: immune to disease
+  - NPCS: magicka mult bonus_15
+  - NPCS: weakness magicka_50
+  - NPCS: weakness fire_50
+  - NPCS: weakness frost_25
+  - NPCS: weakness shock_25
+  - NPCS: resist disease_75
+
+- RACE:
+  - NAME: A1_NecroImpRace
+  - FNAM: Скелет-имперец
+  - RADT:
+      skill_1: BluntWeapon
+      skill_1_bonus: 5
+      skill_2: HandToHand
+      skill_2_bonus: 5
+      skill_3: LightArmor
+      skill_3_bonus: 5
+      skill_4: LongBlade
+      skill_4_bonus: 10
+      skill_5: Mercantile
+      skill_5_bonus: 10
+      skill_6: Speechcraft
+      skill_6_bonus: 10
+      skill_7: null
+      skill_7_bonus: 0
+      attributes:
+        strength:
+          male: 40
+          female: 40
+        intelligence:
+          male: 40
+          female: 40
+        willpower:
+          male: 30
+          female: 40
+        agility:
+          male: 30
+          female: 30
+        speed:
+          male: 40
+          female: 30
+        endurance:
+          male: 40
+          female: 40
+        personality:
+          male: 50
+          female: 50
+        luck:
+          male: 40
+          female: 40
+      height:
+        male: 1.0
+        female: 1.0
+      weight:
+        male: 1.25
+        female: 0.95
+      flags: ''
+  - NPCS: immune to shock
+  - NPCS: immune to frost
+  - NPCS: immune to poison
+  - NPCS: immune to disease
+  - NPCS: star of the west
+  - NPCS: voice of the emperor
+  - NPCS: weakness fire_50
+
+- RACE:
+  - NAME: A1_NecroKhaRace
+  - FNAM: Скелет-хаджит
+  - RADT:
+      skill_1: Acrobatics
+      skill_1_bonus: 15
+      skill_2: Athletics
+      skill_2_bonus: 5
+      skill_3: HandToHand
+      skill_3_bonus: 5
+      skill_4: LightArmor
+      skill_4_bonus: 5
+      skill_5: Security
+      skill_5_bonus: 5
+      skill_6: ShortBlade
+      skill_6_bonus: 5
+      skill_7: Sneak
+      skill_7_bonus: 5
+      attributes:
+        strength:
+          male: 40
+          female: 30
+        intelligence:
+          male: 40
+          female: 40
+        willpower:
+          male: 30
+          female: 30
+        agility:
+          male: 50
+          female: 50
+        speed:
+          male: 40
+          female: 40
+        endurance:
+          male: 30
+          female: 40
+        personality:
+          male: 40
+          female: 40
+        luck:
+          male: 40
+          female: 40
+      height:
+        male: 1.0
+        female: 0.95
+      weight:
+        male: 1.0
+        female: 0.95
+      flags: BEAST_RACE
+  - NPCS: weakness fire_50
+  - NPCS: immune to frost
+  - NPCS: immune to shock
+  - NPCS: immune to disease
+  - NPCS: immune to poison
+  - NPCS: eye of fear
+  - NPCS: eye of night
+
+- RACE:
+  - NAME: A1_NecroNordRace
+  - FNAM: Скелет-нордлинг
+  - RADT:
+      skill_1: Axe
+      skill_1_bonus: 10
+      skill_2: BluntWeapon
+      skill_2_bonus: 10
+      skill_3: HeavyArmor
+      skill_3_bonus: 5
+      skill_4: LongBlade
+      skill_4_bonus: 5
+      skill_5: MediumArmor
+      skill_5_bonus: 10
+      skill_6: Spear
+      skill_6_bonus: 5
+      skill_7: null
+      skill_7_bonus: 0
+      attributes:
+        strength:
+          male: 50
+          female: 50
+        intelligence:
+          male: 30
+          female: 30
+        willpower:
+          male: 40
+          female: 50
+        agility:
+          male: 30
+          female: 30
+        speed:
+          male: 40
+          female: 40
+        endurance:
+          male: 50
+          female: 40
+        personality:
+          male: 30
+          female: 30
+        luck:
+          male: 40
+          female: 40
+      height:
+        male: 1.06
+        female: 1.06
+      weight:
+        male: 1.25
+        female: 1.0
+      flags: ''
+  - NPCS: weakness fire_50
+  - NPCS: immune to poison
+  - NPCS: immune to disease
+  - NPCS: immune to frost
+  - NPCS: resist shock_50
+  - NPCS: woad
+  - NPCS: thunder fist
+  - NPCS: immune to shock
+
+- RACE:
+  - NAME: A1_NecroOrcRace
+  - FNAM: Скелет-орк
+  - RADT:
+      skill_1: Armorer
+      skill_1_bonus: 10
+      skill_2: Axe
+      skill_2_bonus: 5
+      skill_3: Block
+      skill_3_bonus: 10
+      skill_4: HeavyArmor
+      skill_4_bonus: 10
+      skill_5: MediumArmor
+      skill_5_bonus: 10
+      skill_6: null
+      skill_6_bonus: 0
+      skill_7: null
+      skill_7_bonus: 0
+      attributes:
+        strength:
+          male: 45
+          female: 45
+        intelligence:
+          male: 30
+          female: 40
+        willpower:
+          male: 50
+          female: 45
+        agility:
+          male: 35
+          female: 35
+        speed:
+          male: 30
+          female: 30
+        endurance:
+          male: 50
+          female: 50
+        personality:
+          male: 30
+          female: 25
+        luck:
+          male: 40
+          female: 40
+      height:
+        male: 1.05
+        female: 1.05
+      weight:
+        male: 1.35
+        female: 1.1
+      flags: ''
+  - NPCS: immune to shock
+  - NPCS: immune to frost
+  - NPCS: immune to disease
+  - NPCS: immune to poison
+  - NPCS: orc_beserk
+  - NPCS: resist magicka_25
+  - NPCS: weakness fire_50
+
+- RACE:
+  - NAME: A1_NecroRgRace
+  - FNAM: Скелет-редгард
+  - RADT:
+      skill_1: Athletics
+      skill_1_bonus: 5
+      skill_2: Axe
+      skill_2_bonus: 5
+      skill_3: BluntWeapon
+      skill_3_bonus: 5
+      skill_4: HeavyArmor
+      skill_4_bonus: 5
+      skill_5: LongBlade
+      skill_5_bonus: 15
+      skill_6: MediumArmor
+      skill_6_bonus: 5
+      skill_7: ShortBlade
+      skill_7_bonus: 5
+      attributes:
+        strength:
+          male: 50
+          female: 40
+        intelligence:
+          male: 30
+          female: 30
+        willpower:
+          male: 30
+          female: 30
+        agility:
+          male: 40
+          female: 40
+        speed:
+          male: 40
+          female: 40
+        endurance:
+          male: 50
+          female: 50
+        personality:
+          male: 30
+          female: 40
+        luck:
+          male: 40
+          female: 40
+      height:
+        male: 1.02
+        female: 1.0
+      weight:
+        male: 1.1
+        female: 1.0
+      flags: ''
+  - NPCS: immune to shock
+  - NPCS: immune to poison
+  - NPCS: immune to disease
+  - NPCS: adrenaline rush
+  - NPCS: resist poison_75
+  - NPCS: resist disease_75
+  - NPCS: immune to frost
+  - NPCS: weakness fire_50
+
+- RACE:
+  - NAME: A1_NecroBosmerRace
+  - FNAM: Скелет-босмер
+  - RADT:
+      skill_1: Acrobatics
+      skill_1_bonus: 5
+      skill_2: Alchemy
+      skill_2_bonus: 5
+      skill_3: LightArmor
+      skill_3_bonus: 10
+      skill_4: Marksman
+      skill_4_bonus: 15
+      skill_5: Sneak
+      skill_5_bonus: 10
+      skill_6: null
+      skill_6_bonus: 0
+      skill_7: null
+      skill_7_bonus: 0
+      attributes:
+        strength:
+          male: 30
+          female: 30
+        intelligence:
+          male: 40
+          female: 40
+        willpower:
+          male: 30
+          female: 30
+        agility:
+          male: 50
+          female: 50
+        speed:
+          male: 50
+          female: 50
+        endurance:
+          male: 30
+          female: 30
+        personality:
+          male: 40
+          female: 40
+        luck:
+          male: 40
+          female: 40
+      height:
+        male: 0.9
+        female: 1.0
+      weight:
+        male: 0.95
+        female: 0.9
+      flags: ''
+  - NPCS: weakness fire_50
+  - NPCS: immune to frost
+  - NPCS: immune to poison
+  - NPCS: immune to disease
+  - NPCS: beast tongue
+  - NPCS: immune to shock
+
 - SCPT:
   - SCHD:
       name: A1_NecroAltmerBodySc
@@ -14071,3 +15722,351 @@
   - MODL: m\misc_skull00.nif
   - FNAM: Череп редгарда
   - SCRI: A1_NecroRgSkullASc
+
+- NPC_:
+  - NAME: A1_NecroArgNpc
+  - MODL: base_animKnA.nif
+  - FNAM: Скелет-аргонианин
+  - RNAM: A1_NecroArgRace
+  - CNAM: Warrior
+  - ANAM: A1_NecroFact
+  - BNAM: A1_NecroSkelArgHead
+  - KNAM: ''
+  - NPDT:
+      level: 10
+      disposition: 100
+      reputation: 2
+      rank: 0
+      gold: 0
+      padding: 198
+      stats: 31872
+  - FLAG:
+      flags: AUTO_CALCULATE_STATS
+      blood: Skeleton
+      padding: 0
+  - AIDT:
+      hello: 30
+      fight: 30
+      flee: 30
+      alarm: 0
+      padding_8: 198
+      padding_16: 31872
+      services: ''
+
+- NPC_:
+  - NAME: A1_NecroBretonNpc
+  - FNAM: Скелет-бретон
+  - RNAM: A1_NecroBretonRace
+  - CNAM: Warrior
+  - ANAM: A1_NecroFact
+  - BNAM: A1_NecroSkelBretonHead
+  - KNAM: ''
+  - NPDT:
+      level: 10
+      disposition: 100
+      reputation: 2
+      rank: 0
+      gold: 0
+      padding: 198
+      stats: 31872
+  - FLAG:
+      flags: AUTO_CALCULATE_STATS
+      blood: Skeleton
+      padding: 0
+  - AIDT:
+      hello: 30
+      fight: 30
+      flee: 30
+      alarm: 0
+      padding_8: 198
+      padding_16: 31872
+      services: ''
+
+- NPC_:
+  - NAME: A1_NecroDunmerNpc
+  - FNAM: Скелет-данмер
+  - RNAM: A1_NecroDunmerRace
+  - CNAM: Warrior
+  - ANAM: A1_NecroFact
+  - BNAM: A1_NecroSkelDunmerHead
+  - KNAM: ''
+  - NPDT:
+      level: 10
+      disposition: 100
+      reputation: 2
+      rank: 0
+      gold: 0
+      padding: 198
+      stats: 31872
+  - FLAG:
+      flags: AUTO_CALCULATE_STATS
+      blood: Skeleton
+      padding: 0
+  - AIDT:
+      hello: 30
+      fight: 30
+      flee: 30
+      alarm: 0
+      padding_8: 198
+      padding_16: 31872
+      services: ''
+
+- NPC_:
+  - NAME: A1_NecroAltmerNpc
+  - FNAM: Скелет-альтмер
+  - RNAM: A1_NecroAltmerRace
+  - CNAM: Battlemage
+  - ANAM: A1_NecroFact
+  - BNAM: A1_NecroSkelAltmerHead
+  - KNAM: ''
+  - NPDT:
+      level: 10
+      disposition: 100
+      reputation: 2
+      rank: 0
+      gold: 0
+      padding: 0
+      stats:
+        attributes:
+          strength: 59
+          intelligence: 80
+          willpower: 64
+          agility: 50
+          speed: 37
+          endurance: 53
+          personality: 45
+          luck: 40
+        skills:
+          block: 6
+          armorer: 6
+          medium_armor: 6
+          heavy_armor: 39
+          blunt_weapon: 6
+          long_blade: 24
+          axe: 39
+          spear: 6
+          athletics: 6
+          enchant: 44
+          destruction: 58
+          alteration: 54
+          illusion: 20
+          conjuration: 54
+          mysticism: 34
+          restoration: 15
+          alchemy: 44
+          unarmored: 15
+          security: 6
+          sneak: 6
+          acrobatics: 6
+          light_armor: 6
+          short_blade: 6
+          marksman: 24
+          mercantile: 6
+          speechcraft: 6
+          hand_to_hand: 6
+        faction: 0
+        health: 83
+        magicka: 160
+        fatigue: 226
+  - FLAG:
+      flags: ''
+      blood: Skeleton
+      padding: 0
+  - NPCS: sleep
+  - NPCS: distracting touch
+  - NPCS: deadly poison
+  - NPCS: poisonbloom
+  - NPCS: viperbolt
+  - NPCS: dire weakness to fire
+  - NPCS: dire weakness to frost
+  - NPCS: dire weakness to magicka
+  - NPCS: dire weakness to poison
+  - NPCS: dire weakness to shock
+  - NPCS: commanding touch
+  - NPCS: demoralizing touch
+  - NPCS: demoralize humanoid
+  - NPCS: purge magic
+  - NPCS: touch dispel
+  - AIDT:
+      hello: 30
+      fight: 30
+      flee: 30
+      alarm: 0
+      padding_8: 198
+      padding_16: 31872
+      services: ''
+
+- NPC_:
+  - NAME: A1_NecroImpNpc
+  - FNAM: Скелет-имперец
+  - RNAM: A1_NecroImpRace
+  - CNAM: Warrior
+  - ANAM: A1_NecroFact
+  - BNAM: A1_NecroSkelImpHead
+  - KNAM: ''
+  - NPDT:
+      level: 10
+      disposition: 100
+      reputation: 2
+      rank: 0
+      gold: 0
+      padding: 198
+      stats: 31872
+  - FLAG:
+      flags: AUTO_CALCULATE_STATS
+      blood: Skeleton
+      padding: 0
+  - AIDT:
+      hello: 30
+      fight: 30
+      flee: 30
+      alarm: 0
+      padding_8: 198
+      padding_16: 31872
+      services: ''
+
+- NPC_:
+  - NAME: A1_NecroKhaNpc
+  - MODL: base_animKnA.nif
+  - FNAM: Скелет-хаджит
+  - RNAM: A1_NecroKhaRace
+  - CNAM: Assassin
+  - ANAM: A1_NecroFact
+  - BNAM: A1_NecroSkelKhaHead
+  - KNAM: ''
+  - NPDT:
+      level: 10
+      disposition: 100
+      reputation: 2
+      rank: 0
+      gold: 0
+      padding: 198
+      stats: 31872
+  - FLAG:
+      flags: AUTO_CALCULATE_STATS
+      blood: Skeleton
+      padding: 0
+  - AIDT:
+      hello: 30
+      fight: 30
+      flee: 30
+      alarm: 0
+      padding_8: 198
+      padding_16: 31872
+      services: ''
+
+- NPC_:
+  - NAME: A1_NecroNordNpc
+  - FNAM: Скелет-нордлинг
+  - RNAM: A1_NecroNordRace
+  - CNAM: Warrior
+  - ANAM: A1_NecroFact
+  - BNAM: A1_NecroSkelNordHead
+  - KNAM: ''
+  - NPDT:
+      level: 10
+      disposition: 100
+      reputation: 2
+      rank: 0
+      gold: 0
+      padding: 198
+      stats: 31872
+  - FLAG:
+      flags: AUTO_CALCULATE_STATS
+      blood: Skeleton
+      padding: 0
+  - AIDT:
+      hello: 30
+      fight: 30
+      flee: 30
+      alarm: 0
+      padding_8: 198
+      padding_16: 31872
+      services: ''
+
+- NPC_:
+  - NAME: A1_NecroRgNpc
+  - FNAM: Скелет-редгард
+  - RNAM: A1_NecroRgRace
+  - CNAM: Warrior
+  - ANAM: A1_NecroFact
+  - BNAM: A1_NecroSkelRgHead
+  - KNAM: ''
+  - NPDT:
+      level: 10
+      disposition: 100
+      reputation: 2
+      rank: 0
+      gold: 0
+      padding: 198
+      stats: 31872
+  - FLAG:
+      flags: AUTO_CALCULATE_STATS
+      blood: Skeleton
+      padding: 0
+  - AIDT:
+      hello: 30
+      fight: 30
+      flee: 30
+      alarm: 0
+      padding_8: 198
+      padding_16: 31872
+      services: ''
+
+- NPC_:
+  - NAME: A1_NecroOrcNpc
+  - FNAM: Скелет-орк
+  - RNAM: A1_NecroOrcRace
+  - CNAM: Warrior
+  - ANAM: A1_NecroFact
+  - BNAM: A1_NecroSkelOrcHead
+  - KNAM: ''
+  - NPDT:
+      level: 10
+      disposition: 100
+      reputation: 2
+      rank: 0
+      gold: 0
+      padding: 198
+      stats: 31872
+  - FLAG:
+      flags: AUTO_CALCULATE_STATS
+      blood: Skeleton
+      padding: 0
+  - AIDT:
+      hello: 30
+      fight: 30
+      flee: 30
+      alarm: 0
+      padding_8: 198
+      padding_16: 31872
+      services: ''
+
+- NPC_:
+  - NAME: A1_NecroBosmerNpc
+  - FNAM: Скелет-босмер
+  - RNAM: A1_NecroBosmerRace
+  - CNAM: Archer
+  - ANAM: A1_NecroFact
+  - BNAM: A1_NecroSkelBosmerHead
+  - KNAM: ''
+  - NPDT:
+      level: 10
+      disposition: 100
+      reputation: 2
+      rank: 0
+      gold: 0
+      padding: 198
+      stats: 31872
+  - FLAG:
+      flags: AUTO_CALCULATE_STATS
+      blood: Skeleton
+      padding: 0
+  - AIDT:
+      hello: 30
+      fight: 30
+      flee: 30
+      alarm: 0
+      padding_8: 198
+      padding_16: 31872
+      services: ''
