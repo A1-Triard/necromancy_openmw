@@ -6,7 +6,7 @@
       description:
       - Профессиональный некромант.
       - Основан на Blasphemous Revenants v1.3, который создан Fliggerty и переведён Gwathlobal
-      records: 265
+      records: 266
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
@@ -624,11 +624,11 @@
         male: 1.1
         female: 1.0
       flags: ''
-  - NPCS: adrenaline rush
-  - NPCS: resist shock_50
-  - NPCS: immune to frost
-  - NPCS: immune to disease
   - NPCS: immune to poison
+  - NPCS: immune to disease
+  - NPCS: immune to frost
+  - NPCS: resist shock_50
+  - NPCS: adrenaline rush
 
 - RACE:
   - NAME: A1_NecroBosmerRace
@@ -680,11 +680,11 @@
         male: 0.95
         female: 0.9
       flags: ''
-  - NPCS: beast tongue
-  - NPCS: immune to disease
-  - NPCS: immune to poison
-  - NPCS: immune to frost
   - NPCS: resist shock_50
+  - NPCS: immune to frost
+  - NPCS: immune to poison
+  - NPCS: immune to disease
+  - NPCS: beast tongue
 
 - SCPT:
   - SCHD:
@@ -10867,15 +10867,17 @@
   - SCHD:
       name: A1_NecroNpcSc
       vars:
-        shorts: 3
+        shorts: 4
         longs: 0
-        floats: 0
-      data_size: 494
-      var_table_size: 24
+        floats: 1
+      data_size: 657
+      var_table_size: 36
   - SCVR:
     - NoLore
     - Companion
     - Travel
+    - count
+    - tempF
   - SCDT:
       stmts:
       - func: Set
@@ -10885,6 +10887,83 @@
           type: Short
           index: 2
         - ' 1'
+      - func: If
+        args:
+        - 12
+        - " Xъ\x10 == 3"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 4
+        - " s\x04\0 1 +"
+      - func: If
+        args:
+        - 9
+        - " s\x04\0 == 30"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 4
+        - ' 0'
+      - func: If
+        args:
+        - 6
+        - " X\x01\x10 r\x06player > 2000"
+      - func: SetRef
+        args: player
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " X\n\x10X\0"
+      - func: SetPos
+        args:
+        - X
+        - kind: Var
+          type: Float
+          index: 1
+      - func: SetRef
+        args: player
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " X\n\x10Y\0"
+      - func: SetPos
+        args:
+        - Y
+        - kind: Var
+          type: Float
+          index: 1
+      - func: SetRef
+        args: player
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " X\n\x10Z\0"
+      - func: SetPos
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
       - func: If
         args:
         - 24
@@ -11074,8 +11153,25 @@
     - short NoLore
     - short Companion
     - short Travel
+    - short count
+    - float tempF
     - ''
     - set Companion to 1
+    - ''
+    - if ( GetCurrentAIPackage == 3 )
+    - "\tset count to ( count + 1 )"
+    - "\tif ( count == 30 )"
+    - "\t\tset count to 0"
+    - "\t\tif ( GetDistance player > 2000 )"
+    - "\t\t\tset tempF to ( player->GetPos X )"
+    - "\t\t\tSetPos X tempF"
+    - "\t\t\tset tempF to ( player->GetPos Y )"
+    - "\t\t\tSetPos Y tempF"
+    - "\t\t\tset tempF to ( player->GetPos Z )"
+    - "\t\t\tSetPos Z tempF"
+    - "\t\tendif"
+    - "\tendif"
+    - endif
     - ''
     - if ( Travel > 0 )
     - "\tif ( Travel == 1 )"
@@ -14292,6 +14388,28 @@
       magnitude_min: 1
       magnitude_max: 1
 
+- SPEL:
+  - NAME: A1_NecroSummon
+  - FNAM: Поднять нежить
+  - SPDT:
+      type: Spell
+      cost: 20
+      flags: AUTO_CALCULATE_COST
+  - ENAM:
+      index: BoundBoots
+      skill: null
+      attribute: null
+      range: Self
+      area: 0
+      duration: 200
+      magnitude_min: 1
+      magnitude_max: 1
+
+- ACTI:
+  - NAME: A1_NecroPlatform
+  - MODL: i\in_velothi_platform_01.NIF
+  - FNAM: Платформа
+
 - BODY:
   - NAME: A1_NecroSkelArgChest
   - MODL: a1n\b_s_skel_m_chest_1.nif
@@ -16538,9 +16656,6 @@
   - NAME: Как прикажешь.
   - SCVR: '01500'
   - INTV: 12
-  - BNAM:
-    - set Travel to 12
-    - Goodbye
 
 - INFO:
   - INAM: '168903259265894830'

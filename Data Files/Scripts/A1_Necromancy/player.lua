@@ -26,15 +26,110 @@ local function withCrosshairObject(callback)
     end), startPos, endPos, { ignore = self.object })
 end
 
+local skeletons = {
+    ['a1_necroaltmerpaulsk'] = 'h',
+    ['a1_necroargpaulsk'] = 'a',
+    ['a1_necrobosmerpaulsk'] = 'w',
+    ['a1_necrobretonpaulsk'] = 'b',
+    ['a1_necrodunmerpaulsk'] = 'd',
+    ['a1_necroimppaulsk'] = 'i',
+    ['a1_necrokhapaulsk'] = 'k',
+    ['a1_necronordpaulsk'] = 'n',
+    ['a1_necroorcpaulsk'] = 'o',
+    ['a1_necrorgpaulsk'] = 'r',
+}
+
+local skulls = {
+    ['a1_necroaltmerskull'] = 'h',
+    ['a1_necroargskull'] = 'a',
+    ['a1_necrobosmerskull'] = 'w',
+    ['a1_necrobretonskull'] = 'b',
+    ['a1_necrodunmerskull'] = 'd',
+    ['a1_necroimpskull'] = 'i',
+    ['a1_necrokhaskull'] = 'k',
+    ['a1_necronordskull'] = 'n',
+    ['a1_necroorcskull'] = 'o',
+    ['a1_necrorgskull'] = 'r',
+}
+
+local function summon()
+    local inv = types.Actor.inventory(self.object)
+    if inv:countOf('ingred_scrap_metal_01') == 0 then
+        ui.showMessage('Для создания скелета нужны обрезки металла')
+        return nil
+    end
+    if inv:countOf('ingred_bonemeal_01') < 20 then
+        ui.showMessage('Для создания скелета нужно 20 единиц костяной муки')
+        return nil
+    end
+    local platform = nil
+    for _, a in ipairs(nearby.activators) do
+        if types.Activator.record(a).id == 'a1_necroplatform' then
+            local d = self.object.position - a.position
+            if d:length() <= 2000 then
+                platform = a
+                break
+            end
+        end
+    end
+    if not platform then
+        ui.showMessage('Для поднятия нежити нужна платформа')
+        return nil
+    end
+    local skel = nil
+    local skelType
+    for _, i in ipairs(nearby.items) do
+        if types.Armor.objectIsInstance(i) then
+            local s = skeletons[types.Armor.record(i).id]
+            if s then
+                local d = platform.position - i.position
+                if d:length() <= 2000 then
+                    skel = i
+                    skelType = s
+                    break
+                end
+            end
+        end
+    end
+    if not skel then
+        ui.showMessage('Заклинание не может найти тело')
+        return nil
+    end
+    local skull = nil
+    local skullType
+    for _, i in ipairs(nearby.items) do
+        if types.Miscellaneous.objectIsInstance(i) then
+            local s = skulls[types.Miscellaneous.record(i).id]
+            if s then
+                local d = platform.position - i.position
+                if d:length() <= 2000 then
+                    skull = i
+                    skullType = s
+                    break
+                end
+            end
+        end
+    end
+    if not skull or skullType ~= skelType then
+        ui.showMessage('Заклинание не может найти голову')
+        return nil
+    end
+    return {
+        platform = platform,
+        type = skelType,
+        body = skel,
+        head = skull,
+    }
+end
+
 I.AnimationController.addTextKeyHandler('spellcast', function(groupname, key)
     if string.sub(key, -7) == 'release' then
-        async:newUnsavableSimulationTimer(0.5, function()
+        async:newUnsavableSimulationTimer(0, function()
             local spells = types.Actor.activeSpells(self)
             if spells:isSpellActive('a1_necroprepare') then
                 withCrosshairObject(function(target)
                     if target and types.NPC.objectIsInstance(target) and types.Actor.isDead(target) then
                         local head = types.NPC.record(target).head
-                        ui.showMessage(head)
                         core.sendGlobalEvent('A1NecroPrepare', {
                             player = self.object, target = target
                         })
@@ -42,6 +137,31 @@ I.AnimationController.addTextKeyHandler('spellcast', function(groupname, key)
                         ui.showMessage('Заклинание не нашло цель')
                     end
                 end)
+            end
+            if spells:isSpellActive('a1_necrosummon') then
+                local s = summon()
+                local platform
+                local type
+                local body
+                local head
+                if s then
+                    platform = s.platform
+                    type = s.type
+                    body = s.body
+                    head = s.head
+                else
+                    platform = nil
+                    type = nil
+                    body = nil
+                    head = nil
+                end
+                core.sendGlobalEvent('A1NecroSummon', {
+                    player = self.object,
+                    platform = platform,
+                    type = type,
+                    body = body,
+                    head = head,
+                })
             end
         end)
     end

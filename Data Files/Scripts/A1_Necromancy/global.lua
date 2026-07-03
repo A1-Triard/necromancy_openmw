@@ -52,6 +52,19 @@ local paulsByBodies = {
     ['a1_necrorgbody'] = 'a1_necrorgpaul',
 }
 
+local npcs = {
+    ['h'] = 'a1_necroaltmernpc',
+    ['a'] = 'a1_necroargnpc',
+    ['w'] = 'a1_necrobosmernpc',
+    ['b'] = 'a1_necrobretonnpc',
+    ['d'] = 'a1_necrodunmernpc',
+    ['i'] = 'a1_necroimpnpc',
+    ['k'] = 'a1_necrokhanpc',
+    ['n'] = 'a1_necronordnpc',
+    ['o'] = 'a1_necroorcnpc',
+    ['r'] = 'a1_necrorgnpc',
+}
+
 return {
     engineHandlers = {
         onSave = function()
@@ -119,6 +132,30 @@ return {
             local bodyObj = world.createObject(body)
             bodyObj:moveInto(types.Actor.inventory(data.player))
             target:remove()
+        end,
+        A1NecroSummon = function(data)
+            local effects = types.Actor.activeEffects(data.player)
+            effects:remove('boundboots')
+            if not data.platform then
+                return
+            end
+            local inv = types.Actor.inventory(data.player)
+            local m = inv:find('ingred_scrap_metal_01')
+            if not m then
+                return
+            end
+            m:remove(1)
+            local b = inv:find('ingred_bonemeal_01')
+            if not b or b.count < 20 then
+                return
+            end
+            b:remove(20)
+            local npc = world.createObject(npcs[data.type])
+            npc:teleport(data.platform.cell, data.platform.position)
+            local body = data.body
+            body:remove()
+            local head = data.head
+            head:remove()
         end,
     },
 }
