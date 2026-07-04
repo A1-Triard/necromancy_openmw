@@ -6,7 +6,7 @@
       description:
       - Профессиональный некромант.
       - Основан на Blasphemous Revenants v1.3, который создан Fliggerty и переведён Gwathlobal
-      records: 268
+      records: 272
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
@@ -10918,19 +10918,31 @@
   - SCHD:
       name: A1_NecroNpcSc
       vars:
-        shorts: 4
+        shorts: 5
         longs: 0
         floats: 1
-      data_size: 674
-      var_table_size: 36
+      data_size: 703
+      var_table_size: 41
   - SCVR:
     - NoLore
     - Companion
     - Travel
+    - init
     - count
     - tempF
   - SCDT:
       stmts:
+      - func: If
+        args:
+        - 3
+        - " s\x04\0 == 0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 4
+        - ' 1'
       - func: Set
         args:
         - kind: Local
@@ -10938,6 +10950,12 @@
           type: Short
           index: 2
         - ' 1'
+      - func: SetDisposition
+        args:
+          kind: Val
+          val: 100.0
+      - func: EndIf
+        args: null
       - func: If
         args:
         - 1
@@ -10955,18 +10973,18 @@
         - kind: Local
           owner: null
           type: Short
-          index: 4
-        - " s\x04\0 1 +"
+          index: 5
+        - " s\x05\0 1 +"
       - func: If
         args:
         - 9
-        - " s\x04\0 == 30"
+        - " s\x05\0 == 30"
       - func: Set
         args:
         - kind: Local
           owner: null
           type: Short
-          index: 4
+          index: 5
         - ' 0'
       - func: If
         args:
@@ -11212,10 +11230,15 @@
     - short NoLore
     - short Companion
     - short Travel
+    - short init
     - short count
     - float tempF
     - ''
-    - set Companion to 1
+    - if ( init == 0 )
+    - "\tset init to 1"
+    - "\tset Companion to 1"
+    - "\tSetDisposition 100"
+    - endif
     - ''
     - if ( MenuMode == 1 )
     - "\treturn"
@@ -16696,13 +16719,13 @@
     - Choice "Балмора" 1 "Альд'рун" 2 "Вивек" 3 "Молаг Мар" 4 "Волверин Холл" 5 "Вос" 6 "Дагон Фел" 7 "Хуул" 8 "Гнисис" 9 "Призрачные врата" 10 "Морнхолд" 11 "Никуда" 12
 
 - DIAL:
-  - NAME: Greeting 5
+  - NAME: Greeting 0
   - DATA: Greeting
 
 - INFO:
-  - INAM: '1373719765189997642'
-  - PNAM: '27518247831477521212'
-  - NNAM: '1599759952880327831'
+  - INAM: '3083881611008327074'
+  - PNAM: '16043312532573123088'
+  - NNAM: '1331611023695731109'
   - DATA:
       dialog_type: Greeting
       disp_index: 0
@@ -16716,8 +16739,8 @@
   - INTV: 1
 
 - INFO:
-  - INAM: '1599759952880327831'
-  - PNAM: '1373719765189997642'
+  - INAM: '1331611023695731109'
+  - PNAM: '3083881611008327074'
   - NNAM: ''
   - DATA:
       dialog_type: Greeting
