@@ -232,7 +232,7 @@ fn write_esp(
                     armor: 10,
                 })),
                 (ITEX, Field::StringZ(StringZ {
-                    string: "a\\TX_Chitin_pauldron.tga".to_string(), has_tail_zero: true
+                    string: "a1n\\hair.dds".to_string(), has_tail_zero: true
                 })),
                 (INDX, Field::BipedObject(BipedObject::Hair)),
                 (BNAM, Field::String(format!("A1_NecroB{hash}"))),
