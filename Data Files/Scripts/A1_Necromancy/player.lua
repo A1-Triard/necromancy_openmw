@@ -16,7 +16,7 @@ local function withCrosshairObject(callback)
         startPos = camera.getTrackedPosition()
     end
     local direction = camera.viewportToWorldVector(util.vector2(0.5, 0.5))
-    local endPos = startPos + direction * 100
+    local endPos = startPos + direction * 200
     nearby.asyncCastRenderingRay(async:callback(function(result)
         if result.hit and result.hitObject then
             callback(result.hitObject)
@@ -52,29 +52,17 @@ local skulls = {
     ['a1_necrorgskull'] = 'r',
 }
 
-local function summon()
+local function summon(callback)
     local inv = types.Actor.inventory(self.object)
     if inv:countOf('ingred_scrap_metal_01') == 0 then
         ui.showMessage('Для создания скелета нужны обрезки металла')
-        return nil
+        callback(nil)
+        return
     end
     if inv:countOf('ingred_bonemeal_01') < 20 then
         ui.showMessage('Для создания скелета нужно 20 единиц костяной муки')
-        return nil
-    end
-    local platform = nil
-    for _, a in ipairs(nearby.activators) do
-        if types.Activator.record(a).id == 'a1_necroplatform' then
-            local d = self.object.position - a.position
-            if d:length() <= 100 then
-                platform = a
-                break
-            end
-        end
-    end
-    if not platform then
-        ui.showMessage('Для поднятия нежити нужна платформа')
-        return nil
+        callback(nil)
+        return
     end
     local skel = nil
     local skelType
@@ -82,8 +70,8 @@ local function summon()
         if types.Armor.objectIsInstance(i) then
             local s = skeletons[types.Armor.record(i).id]
             if s then
-                local d = platform.position - i.position
-                if d:length() <= 100 then
+                local d = self.object.position - i.position
+                if d:length() <= 200 then
                     skel = i
                     skelType = s
                     break
@@ -93,33 +81,52 @@ local function summon()
     end
     if not skel then
         ui.showMessage('Заклинание не может найти тело')
-        return nil
+        callback(nil)
     end
-    local skull = nil
-    local skullType
-    for _, i in ipairs(nearby.items) do
-        if types.Miscellaneous.objectIsInstance(i) then
-            local s = skulls[types.Miscellaneous.record(i).id]
-            if s then
-                local d = platform.position - i.position
-                if d:length() <= 100 then
-                    skull = i
-                    skullType = s
-                    break
+    local platformStartPos = skel.position
+    local platformEndPos = platformStartPos + util.vector3(0, 0, -200)
+    nearby.asyncCastRenderingRay(async:callback(function(result)
+        local platform = nil
+        if result.hit and result.hitObject then
+            if types.Static.objectIsInstance(result.hitObject) then
+                local id = types.Static.record(result.hitObject).id
+                if id == 'in_velothi_ashpit_01' or id == 'in_velothi_platform_01' then
+                    platform = result.hitObject
                 end
             end
         end
-    end
-    if not skull or skullType ~= skelType then
-        ui.showMessage('Заклинание не может найти голову')
-        return nil
-    end
-    return {
-        platform = platform,
-        type = skelType,
-        body = skel,
-        head = skull,
-    }
+        if not platform then
+            ui.showMessage('Для поднятия нежити нужна платформа')
+            callback(nil)
+            return
+        end
+        local skull = nil
+        local skullType
+        for _, i in ipairs(nearby.items) do
+            if types.Miscellaneous.objectIsInstance(i) then
+                local s = skulls[types.Miscellaneous.record(i).id]
+                if s then
+                    local d = platform.position - i.position
+                    if d:length() <= 200 then
+                        skull = i
+                        skullType = s
+                        break
+                    end
+                end
+            end
+        end
+        if not skull or skullType ~= skelType then
+            ui.showMessage('Заклинание не может найти голову')
+            callback(nil)
+            return
+        end
+        callback({
+            platform = platform,
+            type = skelType,
+            body = skel,
+            head = skull,
+        })
+    end), platformStartPos, platformEndPos, { ignore = skel })
 end
 
 I.AnimationController.addTextKeyHandler('spellcast', function(groupname, key)
@@ -139,29 +146,30 @@ I.AnimationController.addTextKeyHandler('spellcast', function(groupname, key)
                 end)
             end
             if spells:isSpellActive('a1_necrosummon') then
-                local s = summon()
-                local platform
-                local type
-                local body
-                local head
-                if s then
-                    platform = s.platform
-                    type = s.type
-                    body = s.body
-                    head = s.head
-                else
-                    platform = nil
-                    type = nil
-                    body = nil
-                    head = nil
-                end
-                core.sendGlobalEvent('A1NecroSummon', {
-                    player = self.object,
-                    platform = platform,
-                    type = type,
-                    body = body,
-                    head = head,
-                })
+                summon(function(s)
+                    local platform
+                    local type
+                    local body
+                    local head
+                    if s then
+                        platform = s.platform
+                        type = s.type
+                        body = s.body
+                        head = s.head
+                    else
+                        platform = nil
+                        type = nil
+                        body = nil
+                        head = nil
+                    end
+                    core.sendGlobalEvent('A1NecroSummon', {
+                        player = self.object,
+                        platform = platform,
+                        type = type,
+                        body = body,
+                        head = head,
+                    })
+                end)
             end
         end)
     end

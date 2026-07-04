@@ -6,15 +6,13 @@
       description:
       - Профессиональный некромант.
       - Основан на Blasphemous Revenants v1.3, который создан Fliggerty и переведён Gwathlobal
-      records: 268
+      records: 320
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
   - DATA: 6616539
   - MAST: Bloodmoon.esm
   - DATA: 11799703
-  - MAST: Trib_BM_patch_1C.esm
-  - DATA: 23382
 
 - GLOB:
   - NAME: A1_NecroX
@@ -14229,11 +14227,6 @@
       magnitude_min: 1
       magnitude_max: 1
 
-- ACTI:
-  - NAME: A1_NecroPlatform
-  - MODL: c\amulet_common_1.nif
-  - FNAM: Платформа
-
 - BODY:
   - NAME: A1_NecroSkelArgChest
   - MODL: a1n\b_s_skel_m_chest_1.nif
@@ -16251,60 +16244,6 @@
       padding_8: 233
       padding_16: 31671
       services: ''
-
-- CELL:
-  - NAME: Aran Ancestral Tomb
-  - DATA:
-      flags: INTERIOR
-      position:
-        type: Interior
-        x: 9.038e-42
-        y: 1.0
-  - WHGT: 0.0
-  - AMBI:
-      ambient: '#0A0A0A'
-      sunlight: '#282828'
-      fog: '#321900'
-      fog_density: 1.0
-  - NAM0: 1
-  - FRMR: 1
-  - NAME: A1_NecroPlatform
-  - DATA:
-      pos:
-        x: 1710.172
-        y: 2809.355
-        z: -719.719
-      rot:
-        x: 0.0
-        y: 0.0
-        z: 0.0
-
-- CELL:
-  - NAME: Baram Ancestral Tomb
-  - DATA:
-      flags: INTERIOR
-      position:
-        type: Interior
-        x: 9.038e-42
-        y: 1.0
-  - WHGT: 0.0
-  - AMBI:
-      ambient: '#0A0A0A'
-      sunlight: '#281E14'
-      fog: '#321900'
-      fog_density: 1.0
-  - NAM0: 1
-  - FRMR: 2
-  - NAME: A1_NecroPlatform
-  - DATA:
-      pos:
-        x: 1550.171
-        y: -2054.646
-        z: 912.281
-      rot:
-        x: 0.0
-        y: 0.0
-        z: 0.0
 
 - DIAL:
   - NAME: Команды перемещений
