@@ -16,7 +16,7 @@ local function withCrosshairObject(callback)
         startPos = camera.getTrackedPosition()
     end
     local direction = camera.viewportToWorldVector(util.vector2(0.5, 0.5))
-    local endPos = startPos + direction * 200
+    local endPos = startPos + direction * 100
     nearby.asyncCastRenderingRay(async:callback(function(result)
         if result.hit and result.hitObject then
             callback(result.hitObject)
@@ -66,7 +66,7 @@ local function summon()
     for _, a in ipairs(nearby.activators) do
         if types.Activator.record(a).id == 'a1_necroplatform' then
             local d = self.object.position - a.position
-            if d:length() <= 2000 then
+            if d:length() <= 100 then
                 platform = a
                 break
             end
@@ -83,7 +83,7 @@ local function summon()
             local s = skeletons[types.Armor.record(i).id]
             if s then
                 local d = platform.position - i.position
-                if d:length() <= 2000 then
+                if d:length() <= 100 then
                     skel = i
                     skelType = s
                     break
@@ -102,7 +102,7 @@ local function summon()
             local s = skulls[types.Miscellaneous.record(i).id]
             if s then
                 local d = platform.position - i.position
-                if d:length() <= 2000 then
+                if d:length() <= 100 then
                     skull = i
                     skullType = s
                     break

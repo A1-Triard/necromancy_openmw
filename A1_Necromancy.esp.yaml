@@ -6,13 +6,15 @@
       description:
       - Профессиональный некромант.
       - Основан на Blasphemous Revenants v1.3, который создан Fliggerty и переведён Gwathlobal
-      records: 266
+      records: 268
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
   - DATA: 6616539
   - MAST: Bloodmoon.esm
   - DATA: 11799703
+  - MAST: Trib_BM_patch_1C.esm
+  - DATA: 23382
 
 - GLOB:
   - NAME: A1_NecroX
@@ -693,7 +695,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 931
+      data_size: 914
       var_table_size: 34
   - SCVR:
     - state
@@ -846,14 +848,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -1072,10 +1066,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -1327,7 +1317,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 931
+      data_size: 914
       var_table_size: 34
   - SCVR:
     - state
@@ -1480,14 +1470,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -1706,10 +1688,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -1963,7 +1941,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 928
+      data_size: 911
       var_table_size: 34
   - SCVR:
     - state
@@ -2116,14 +2094,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -2342,10 +2312,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -2599,7 +2565,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 928
+      data_size: 911
       var_table_size: 34
   - SCVR:
     - state
@@ -2752,14 +2718,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -2978,10 +2936,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -3236,7 +3190,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 931
+      data_size: 914
       var_table_size: 34
   - SCVR:
     - state
@@ -3389,14 +3343,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -3615,10 +3561,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -3872,7 +3814,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 931
+      data_size: 914
       var_table_size: 34
   - SCVR:
     - state
@@ -4025,14 +3967,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -4251,10 +4185,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -4510,7 +4440,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 931
+      data_size: 914
       var_table_size: 34
   - SCVR:
     - state
@@ -4663,14 +4593,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -4889,10 +4811,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -5146,7 +5064,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 931
+      data_size: 914
       var_table_size: 34
   - SCVR:
     - state
@@ -5299,14 +5217,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -5525,10 +5435,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -5782,7 +5688,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 931
+      data_size: 914
       var_table_size: 34
   - SCVR:
     - state
@@ -5935,14 +5841,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -6161,10 +6059,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -6418,7 +6312,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 931
+      data_size: 914
       var_table_size: 34
   - SCVR:
     - state
@@ -6571,14 +6465,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -6797,10 +6683,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -7054,7 +6936,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 928
+      data_size: 911
       var_table_size: 34
   - SCVR:
     - state
@@ -7207,14 +7089,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -7433,10 +7307,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -7690,7 +7560,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 928
+      data_size: 911
       var_table_size: 34
   - SCVR:
     - state
@@ -7843,14 +7713,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -8069,10 +7931,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -8326,7 +8184,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 928
+      data_size: 911
       var_table_size: 34
   - SCVR:
     - state
@@ -8479,14 +8337,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -8705,10 +8555,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -8962,7 +8808,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 928
+      data_size: 911
       var_table_size: 34
   - SCVR:
     - state
@@ -9115,14 +8961,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -9341,10 +9179,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -9598,7 +9432,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 929
+      data_size: 912
       var_table_size: 34
   - SCVR:
     - state
@@ -9751,14 +9585,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -9977,10 +9803,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -10234,7 +10056,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 929
+      data_size: 912
       var_table_size: 34
   - SCVR:
     - state
@@ -10387,14 +10209,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -10613,10 +10427,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -10870,7 +10680,7 @@
         shorts: 4
         longs: 0
         floats: 1
-      data_size: 657
+      data_size: 674
       var_table_size: 36
   - SCVR:
     - NoLore
@@ -10887,6 +10697,14 @@
           type: Short
           index: 2
         - ' 1'
+      - func: If
+        args:
+        - 1
+        - " X \x10 == 1"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
       - func: If
         args:
         - 12
@@ -11158,6 +10976,10 @@
     - ''
     - set Companion to 1
     - ''
+    - if ( MenuMode == 1 )
+    - "\treturn"
+    - endif
+    - ''
     - if ( GetCurrentAIPackage == 3 )
     - "\tset count to ( count + 1 )"
     - "\tif ( count == 30 )"
@@ -11209,7 +11031,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 928
+      data_size: 911
       var_table_size: 34
   - SCVR:
     - state
@@ -11362,14 +11184,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -11588,10 +11402,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -11845,7 +11655,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 928
+      data_size: 911
       var_table_size: 34
   - SCVR:
     - state
@@ -11998,14 +11808,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -12224,10 +12026,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -12478,16 +12276,17 @@
   - SCHD:
       name: A1_NecroPaulSc
       vars:
-        shorts: 4
+        shorts: 5
         longs: 0
         floats: 0
-      data_size: 5603
-      var_table_size: 28
+      data_size: 6128
+      var_table_size: 36
   - SCVR:
     - delay
     - dropped
     - drop
     - equipped
+    - country
   - SCDT:
       stmts:
       - func: If
@@ -12508,7 +12307,7 @@
       - func: If
         args:
         - 1
-        - " s\x01\0 < 1000"
+        - " s\x01\0 < 500"
       - func: Return
         args: null
       - func: EndIf
@@ -12702,7 +12501,24 @@
       - 1F 00 CD E5 F1 F2 E8 20 E1 EE EB FC F8 E5 20 EE E4 ED EE E3 EE 20 F2 E5 EB E0 20 F2 FF E6 E5 EB
       - EE 00 00 09 01 06 01 01 09 20 73 04 00 20 3D 3D 20 31 00 10 3C 00 CD E5 F1 F2 E8 20 F2 E5 EB EE
       - 20 F2 FF E6 E5 EB EE 2C 20 EF EE FD F2 EE EC F3 20 E2 FB 20 EF E5 F0 E5 E1 F0 E0 F1 FB E2 E0 E5
-      - F2 E5 20 E5 E3 EE 20 F7 E5 F0 E5 E7 20 EF EB E5 F7 EE 00 00 09 01 01 01
+      - F2 E5 20 E5 E3 EE 20 F7 E5 F0 E5 E7 20 EF EB E5 F7 EE 00 00 09 01 06 01 1C 09 20 73 03 00 20 3D
+      - 3D 20 31 06 01 1A 12 20 58 4E 11 20 72 06 70 6C 61 79 65 72 20 3D 3D 20 31 05 01 73 05 00 02 20
+      - 30 06 01 01 27 20 58 12 11 20 63 1B D0 E0 E9 EE ED 20 C0 F1 EA E0 E4 E8 E0 ED F1 EA E8 F5 20 CE
+      - F1 F2 F0 EE E2 EE E2 20 3D 3D 20 31 05 01 73 05 00 02 20 31 08 01 01 21 20 58 12 11 20 63 15 D0
+      - E0 E9 EE ED 20 C3 EE F0 FC EA EE E3 EE 20 C1 E5 F0 E5 E3 E0 20 3D 3D 20 31 05 01 73 05 00 02 20
+      - 31 08 01 01 1C 20 58 12 11 20 63 10 D0 E0 E9 EE ED 20 C3 F0 E5 E9 E7 EB E5 ED E4 E0 20 3D 3D 20
+      - 31 05 01 73 05 00 02 20 31 08 01 01 23 20 58 12 11 20 63 17 D0 E0 E9 EE ED 20 C7 E0 EF E0 E4 ED
+      - EE E3 EE 20 CD E0 E3 EE F0 FC FF 20 3D 3D 20 31 05 01 73 05 00 02 20 31 08 01 01 1E 20 58 12 11
+      - 20 63 12 D0 E0 E9 EE ED 20 CA F0 E0 F1 ED EE E9 20 C3 EE F0 FB 20 3D 3D 20 31 05 01 73 05 00 02
+      - 20 31 08 01 01 1C 20 58 12 11 20 63 10 D0 E0 E9 EE ED 20 CC EE EB E0 E3 20 C0 EC F3 F0 20 3D 3D
+      - 20 31 05 01 73 05 00 02 20 31 08 01 01 21 20 58 12 11 20 63 15 D0 E0 E9 EE ED 20 CF EE E1 E5 F0
+      - E5 E6 FC FF 20 C0 E7 F3 F0 FB 20 3D 3D 20 31 05 01 73 05 00 02 20 31 08 01 01 1A 20 58 12 11 20
+      - 63 0E D0 E0 E9 EE ED 20 D8 E8 E3 EE F0 E0 E4 E0 20 3D 3D 20 31 05 01 73 05 00 02 20 31 08 01 01
+      - 19 20 58 12 11 20 63 0D D0 E0 E9 EE ED 20 DD F8 EB E5 ED E4 E0 20 3D 3D 20 31 05 01 73 05 00 02
+      - 20 31 08 01 01 15 20 58 12 11 20 64 09 D1 EE EB F1 F2 F5 E5 E9 EC 20 3D 3D 20 31 05 01 73 05 00
+      - 02 20 31 09 01 06 01 02 09 20 73 05 00 20 3D 3D 20 30 00 10 20 00 CA F2 EE 2D F2 EE 20 F3 E2 E8
+      - E4 E5 EB 20 EA E0 EA 20 E2 FB 20 ED E5 F1 E5 F2 E5 20 F2 E5 EB EE 00 00 9D 10 00 00 FA 43 09 01
+      - 09 01 09 01 01 01
   - SCTX:
     - begin A1_NecroPaulSc
     - ''
@@ -12710,13 +12526,14 @@
     - short dropped
     - short drop
     - short equipped
+    - short country
     - ''
     - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
     - set delay to ( delay + 1 )
-    - if ( delay < 1000 )
+    - if ( delay < 500 )
     - "\treturn"
     - endif
     - set delay to 0
@@ -13049,6 +12866,37 @@
     - "\tMessageBox \"Нести тело тяжело, поэтому вы перебрасываете его через плечо\""
     - endif
     - ''
+    - if ( drop == 1 )
+    - "\tif ( GetDetected player == 1 )"
+    - "\t\tset country to 0"
+    - "\t\tif ( GetPCCell \"Район Аскадианских Островов\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Район Горького Берега\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Район Грейзленда\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Район Западного Нагорья\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Район Красной Горы\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Район Молаг Амур\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Район Побережья Азуры\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Район Шигорада\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Район Эшленда\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Солстхейм\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\tendif"
+    - "\t\tif ( country == 0 )"
+    - "\t\t\tMessageBox \"Кто-то увидел как вы несете тело\""
+    - "\t\t\tModPCCrimeLevel 500"
+    - "\t\tendif"
+    - "\tendif"
+    - endif
+    - ''
     - end
 
 - SCPT:
@@ -13058,7 +12906,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 927
+      data_size: 910
       var_table_size: 34
   - SCVR:
     - state
@@ -13211,14 +13059,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -13437,10 +13277,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -13694,7 +13530,7 @@
         shorts: 3
         longs: 0
         floats: 3
-      data_size: 927
+      data_size: 910
       var_table_size: 34
   - SCVR:
     - state
@@ -13847,14 +13683,6 @@
         args:
         - 1
         - " s\x01\0 == 1"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X \x10 == 1"
       - func: Return
         args: null
       - func: EndIf
@@ -14073,10 +13901,6 @@
     - endif
     - ''
     - if ( state == 1 )
-    - "\treturn"
-    - endif
-    - ''
-    - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
@@ -14407,7 +14231,7 @@
 
 - ACTI:
   - NAME: A1_NecroPlatform
-  - MODL: i\in_velothi_platform_01.NIF
+  - MODL: c\amulet_common_1.nif
   - FNAM: Платформа
 
 - BODY:
@@ -16427,6 +16251,60 @@
       padding_8: 233
       padding_16: 31671
       services: ''
+
+- CELL:
+  - NAME: Aran Ancestral Tomb
+  - DATA:
+      flags: INTERIOR
+      position:
+        type: Interior
+        x: 9.038e-42
+        y: 1.0
+  - WHGT: 0.0
+  - AMBI:
+      ambient: '#0A0A0A'
+      sunlight: '#282828'
+      fog: '#321900'
+      fog_density: 1.0
+  - NAM0: 1
+  - FRMR: 1
+  - NAME: A1_NecroPlatform
+  - DATA:
+      pos:
+        x: 1710.172
+        y: 2809.355
+        z: -719.719
+      rot:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+
+- CELL:
+  - NAME: Baram Ancestral Tomb
+  - DATA:
+      flags: INTERIOR
+      position:
+        type: Interior
+        x: 9.038e-42
+        y: 1.0
+  - WHGT: 0.0
+  - AMBI:
+      ambient: '#0A0A0A'
+      sunlight: '#281E14'
+      fog: '#321900'
+      fog_density: 1.0
+  - NAM0: 1
+  - FRMR: 2
+  - NAME: A1_NecroPlatform
+  - DATA:
+      pos:
+        x: 1550.171
+        y: -2054.646
+        z: 912.281
+      rot:
+        x: 0.0
+        y: 0.0
+        z: 0.0
 
 - DIAL:
   - NAME: Команды перемещений
