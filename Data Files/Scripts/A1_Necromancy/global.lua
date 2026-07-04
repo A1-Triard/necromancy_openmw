@@ -1,5 +1,7 @@
 local types = require('openmw.types')
 local world = require('openmw.world')
+local core = require('openmw.core')
+local async = require('openmw.async')
 
 local function incSkill(player)
     local bookRecordDraft = types.Book.createRecordDraft({
