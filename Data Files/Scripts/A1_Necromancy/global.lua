@@ -1,6 +1,31 @@
 local types = require('openmw.types')
 local world = require('openmw.world')
 
+local function incSkill(player)
+    local bookRecordDraft = types.Book.createRecordDraft({
+        enchant = nil,
+        enchantCapacity = 0,
+        icon = 'icons\\m\\tx_scroll_open_01.tga',
+        isScroll = true,
+        model = 'meshes\\m\\text_scroll_01.nif',
+        mwscript = nil,
+        name = 'Навык колдовства вырос',
+        skill = 'conjuration',
+        text
+            =  '<DIV ALIGN="LEFT"><FONT COLOR="000000" SIZE="3" FACE="Magic Cards"><BR>'
+            .. 'Ваш навык колдовства вырос.<BR>',
+        value = 0,
+        weight = 0,
+    })
+    local bookRecord = world.createRecord(bookRecordDraft)
+    local book = world.createObject(bookRecord.id)
+    book:moveInto(types.Actor.inventory(player))
+    core.sendGlobalEvent('UseItem', { object = book, actor = player, force = true })
+    async:newUnsavableSimulationTimer(0, function()
+        book:remove()
+    end)
+end
+
 local function idHash(id)
     local res = 5381
     for i = 1, #id do
@@ -156,6 +181,10 @@ return {
             body:remove()
             local head = data.head
             head:remove()
+            incSkill(data.player)
+        end,
+        A1NecroDrag = function(data)
+            world.mwscript.getGlobalVariables(data.player)['A1_NecroDrag'] = 1
         end,
     },
 }

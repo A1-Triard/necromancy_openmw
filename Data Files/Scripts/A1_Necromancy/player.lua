@@ -90,7 +90,11 @@ local function summon(callback)
         if result.hit and result.hitObject then
             if types.Static.objectIsInstance(result.hitObject) then
                 local id = types.Static.record(result.hitObject).id
-                if id == 'in_velothi_ashpit_01' or id == 'in_velothi_platform_01' then
+                if
+                       id == 'in_velothi_ashpit_01'
+                    or id == 'in_velothi_ashpit_02'
+                    or id == 'in_velothi_platform_01'
+                then
                     platform = result.hitObject
                 end
             end
@@ -174,3 +178,5 @@ I.AnimationController.addTextKeyHandler('spellcast', function(groupname, key)
         end)
     end
 end)
+
+return { }

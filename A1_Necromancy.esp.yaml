@@ -6,7 +6,7 @@
       description:
       - Профессиональный некромант.
       - Основан на Blasphemous Revenants v1.3, который создан Fliggerty и переведён Gwathlobal
-      records: 320
+      records: 268
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
@@ -47,6 +47,16 @@
 - GLOB:
   - NAME: A1_NecroZRot
   - FNAM: f
+  - FLTV: 0.0
+
+- GLOB:
+  - NAME: A1_NecroDrag
+  - FNAM: s
+  - FLTV: 0.0
+
+- GLOB:
+  - NAME: A1_NecroDetect
+  - FNAM: s
   - FLTV: 0.0
 
 - FACT:
@@ -5674,6 +5684,239 @@
     - "\tDisable"
     - "\tset state to 2"
     - "\tplayer->AddItem A1_NecroBretonSkull 1"
+    - endif
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
+      name: A1_NecroDragSc
+      vars:
+        shorts: 3
+        longs: 0
+        floats: 0
+      data_size: 646
+      var_table_size: 17
+  - SCVR:
+    - country
+    - det
+    - days
+  - SCDT:
+      stmts:
+      - func: If
+        args:
+        - 35
+        - " G\fA1_NecroDrag == 1"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroDrag
+        - ' 0'
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 2
+        - " G\x0EA1_NecroDetect\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 3
+        - " G\nDaysPassed\0"
+      - func: If
+        args:
+        - 1
+        - " s\x03\0 <= s\x02\0\0"
+      - func: Return
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 27
+        - " XN\x11 r\x06player == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 0'
+      - func: If
+        args:
+        - 1
+        - " X\x12\x11 c\eРайон Аскадианских Островов == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: ElseIf
+        args:
+        - 1
+        - " X\x12\x11 c\x15Район Горького Берега == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: ElseIf
+        args:
+        - 1
+        - " X\x12\x11 c\x10Район Грейзленда == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: ElseIf
+        args:
+        - 1
+        - " X\x12\x11 c\x17Район Западного Нагорья == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: ElseIf
+        args:
+        - 1
+        - " X\x12\x11 c\x12Район Красной Горы == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: ElseIf
+        args:
+        - 1
+        - " X\x12\x11 c\x10Район Молаг Амур == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: ElseIf
+        args:
+        - 1
+        - " X\x12\x11 c\x15Район Побережья Азуры == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: ElseIf
+        args:
+        - 1
+        - " X\x12\x11 c\x0EРайон Шигорада == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: ElseIf
+        args:
+        - 1
+        - " X\x12\x11 c\rРайон Эшленда == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: ElseIf
+        args:
+        - 1
+        - " X\x12\x11 d\tСолстхейм == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 1
+        - ' 1'
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 3
+        - " s\x01\0 == 0"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroDetect
+        - " s\x03\0\0"
+      - func: MessageBox
+        args:
+        - Кто-то увидел как вы несете тело
+        - []
+        - []
+      raw:
+      - 9D 10 00 00 FA 43 09 01 09 01 09 01 01 01
+  - SCTX:
+    - begin A1_NecroDragSc
+    - ''
+    - short country
+    - short det
+    - short days
+    - ''
+    - if ( A1_NecroDrag == 1 )
+    - "\tset A1_NecroDrag to 0"
+    - "\tset det to A1_NecroDetect"
+    - "\tset days to DaysPassed"
+    - "\tif ( days <= det )"
+    - "\t\treturn"
+    - "\tendif"
+    - "\tif ( GetDetected player == 1 )"
+    - "\t\tset country to 0"
+    - "\t\tif ( GetPCCell \"Район Аскадианских Островов\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Район Горького Берега\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Район Грейзленда\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Район Западного Нагорья\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Район Красной Горы\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Район Молаг Амур\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Район Побережья Азуры\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Район Шигорада\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Район Эшленда\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\telseif ( GetPCCell \"Солстхейм\" == 1 )"
+    - "\t\t\tset country to 1"
+    - "\t\tendif"
+    - "\t\tif ( country == 0 )"
+    - "\t\t\tset A1_NecroDetect to days"
+    - "\t\t\tMessageBox \"Кто-то увидел как вы несете тело\""
+    - "\t\t\tModPCCrimeLevel 500"
+    - "\t\tendif"
+    - "\tendif"
     - endif
     - ''
     - end
@@ -12274,17 +12517,16 @@
   - SCHD:
       name: A1_NecroPaulSc
       vars:
-        shorts: 5
+        shorts: 4
         longs: 0
         floats: 0
-      data_size: 6128
-      var_table_size: 36
+      data_size: 5602
+      var_table_size: 28
   - SCVR:
     - delay
     - dropped
     - drop
     - equipped
-    - country
   - SCDT:
       stmts:
       - func: If
@@ -12499,24 +12741,7 @@
       - 1F 00 CD E5 F1 F2 E8 20 E1 EE EB FC F8 E5 20 EE E4 ED EE E3 EE 20 F2 E5 EB E0 20 F2 FF E6 E5 EB
       - EE 00 00 09 01 06 01 01 09 20 73 04 00 20 3D 3D 20 31 00 10 3C 00 CD E5 F1 F2 E8 20 F2 E5 EB EE
       - 20 F2 FF E6 E5 EB EE 2C 20 EF EE FD F2 EE EC F3 20 E2 FB 20 EF E5 F0 E5 E1 F0 E0 F1 FB E2 E0 E5
-      - F2 E5 20 E5 E3 EE 20 F7 E5 F0 E5 E7 20 EF EB E5 F7 EE 00 00 09 01 06 01 1C 09 20 73 03 00 20 3D
-      - 3D 20 31 06 01 1A 12 20 58 4E 11 20 72 06 70 6C 61 79 65 72 20 3D 3D 20 31 05 01 73 05 00 02 20
-      - 30 06 01 01 27 20 58 12 11 20 63 1B D0 E0 E9 EE ED 20 C0 F1 EA E0 E4 E8 E0 ED F1 EA E8 F5 20 CE
-      - F1 F2 F0 EE E2 EE E2 20 3D 3D 20 31 05 01 73 05 00 02 20 31 08 01 01 21 20 58 12 11 20 63 15 D0
-      - E0 E9 EE ED 20 C3 EE F0 FC EA EE E3 EE 20 C1 E5 F0 E5 E3 E0 20 3D 3D 20 31 05 01 73 05 00 02 20
-      - 31 08 01 01 1C 20 58 12 11 20 63 10 D0 E0 E9 EE ED 20 C3 F0 E5 E9 E7 EB E5 ED E4 E0 20 3D 3D 20
-      - 31 05 01 73 05 00 02 20 31 08 01 01 23 20 58 12 11 20 63 17 D0 E0 E9 EE ED 20 C7 E0 EF E0 E4 ED
-      - EE E3 EE 20 CD E0 E3 EE F0 FC FF 20 3D 3D 20 31 05 01 73 05 00 02 20 31 08 01 01 1E 20 58 12 11
-      - 20 63 12 D0 E0 E9 EE ED 20 CA F0 E0 F1 ED EE E9 20 C3 EE F0 FB 20 3D 3D 20 31 05 01 73 05 00 02
-      - 20 31 08 01 01 1C 20 58 12 11 20 63 10 D0 E0 E9 EE ED 20 CC EE EB E0 E3 20 C0 EC F3 F0 20 3D 3D
-      - 20 31 05 01 73 05 00 02 20 31 08 01 01 21 20 58 12 11 20 63 15 D0 E0 E9 EE ED 20 CF EE E1 E5 F0
-      - E5 E6 FC FF 20 C0 E7 F3 F0 FB 20 3D 3D 20 31 05 01 73 05 00 02 20 31 08 01 01 1A 20 58 12 11 20
-      - 63 0E D0 E0 E9 EE ED 20 D8 E8 E3 EE F0 E0 E4 E0 20 3D 3D 20 31 05 01 73 05 00 02 20 31 08 01 01
-      - 19 20 58 12 11 20 63 0D D0 E0 E9 EE ED 20 DD F8 EB E5 ED E4 E0 20 3D 3D 20 31 05 01 73 05 00 02
-      - 20 31 08 01 01 15 20 58 12 11 20 64 09 D1 EE EB F1 F2 F5 E5 E9 EC 20 3D 3D 20 31 05 01 73 05 00
-      - 02 20 31 09 01 06 01 02 09 20 73 05 00 20 3D 3D 20 30 00 10 20 00 CA F2 EE 2D F2 EE 20 F3 E2 E8
-      - E4 E5 EB 20 EA E0 EA 20 E2 FB 20 ED E5 F1 E5 F2 E5 20 F2 E5 EB EE 00 00 9D 10 00 00 FA 43 09 01
-      - 09 01 09 01 01 01
+      - F2 E5 20 E5 E3 EE 20 F7 E5 F0 E5 E7 20 EF EB E5 F7 EE 00 00 09 01 01 01
   - SCTX:
     - begin A1_NecroPaulSc
     - ''
@@ -12524,7 +12749,6 @@
     - short dropped
     - short drop
     - short equipped
-    - short country
     - ''
     - if ( MenuMode == 1 )
     - "\treturn"
@@ -12862,37 +13086,6 @@
     - ''
     - if ( equipped == 1 )
     - "\tMessageBox \"Нести тело тяжело, поэтому вы перебрасываете его через плечо\""
-    - endif
-    - ''
-    - if ( drop == 1 )
-    - "\tif ( GetDetected player == 1 )"
-    - "\t\tset country to 0"
-    - "\t\tif ( GetPCCell \"Район Аскадианских Островов\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Район Горького Берега\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Район Грейзленда\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Район Западного Нагорья\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Район Красной Горы\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Район Молаг Амур\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Район Побережья Азуры\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Район Шигорада\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Район Эшленда\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Солстхейм\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\tendif"
-    - "\t\tif ( country == 0 )"
-    - "\t\t\tMessageBox \"Кто-то увидел как вы несете тело\""
-    - "\t\t\tModPCCrimeLevel 500"
-    - "\t\tendif"
-    - "\tendif"
     - endif
     - ''
     - end
@@ -14152,7 +14345,7 @@
         shorts: 0
         longs: 0
         floats: 0
-      data_size: 67
+      data_size: 116
       var_table_size: 0
   - SCDT:
       stmts:
@@ -14162,6 +14355,14 @@
         - " X\x1D\x10 m\x0EA1_NecroPaulSc == 0"
       - func: StartScript
         args: A1_NecroPaulSc
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 1
+        - " X\x1D\x10 m\x0EA1_NecroDragSc == 0"
+      - func: StartScript
+        args: A1_NecroDragSc
       - func: EndIf
         args: null
       - func: StopScript
@@ -14174,6 +14375,10 @@
     - ''
     - if ( ScriptRunning A1_NecroPaulSc == 0 )
     - "\tStartScript A1_NecroPaulSc"
+    - endif
+    - ''
+    - if ( ScriptRunning A1_NecroDragSc == 0 )
+    - "\tStartScript A1_NecroDragSc"
     - endif
     - ''
     - StopScript A1_NecroStart
