@@ -171,6 +171,22 @@ fn head_script(race: &str) -> &'static str {
     }
 }
 
+fn head_icon(race: &str) -> &'static str {
+    match race {
+        "High Elf" => "a1n\\head_he.dds",
+        "Argonian" => "a1n\\head_a.dds",
+        "Wood Elf" => "a1n\\head_we.dds",
+        "Breton" => "a1n\\head_b.dds",
+        "Dark Elf" => "a1n\\head_de.dds",
+        "Imperial" => "a1n\\head_i.dds",
+        "Khajiit" => "a1n\\head_k.dds",
+        "Nord" => "a1n\\head_n.dds",
+        "Orc" => "a1n\\head_o.dds",
+        "Redguard" => "a1n\\head_r.dds",
+        _ => "",
+    }
+}
+
 fn write_esp(
     path: &Path,
     heads: &HashMap<String, RaceAndModel>,
@@ -243,6 +259,7 @@ fn write_esp(
     for (head_id, head) in heads {
         let race = race_name(&head.race);
         if race.is_empty() { continue; }
+        let icon = head_icon(&head.race);
         let hash = id_hash(head_id);
         let misc_record = Record {
             tag: MISC,
@@ -257,7 +274,7 @@ fn write_esp(
                     is_key: false,
                 })),
                 (ITEX, Field::StringZ(StringZ {
-                    string: "m\\Misc_Com_Basket_01.tga".to_string(), has_tail_zero: true
+                    string: icon.to_string(), has_tail_zero: true
                 })),
             ],
         };
