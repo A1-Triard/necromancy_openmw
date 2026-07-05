@@ -133,14 +133,42 @@ local function summon(callback)
     end), platformStartPos, platformEndPos, { ignore = skel })
 end
 
+local supportedRaces = {
+    ['high elf'] = true,
+    ['argonian'] = true,
+    ['wood elf'] = true,
+    ['breton'] = true,
+    ['dark elf'] = true,
+    ['imperial'] = true,
+    ['khajiit'] = true,
+    ['nord'] = true,
+    ['orc'] = true,
+    ['redguard'] = true,
+    ['a1_necroaltmerrace'] = true,
+    ['a1_necroargrace'] = true,
+    ['a1_necrobosmerrace'] = true,
+    ['a1_necrobretonrace'] = true,
+    ['a1_necrodunmerrace'] = true,
+    ['a1_necroimprace'] = true,
+    ['a1_necrokharace'] = true,
+    ['a1_necronordrace'] = true,
+    ['a1_necroorcrace'] = true,
+    ['a1_necrorgrace'] = true,
+}
+
+
 I.AnimationController.addTextKeyHandler('spellcast', function(groupname, key)
     if string.sub(key, -7) == 'release' then
         async:newUnsavableSimulationTimer(0, function()
             local spells = types.Actor.activeSpells(self)
             if spells:isSpellActive('a1_necroprepare') then
                 withCrosshairObject(function(target)
-                    if target and types.NPC.objectIsInstance(target) and types.Actor.isDead(target) then
-                        local head = types.NPC.record(target).head
+                    if
+                            target
+                        and types.NPC.objectIsInstance(target)
+                        and types.Actor.isDead(target)
+                        and supportedRaces[types.NPC.record(target).race]
+                    then
                         core.sendGlobalEvent('A1NecroPrepare', {
                             player = self.object, target = target
                         })

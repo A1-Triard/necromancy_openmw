@@ -38,8 +38,6 @@ local function idHash(id)
     return res
 end
 
-local heads = { }
-
 local pauls = {
     ['high elf'] = 'a1_necroaltmerpaul',
     ['argonian'] = 'a1_necroargpaul',
@@ -51,6 +49,16 @@ local pauls = {
     ['nord'] = 'a1_necronordpaul',
     ['orc'] = 'a1_necroorcpaul',
     ['redguard'] = 'a1_necrorgpaul',
+    ['a1_necroaltmerrace'] = 'a1_necroaltmerpaulsk',
+    ['a1_necroargrace'] = 'a1_necroargpaulsk',
+    ['a1_necrobosmerrace'] = 'a1_necrobosmerpaulsk',
+    ['a1_necrobretonrace'] = 'a1_necrobretonpaulsk',
+    ['a1_necrodunmerrace'] = 'a1_necrodunmerpaulsk',
+    ['a1_necroimprace'] = 'a1_necroimppaulsk',
+    ['a1_necrokharace'] = 'a1_necrokhapaulsk',
+    ['a1_necronordrace'] = 'a1_necronordpaulsk',
+    ['a1_necroorcrace'] = 'a1_necroorcpaulsk',
+    ['a1_necrorgrace'] = 'a1_necrorgpaulsk',
 }
 
 local bodies = {
@@ -92,16 +100,21 @@ local npcs = {
     ['r'] = 'a1_necrorgnpc',
 }
 
+local skelHeads = {
+    ['a1_necroaltmerrace'] = 'a1_necroaltmerskull',
+    ['a1_necroargrace'] = 'a1_necroargskull',
+    ['a1_necrobosmerrace'] = 'a1_necrobosmerskull',
+    ['a1_necrobretonrace'] = 'a1_necrobretonskull',
+    ['a1_necrodunmerrace'] = 'a1_necrodunmerskull',
+    ['a1_necroimprace'] = 'a1_necroimpskull',
+    ['a1_necrokharace'] = 'a1_necrokhaskull',
+    ['a1_necronordrace'] = 'a1_necronordskull',
+    ['a1_necroorcrace'] = 'a1_necroorcskull',
+    ['a1_necrorgrace'] = 'a1_necrorgskull',
+}
+
 return {
     engineHandlers = {
-        onSave = function()
-            return heads
-        end,
-        onLoad = function(data)
-            if data then
-                heads = data
-            end
-        end,
         onItemActive = function(item)
             if types.Armor.objectIsInstance(item) then
                 local id = types.Armor.record(item).id
@@ -150,11 +163,17 @@ return {
                 item:moveInto(types.Actor.inventory(data.player))
             end
             local record = types.NPC.record(target)
-            local hair = world.createObject('a1_necroh' .. idHash(record.hair))
-            hair:moveInto(types.Actor.inventory(data.player))
-            local head = world.createObject('a1_necroh' .. idHash(record.head))
+            local headId
+            local skelHead = skelHeads[record.race]
+            if skelHead then
+                headId = skelHead
+            else
+                local hair = world.createObject('a1_necroh' .. idHash(record.hair))
+                hair:moveInto(types.Actor.inventory(data.player))
+                headId = 'a1_necroh' .. idHash(record.head)
+            end
+            head = world.createObject(headId)
             head:moveInto(types.Actor.inventory(data.player))
-            heads[head.id] = record.id
             local body = pauls[record.race]
             local bodyObj = world.createObject(body)
             bodyObj:moveInto(types.Actor.inventory(data.player))

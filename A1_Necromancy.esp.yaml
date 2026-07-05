@@ -10679,17 +10679,16 @@
   - SCHD:
       name: A1_NecroNpcSc
       vars:
-        shorts: 5
+        shorts: 4
         longs: 0
         floats: 1
-      data_size: 762
-      var_table_size: 41
+      data_size: 811
+      var_table_size: 35
   - SCVR:
     - NoLore
     - Companion
     - Travel
     - init
-    - count
     - tempF
   - SCDT:
       stmts:
@@ -10719,6 +10718,33 @@
         args: null
       - func: If
         args:
+        - 5
+        - " XЊ\x10 <= 0"
+      - func: If
+        args:
+        - 3
+        - " s\x04\0 == 1"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 4
+        - ' 2'
+      - func: AddItem
+        args:
+        - ingred_scrap_metal_01
+        - 1
+      - func: AddItem
+        args:
+        - ingred_bonemeal_01
+        - 5
+      - func: EndIf
+        args: null
+      - func: EndIf
+        args: null
+      - func: If
+        args:
         - 1
         - " X \x10 == 1"
       - func: Return
@@ -10727,26 +10753,8 @@
         args: null
       - func: If
         args:
-        - 18
+        - 14
         - " Xъ\x10 == 3"
-      - func: Set
-        args:
-        - kind: Local
-          owner: null
-          type: Short
-          index: 5
-        - " s\x05\0 1 +"
-      - func: If
-        args:
-        - 15
-        - " s\x05\0 == 30"
-      - func: Set
-        args:
-        - kind: Local
-          owner: null
-          type: Short
-          index: 5
-        - ' 0'
       - func: If
         args:
         - 6
@@ -10821,8 +10829,6 @@
         - kind: Var
           type: Float
           index: 1
-      - func: EndIf
-        args: null
       - func: EndIf
         args: null
       - func: EndIf
@@ -11019,7 +11025,6 @@
     - short Companion
     - short Travel
     - short init
-    - short count
     - float tempF
     - ''
     - if ( init == 0 )
@@ -11028,27 +11033,31 @@
     - "\tSetDisposition 100"
     - endif
     - ''
+    - if ( GetHealth <= 0 )
+    - "\tif ( init == 1 )"
+    - "\t\tset init to 2"
+    - "\t\tAddItem \"ingred_scrap_metal_01\", 1"
+    - "\t\tAddItem \"ingred_bonemeal_01\", 5"
+    - "\tendif"
+    - endif
+    - ''
     - if ( MenuMode == 1 )
     - "\treturn"
     - endif
     - ''
     - if ( GetCurrentAIPackage == 3 )
-    - "\tset count to ( count + 1 )"
-    - "\tif ( count == 30 )"
-    - "\t\tset count to 0"
-    - "\t\tif ( GetDistance player > 2000 )"
-    - "\t\t\tset tempF to ( player->GetPos X )"
-    - "\t\t\tSetPos X tempF"
-    - "\t\t\tset tempF to ( player->GetPos Y )"
-    - "\t\t\tSetPos Y tempF"
+    - "\tif ( GetDistance player > 2000 )"
+    - "\t\tset tempF to ( player->GetPos X )"
+    - "\t\tSetPos X tempF"
+    - "\t\tset tempF to ( player->GetPos Y )"
+    - "\t\tSetPos Y tempF"
+    - "\t\tset tempF to ( player->GetPos Z )"
+    - "\t\tSetPos Z tempF"
+    - "\tendif"
+    - "\tif ( GetWeaponDrawn == 0 )"
+    - "\t\tif ( GetEffect sEffectLevitate == 1 )"
     - "\t\t\tset tempF to ( player->GetPos Z )"
     - "\t\t\tSetPos Z tempF"
-    - "\t\tendif"
-    - "\t\tif ( GetWeaponDrawn == 0 )"
-    - "\t\t\tif ( GetEffect sEffectLevitate == 1 )"
-    - "\t\t\t\tset tempF to ( player->GetPos Z )"
-    - "\t\t\t\tSetPos Z tempF"
-    - "\t\t\tendif"
     - "\t\tendif"
     - "\tendif"
     - endif
@@ -15327,7 +15336,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\body_he.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroAltmerCarry
@@ -15342,7 +15351,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\body_ar.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroArgCarry
@@ -15357,7 +15366,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\body_we.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroHumanCarry
@@ -15372,7 +15381,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\body_de.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroDunmerCarry
@@ -15387,7 +15396,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\body_we.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroHumanCarry
@@ -15402,7 +15411,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\body_we.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroHumanCarry
@@ -15417,7 +15426,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\body_we.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroHumanCarry
@@ -15432,7 +15441,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\body_kh.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroKhaCarry
@@ -15447,7 +15456,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\body_or.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroOrcCarry
@@ -15462,7 +15471,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\body_rg.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroRgCarry
@@ -15477,7 +15486,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\skelly.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroSkelCarry
@@ -15492,7 +15501,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\skelly.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroSkelCarry
@@ -15507,7 +15516,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\skelly.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroSkelCarry
@@ -15522,7 +15531,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\skelly.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroSkelCarry
@@ -15537,7 +15546,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\skelly.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroSkelCarry
@@ -15552,7 +15561,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\skelly.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroSkelCarry
@@ -15567,7 +15576,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\skelly.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroSkelCarry
@@ -15582,7 +15591,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\skelly.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroSkelCarry
@@ -15597,7 +15606,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\skelly.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroSkelCarry
@@ -15612,7 +15621,7 @@
       value: 0
       health: 100
       enchantment: 0
-      armor: 0
+      armor: 20
   - ITEX: a1n\skelly.dds
   - INDX: LeftPauldron
   - BNAM: A1_NecroSkelCarry
