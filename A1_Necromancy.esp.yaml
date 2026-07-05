@@ -6,13 +6,17 @@
       description:
       - Профессиональный некромант.
       - Основан на Blasphemous Revenants v1.3, который создан Fliggerty и переведён Gwathlobal
-      records: 268
+      records: 266
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
   - DATA: 6616539
   - MAST: Bloodmoon.esm
   - DATA: 11799703
+
+- GMST:
+  - NAME: fCorpseClearDelay
+  - FLTV: 72000.0
 
 - GLOB:
   - NAME: A1_NecroX
