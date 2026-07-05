@@ -6,7 +6,7 @@
       description:
       - Профессиональный некромант.
       - Основан на Blasphemous Revenants v1.3, который создан Fliggerty и переведён Gwathlobal
-      records: 272
+      records: 268
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
@@ -47,16 +47,6 @@
 - GLOB:
   - NAME: A1_NecroZRot
   - FNAM: f
-  - FLTV: 0.0
-
-- GLOB:
-  - NAME: A1_NecroDrag
-  - FNAM: s
-  - FLTV: 0.0
-
-- GLOB:
-  - NAME: A1_NecroDetect
-  - FNAM: s
   - FLTV: 0.0
 
 - FACT:
@@ -5691,239 +5681,6 @@
 
 - SCPT:
   - SCHD:
-      name: A1_NecroDragSc
-      vars:
-        shorts: 3
-        longs: 0
-        floats: 0
-      data_size: 646
-      var_table_size: 17
-  - SCVR:
-    - country
-    - det
-    - days
-  - SCDT:
-      stmts:
-      - func: If
-        args:
-        - 35
-        - " G\fA1_NecroDrag == 1"
-      - func: Set
-        args:
-        - kind: Global
-          name: A1_NecroDrag
-        - ' 0'
-      - func: Set
-        args:
-        - kind: Local
-          owner: null
-          type: Short
-          index: 2
-        - " G\x0EA1_NecroDetect\0"
-      - func: Set
-        args:
-        - kind: Local
-          owner: null
-          type: Short
-          index: 3
-        - " G\nDaysPassed\0"
-      - func: If
-        args:
-        - 1
-        - " s\x03\0 <= s\x02\0\0"
-      - func: Return
-        args: null
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 27
-        - " XN\x11 r\x06player == 1"
-      - func: Set
-        args:
-        - kind: Local
-          owner: null
-          type: Short
-          index: 1
-        - ' 0'
-      - func: If
-        args:
-        - 1
-        - " X\x12\x11 c\eРайон Аскадианских Островов == 1"
-      - func: Set
-        args:
-        - kind: Local
-          owner: null
-          type: Short
-          index: 1
-        - ' 1'
-      - func: ElseIf
-        args:
-        - 1
-        - " X\x12\x11 c\x15Район Горького Берега == 1"
-      - func: Set
-        args:
-        - kind: Local
-          owner: null
-          type: Short
-          index: 1
-        - ' 1'
-      - func: ElseIf
-        args:
-        - 1
-        - " X\x12\x11 c\x10Район Грейзленда == 1"
-      - func: Set
-        args:
-        - kind: Local
-          owner: null
-          type: Short
-          index: 1
-        - ' 1'
-      - func: ElseIf
-        args:
-        - 1
-        - " X\x12\x11 c\x17Район Западного Нагорья == 1"
-      - func: Set
-        args:
-        - kind: Local
-          owner: null
-          type: Short
-          index: 1
-        - ' 1'
-      - func: ElseIf
-        args:
-        - 1
-        - " X\x12\x11 c\x12Район Красной Горы == 1"
-      - func: Set
-        args:
-        - kind: Local
-          owner: null
-          type: Short
-          index: 1
-        - ' 1'
-      - func: ElseIf
-        args:
-        - 1
-        - " X\x12\x11 c\x10Район Молаг Амур == 1"
-      - func: Set
-        args:
-        - kind: Local
-          owner: null
-          type: Short
-          index: 1
-        - ' 1'
-      - func: ElseIf
-        args:
-        - 1
-        - " X\x12\x11 c\x15Район Побережья Азуры == 1"
-      - func: Set
-        args:
-        - kind: Local
-          owner: null
-          type: Short
-          index: 1
-        - ' 1'
-      - func: ElseIf
-        args:
-        - 1
-        - " X\x12\x11 c\x0EРайон Шигорада == 1"
-      - func: Set
-        args:
-        - kind: Local
-          owner: null
-          type: Short
-          index: 1
-        - ' 1'
-      - func: ElseIf
-        args:
-        - 1
-        - " X\x12\x11 c\rРайон Эшленда == 1"
-      - func: Set
-        args:
-        - kind: Local
-          owner: null
-          type: Short
-          index: 1
-        - ' 1'
-      - func: ElseIf
-        args:
-        - 1
-        - " X\x12\x11 d\tСолстхейм == 1"
-      - func: Set
-        args:
-        - kind: Local
-          owner: null
-          type: Short
-          index: 1
-        - ' 1'
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 3
-        - " s\x01\0 == 0"
-      - func: Set
-        args:
-        - kind: Global
-          name: A1_NecroDetect
-        - " s\x03\0\0"
-      - func: MessageBox
-        args:
-        - Кто-то увидел как вы несете тело
-        - []
-        - []
-      raw:
-      - 9D 10 00 00 FA 43 09 01 09 01 09 01 01 01
-  - SCTX:
-    - begin A1_NecroDragSc
-    - ''
-    - short country
-    - short det
-    - short days
-    - ''
-    - if ( A1_NecroDrag == 1 )
-    - "\tset A1_NecroDrag to 0"
-    - "\tset det to A1_NecroDetect"
-    - "\tset days to DaysPassed"
-    - "\tif ( days <= det )"
-    - "\t\treturn"
-    - "\tendif"
-    - "\tif ( GetDetected player == 1 )"
-    - "\t\tset country to 0"
-    - "\t\tif ( GetPCCell \"Район Аскадианских Островов\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Район Горького Берега\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Район Грейзленда\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Район Западного Нагорья\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Район Красной Горы\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Район Молаг Амур\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Район Побережья Азуры\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Район Шигорада\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Район Эшленда\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\telseif ( GetPCCell \"Солстхейм\" == 1 )"
-    - "\t\t\tset country to 1"
-    - "\t\tendif"
-    - "\t\tif ( country == 0 )"
-    - "\t\t\tset A1_NecroDetect to days"
-    - "\t\t\tMessageBox \"Кто-то увидел как вы несете тело\""
-    - "\t\t\tModPCCrimeLevel 500"
-    - "\t\tendif"
-    - "\tendif"
-    - endif
-    - ''
-    - end
-    - ''
-
-- SCPT:
-  - SCHD:
       name: A1_NecroDunmerBodySc
       vars:
         shorts: 3
@@ -10921,7 +10678,7 @@
         shorts: 5
         longs: 0
         floats: 1
-      data_size: 703
+      data_size: 762
       var_table_size: 41
   - SCVR:
     - NoLore
@@ -10966,7 +10723,7 @@
         args: null
       - func: If
         args:
-        - 12
+        - 18
         - " Xъ\x10 == 3"
       - func: Set
         args:
@@ -10977,7 +10734,7 @@
         - " s\x05\0 1 +"
       - func: If
         args:
-        - 9
+        - 15
         - " s\x05\0 == 30"
       - func: Set
         args:
@@ -11035,6 +10792,33 @@
         - kind: Var
           type: Float
           index: 1
+      - func: EndIf
+        args: null
+      - func: If
+        args:
+        - 4
+        - " X®\x11 == 0"
+      - func: If
+        args:
+        - 2
+        - " X8\x11\n == 1"
+      - func: SetRef
+        args: player
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Float
+          index: 1
+        - " X\n\x10Z\0"
+      - func: SetPos
+        args:
+        - Z
+        - kind: Var
+          type: Float
+          index: 1
+      - func: EndIf
+        args: null
       - func: EndIf
         args: null
       - func: EndIf
@@ -11255,6 +11039,12 @@
     - "\t\t\tSetPos Y tempF"
     - "\t\t\tset tempF to ( player->GetPos Z )"
     - "\t\t\tSetPos Z tempF"
+    - "\t\tendif"
+    - "\t\tif ( GetWeaponDrawn == 0 )"
+    - "\t\t\tif ( GetEffect sEffectLevitate == 1 )"
+    - "\t\t\t\tset tempF to ( player->GetPos Z )"
+    - "\t\t\t\tSetPos Z tempF"
+    - "\t\t\tendif"
     - "\t\tendif"
     - "\tendif"
     - endif
@@ -14368,7 +14158,7 @@
         shorts: 0
         longs: 0
         floats: 0
-      data_size: 116
+      data_size: 67
       var_table_size: 0
   - SCDT:
       stmts:
@@ -14378,14 +14168,6 @@
         - " X\x1D\x10 m\x0EA1_NecroPaulSc == 0"
       - func: StartScript
         args: A1_NecroPaulSc
-      - func: EndIf
-        args: null
-      - func: If
-        args:
-        - 1
-        - " X\x1D\x10 m\x0EA1_NecroDragSc == 0"
-      - func: StartScript
-        args: A1_NecroDragSc
       - func: EndIf
         args: null
       - func: StopScript
@@ -14398,10 +14180,6 @@
     - ''
     - if ( ScriptRunning A1_NecroPaulSc == 0 )
     - "\tStartScript A1_NecroPaulSc"
-    - endif
-    - ''
-    - if ( ScriptRunning A1_NecroDragSc == 0 )
-    - "\tStartScript A1_NecroDragSc"
     - endif
     - ''
     - StopScript A1_NecroStart

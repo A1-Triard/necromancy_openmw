@@ -59,8 +59,8 @@ local function summon(callback)
         callback(nil)
         return
     end
-    if inv:countOf('ingred_bonemeal_01') < 20 then
-        ui.showMessage('Для создания скелета нужно 20 единиц костяной муки')
+    if inv:countOf('ingred_bonemeal_01') < 10 then
+        ui.showMessage('Для создания скелета нужно 10 единиц костяной муки')
         callback(nil)
         return
     end

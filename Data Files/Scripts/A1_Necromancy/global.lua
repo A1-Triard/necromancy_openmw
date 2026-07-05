@@ -173,10 +173,10 @@ return {
             end
             m:remove(1)
             local b = inv:find('ingred_bonemeal_01')
-            if not b or b.count < 20 then
+            if not b or b.count < 10 then
                 return
             end
-            b:remove(20)
+            b:remove(10)
             local npc = world.createObject(npcs[data.type])
             npc:teleport(data.platform.cell, data.platform.position)
             local body = data.body
@@ -184,9 +184,6 @@ return {
             local head = data.head
             head:remove()
             incSkill(data.player)
-        end,
-        A1NecroDrag = function(data)
-            world.mwscript.getGlobalVariables(data.player)['A1_NecroDrag'] = 1
         end,
     },
 }
