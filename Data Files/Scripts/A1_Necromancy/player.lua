@@ -209,7 +209,11 @@ end)
 return {
     eventHandlers = {
         A1NecroDeny = function(data)
-            ui.showMessage('Этот скелет слишком ветхий')
+            if data then
+                ui.showMessage('Этот скелет слишком ветхий')
+            else
+                ui.showMessage('Вы не можете контролировать так много нежити')
+            end
         end,
     },
 }

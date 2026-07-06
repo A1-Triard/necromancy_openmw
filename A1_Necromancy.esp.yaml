@@ -6,7 +6,7 @@
       description:
       - Профессиональный некромант.
       - Основан на Blasphemous Revenants v1.3, который создан Fliggerty и переведён Gwathlobal
-      records: 267
+      records: 268
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
@@ -51,6 +51,11 @@
 - GLOB:
   - NAME: A1_NecroZRot
   - FNAM: f
+  - FLTV: 0.0
+
+- GLOB:
+  - NAME: A1_NecroCount
+  - FNAM: s
   - FLTV: 0.0
 
 - FACT:
@@ -10703,23 +10708,24 @@
   - SCHD:
       name: A1_NecroNpcSc
       vars:
-        shorts: 5
+        shorts: 6
         longs: 0
         floats: 1
-      data_size: 811
-      var_table_size: 46
+      data_size: 931
+      var_table_size: 51
   - SCVR:
     - NoLore
     - Companion
     - Travel
     - init
     - Generation
+    - temp
     - tempF
   - SCDT:
       stmts:
       - func: If
         args:
-        - 3
+        - 6
         - " s\x04\0 == 0"
       - func: Set
         args:
@@ -10739,15 +10745,34 @@
         args:
           kind: Val
           val: 100.0
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 6
+        - " G\rA1_NecroCount\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 6
+        - " s\x06\0 1 +"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroCount
+        - " s\x06\0\0"
       - func: EndIf
         args: null
       - func: If
         args:
-        - 5
+        - 8
         - " XЊ\x10 <= 0"
       - func: If
         args:
-        - 3
+        - 6
         - " s\x04\0 == 1"
       - func: Set
         args:
@@ -10764,6 +10789,25 @@
         args:
         - ingred_bonemeal_01
         - 5
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 6
+        - " G\rA1_NecroCount\0"
+      - func: Set
+        args:
+        - kind: Local
+          owner: null
+          type: Short
+          index: 6
+        - " s\x06\0 1 -"
+      - func: Set
+        args:
+        - kind: Global
+          name: A1_NecroCount
+        - " s\x06\0\0"
       - func: EndIf
         args: null
       - func: EndIf
@@ -11051,12 +11095,16 @@
     - short Travel
     - short init
     - short Generation
+    - short temp
     - float tempF
     - ''
     - if ( init == 0 )
     - "\tset init to 1"
     - "\tset Companion to 1"
     - "\tSetDisposition 100"
+    - "\tset temp to A1_NecroCount"
+    - "\tset temp to ( temp + 1 )"
+    - "\tset A1_NecroCount to temp"
     - endif
     - ''
     - if ( GetHealth <= 0 )
@@ -11064,6 +11112,9 @@
     - "\t\tset init to 2"
     - "\t\tAddItem \"ingred_scrap_metal_01\", 1"
     - "\t\tAddItem \"ingred_bonemeal_01\", 5"
+    - "\t\tset temp to A1_NecroCount"
+    - "\t\tset temp to ( temp - 1 )"
+    - "\t\tset A1_NecroCount to temp"
     - "\tendif"
     - endif
     - ''

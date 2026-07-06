@@ -4,6 +4,7 @@ local core = require('openmw.core')
 local async = require('openmw.async')
 
 local maxGeneration = 3
+local maxCount = 4
 
 local function incSkill(player)
     local bookRecordDraft = types.Book.createRecordDraft({
@@ -159,22 +160,22 @@ return {
     },
     eventHandlers = {
         A1NecroPrepare = function(data)
+            local player = data.player
             local target = data.target
             local record = types.NPC.record(target)
             local body = pauls[record.race]
             local generation = nil
             if body.isSkel then
-                local npcScript = world.mwscript.getLocalScript(target, data.player)
+                local npcScript = world.mwscript.getLocalScript(target, player)
                 generation = npcScript.variables['generation'] + 1
                 if generation >= maxGeneration then
-                    local player = data.player
-                    player:sendEvent("A1NecroDeny", nil)
+                    player:sendEvent("A1NecroDeny", true)
                     return
                 end
             end
             local inv = types.Actor.inventory(target)
             for _, item in ipairs(inv:getAll()) do
-                item:moveInto(types.Actor.inventory(data.player))
+                item:moveInto(types.Actor.inventory(player))
             end
             local headId
             local skelHead = skelHeads[record.race]
@@ -182,28 +183,34 @@ return {
                 headId = skelHead
             else
                 local hair = world.createObject('a1_necroh' .. idHash(record.hair))
-                hair:moveInto(types.Actor.inventory(data.player))
+                hair:moveInto(types.Actor.inventory(player))
                 headId = 'a1_necroh' .. idHash(record.head)
             end
             head = world.createObject(headId)
-            head:moveInto(types.Actor.inventory(data.player))
+            head:moveInto(types.Actor.inventory(player))
             local bodyObj = world.createObject(body.id)
-            bodyObj:moveInto(types.Actor.inventory(data.player))
+            bodyObj:moveInto(types.Actor.inventory(player))
             target:remove()
             if generation then
                 async:newUnsavableSimulationTimer(0, function()
-                    local paulScript = world.mwscript.getLocalScript(bodyObj, data.player)
+                    local paulScript = world.mwscript.getLocalScript(bodyObj, player)
                     paulScript.variables['generation'] = generation
                 end)
             end
         end,
         A1NecroSummon = function(data)
-            local effects = types.Actor.activeEffects(data.player)
+            local player = data.player
+            local effects = types.Actor.activeEffects(player)
             effects:remove('boundboots')
             if not data.platform then
                 return
             end
-            local inv = types.Actor.inventory(data.player)
+            local count = world.mwscript.getGlobalVariables(player)['A1_NecroCount']
+            if count >= maxCount then
+                player:sendEvent("A1NecroDeny", false)
+                return
+            end
+            local inv = types.Actor.inventory(player)
             local m = inv:find('ingred_scrap_metal_01')
             if not m then
                 return
@@ -217,14 +224,16 @@ return {
             local npc = world.createObject(npcs[data.type])
             npc:teleport(data.platform.cell, data.platform.position)
             local body = data.body
-            local paulScript = world.mwscript.getLocalScript(body, data.player)
+            local paulScript = world.mwscript.getLocalScript(body, player)
             local generation = paulScript.variables['generation']
-            local npcScript = world.mwscript.getLocalScript(npc, data.player)
-            npcScript.variables['generation'] = generation
             body:remove()
             local head = data.head
             head:remove()
-            incSkill(data.player)
+            incSkill(player)
+            async:newUnsavableSimulationTimer(0, function()
+                local npcScript = world.mwscript.getLocalScript(npc, player)
+                npcScript.variables['generation'] = generation
+            end)
         end,
     },
 }
