@@ -156,7 +156,6 @@ local supportedRaces = {
     ['a1_necrorgrace'] = true,
 }
 
-
 I.AnimationController.addTextKeyHandler('spellcast', function(groupname, key)
     if string.sub(key, -7) == 'release' then
         async:newUnsavableSimulationTimer(0, function()
@@ -207,4 +206,10 @@ I.AnimationController.addTextKeyHandler('spellcast', function(groupname, key)
     end
 end)
 
-return { }
+return {
+    eventHandlers = {
+        A1NecroDeny = function(data)
+            ui.showMessage('Этот скелет слишком ветхий')
+        end,
+    },
+}

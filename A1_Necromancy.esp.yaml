@@ -6,7 +6,7 @@
       description:
       - Профессиональный некромант.
       - Основан на Blasphemous Revenants v1.3, который создан Fliggerty и переведён Gwathlobal
-      records: 266
+      records: 267
   - MAST: Morrowind.esm
   - DATA: 79764287
   - MAST: Tribunal.esm
@@ -5685,6 +5685,30 @@
 
 - SCPT:
   - SCHD:
+      name: A1_NecroDataSc
+      vars:
+        shorts: 1
+        longs: 0
+        floats: 0
+      data_size: 2
+      var_table_size: 11
+  - SCVR:
+    - Generation
+  - SCDT:
+      stmts:
+      - func: End
+        args: null
+      raw: []
+  - SCTX:
+    - begin A1_NecroDataSc
+    - ''
+    - short Generation
+    - ''
+    - end
+    - ''
+
+- SCPT:
+  - SCHD:
       name: A1_NecroDunmerBodySc
       vars:
         shorts: 3
@@ -10679,16 +10703,17 @@
   - SCHD:
       name: A1_NecroNpcSc
       vars:
-        shorts: 4
+        shorts: 5
         longs: 0
         floats: 1
       data_size: 811
-      var_table_size: 35
+      var_table_size: 46
   - SCVR:
     - NoLore
     - Companion
     - Travel
     - init
+    - Generation
     - tempF
   - SCDT:
       stmts:
@@ -11025,6 +11050,7 @@
     - short Companion
     - short Travel
     - short init
+    - short Generation
     - float tempF
     - ''
     - if ( init == 0 )
@@ -15374,7 +15400,7 @@
 - ARMO:
   - NAME: A1_NecroDunmerPaul
   - MODL: a1n\dunmer_corpse.nif
-  - FNAM: Труп данмера
+  - FNAM: Труп темного эльфа
   - AODT:
       type: LeftPauldron
       weight: 165.0
@@ -15480,6 +15506,7 @@
   - NAME: A1_NecroAltmerPaulSk
   - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет высокого эльфа
+  - SCRI: A1_NecroDataSc
   - AODT:
       type: LeftPauldron
       weight: 30.0
@@ -15495,6 +15522,7 @@
   - NAME: A1_NecroArgPaulSk
   - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет аргонианина
+  - SCRI: A1_NecroDataSc
   - AODT:
       type: LeftPauldron
       weight: 30.0
@@ -15510,6 +15538,7 @@
   - NAME: A1_NecroBosmerPaulSk
   - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет лесного эльфа
+  - SCRI: A1_NecroDataSc
   - AODT:
       type: LeftPauldron
       weight: 30.0
@@ -15524,7 +15553,8 @@
 - ARMO:
   - NAME: A1_NecroDunmerPaulSk
   - MODL: a1n\skeleton_corpse.nif
-  - FNAM: Скелет данмера
+  - FNAM: Скелет темного эльфа
+  - SCRI: A1_NecroDataSc
   - AODT:
       type: LeftPauldron
       weight: 30.0
@@ -15540,6 +15570,7 @@
   - NAME: A1_NecroImpPaulSk
   - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет имперца
+  - SCRI: A1_NecroDataSc
   - AODT:
       type: LeftPauldron
       weight: 30.0
@@ -15555,6 +15586,7 @@
   - NAME: A1_NecroKhaPaulSk
   - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет хаджита
+  - SCRI: A1_NecroDataSc
   - AODT:
       type: LeftPauldron
       weight: 30.0
@@ -15570,6 +15602,7 @@
   - NAME: A1_NecroNordPaulSk
   - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет нордлинга
+  - SCRI: A1_NecroDataSc
   - AODT:
       type: LeftPauldron
       weight: 30.0
@@ -15585,6 +15618,7 @@
   - NAME: A1_NecroOrcPaulSk
   - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет орка
+  - SCRI: A1_NecroDataSc
   - AODT:
       type: LeftPauldron
       weight: 30.0
@@ -15600,6 +15634,7 @@
   - NAME: A1_NecroRgPaulSk
   - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет редгарда
+  - SCRI: A1_NecroDataSc
   - AODT:
       type: LeftPauldron
       weight: 30.0
@@ -15615,6 +15650,7 @@
   - NAME: A1_NecroBretonPaulSk
   - MODL: a1n\skeleton_corpse.nif
   - FNAM: Скелет бретона
+  - SCRI: A1_NecroDataSc
   - AODT:
       type: LeftPauldron
       weight: 30.0

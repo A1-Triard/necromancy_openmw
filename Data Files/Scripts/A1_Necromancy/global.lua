@@ -3,6 +3,8 @@ local world = require('openmw.world')
 local core = require('openmw.core')
 local async = require('openmw.async')
 
+local maxGeneration = 3
+
 local function incSkill(player)
     local bookRecordDraft = types.Book.createRecordDraft({
         enchant = nil,
@@ -39,26 +41,26 @@ local function idHash(id)
 end
 
 local pauls = {
-    ['high elf'] = 'a1_necroaltmerpaul',
-    ['argonian'] = 'a1_necroargpaul',
-    ['wood elf'] = 'a1_necrobosmerpaul',
-    ['breton'] = 'a1_necrobretonpaul',
-    ['dark elf'] = 'a1_necrodunmerpaul',
-    ['imperial'] = 'a1_necroimppaul',
-    ['khajiit'] = 'a1_necrokhapaul',
-    ['nord'] = 'a1_necronordpaul',
-    ['orc'] = 'a1_necroorcpaul',
-    ['redguard'] = 'a1_necrorgpaul',
-    ['a1_necroaltmerrace'] = 'a1_necroaltmerpaulsk',
-    ['a1_necroargrace'] = 'a1_necroargpaulsk',
-    ['a1_necrobosmerrace'] = 'a1_necrobosmerpaulsk',
-    ['a1_necrobretonrace'] = 'a1_necrobretonpaulsk',
-    ['a1_necrodunmerrace'] = 'a1_necrodunmerpaulsk',
-    ['a1_necroimprace'] = 'a1_necroimppaulsk',
-    ['a1_necrokharace'] = 'a1_necrokhapaulsk',
-    ['a1_necronordrace'] = 'a1_necronordpaulsk',
-    ['a1_necroorcrace'] = 'a1_necroorcpaulsk',
-    ['a1_necrorgrace'] = 'a1_necrorgpaulsk',
+    ['high elf'] = { id = 'a1_necroaltmerpaul', isSkel = false },
+    ['argonian'] = { id = 'a1_necroargpaul', isSkel = false },
+    ['wood elf'] = { id = 'a1_necrobosmerpaul', isSkel = false },
+    ['breton'] = { id = 'a1_necrobretonpaul', isSkel = false },
+    ['dark elf'] = { id = 'a1_necrodunmerpaul', isSkel = false },
+    ['imperial'] = { id = 'a1_necroimppaul', isSkel = false },
+    ['khajiit'] = { id = 'a1_necrokhapaul', isSkel = false },
+    ['nord'] = { id = 'a1_necronordpaul', isSkel = false },
+    ['orc'] = { id = 'a1_necroorcpaul', isSkel = false },
+    ['redguard'] = { id = 'a1_necrorgpaul', isSkel = false },
+    ['a1_necroaltmerrace'] = { id = 'a1_necroaltmerpaulsk', isSkel = true },
+    ['a1_necroargrace'] = { id = 'a1_necroargpaulsk', isSkel = true },
+    ['a1_necrobosmerrace'] = { id = 'a1_necrobosmerpaulsk', isSkel = true },
+    ['a1_necrobretonrace'] = { id = 'a1_necrobretonpaulsk', isSkel = true },
+    ['a1_necrodunmerrace'] = { id = 'a1_necrodunmerpaulsk', isSkel = true },
+    ['a1_necroimprace'] = { id = 'a1_necroimppaulsk', isSkel = true },
+    ['a1_necrokharace'] = { id = 'a1_necrokhapaulsk', isSkel = true },
+    ['a1_necronordrace'] = { id = 'a1_necronordpaulsk', isSkel = true },
+    ['a1_necroorcrace'] = { id = 'a1_necroorcpaulsk', isSkel = true },
+    ['a1_necrorgrace'] = { id = 'a1_necrorgpaulsk', isSkel = true },
 }
 
 local bodies = {
@@ -158,11 +160,22 @@ return {
     eventHandlers = {
         A1NecroPrepare = function(data)
             local target = data.target
+            local record = types.NPC.record(target)
+            local body = pauls[record.race]
+            local generation = nil
+            if body.isSkel then
+                local npcScript = world.mwscript.getLocalScript(target, data.player)
+                generation = npcScript.variables['generation'] + 1
+                if generation >= maxGeneration then
+                    local player = data.player
+                    player:sendEvent("A1NecroDeny", nil)
+                    return
+                end
+            end
             local inv = types.Actor.inventory(target)
             for _, item in ipairs(inv:getAll()) do
                 item:moveInto(types.Actor.inventory(data.player))
             end
-            local record = types.NPC.record(target)
             local headId
             local skelHead = skelHeads[record.race]
             if skelHead then
@@ -174,10 +187,15 @@ return {
             end
             head = world.createObject(headId)
             head:moveInto(types.Actor.inventory(data.player))
-            local body = pauls[record.race]
-            local bodyObj = world.createObject(body)
+            local bodyObj = world.createObject(body.id)
             bodyObj:moveInto(types.Actor.inventory(data.player))
             target:remove()
+            if generation then
+                async:newUnsavableSimulationTimer(0, function()
+                    local paulScript = world.mwscript.getLocalScript(bodyObj, data.player)
+                    paulScript.variables['generation'] = generation
+                end)
+            end
         end,
         A1NecroSummon = function(data)
             local effects = types.Actor.activeEffects(data.player)
@@ -199,6 +217,10 @@ return {
             local npc = world.createObject(npcs[data.type])
             npc:teleport(data.platform.cell, data.platform.position)
             local body = data.body
+            local paulScript = world.mwscript.getLocalScript(body, data.player)
+            local generation = paulScript.variables['generation']
+            local npcScript = world.mwscript.getLocalScript(npc, data.player)
+            npcScript.variables['generation'] = generation
             body:remove()
             local head = data.head
             head:remove()
